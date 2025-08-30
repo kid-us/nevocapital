@@ -13,20 +13,25 @@ import CompanyPage from "./routes/company";
 import InvestWithUsPage from "./routes/investWithUs";
 import ClientPortalPage from "./routes/clientPortal";
 import InvestmentFundsPage from "./routes/investmentFunds";
+import Footer from "./components/Footer";
 
 function Layout() {
   return (
-    <div className="flex justify-center">
-      <main className="container mx-auto w-7xl md:px-8 lg:px-0  px-5">
-        {/* Navbar */}
-        <Navbar />
+    <>
+      <div className="flex justify-center">
+        <main className="container mx-auto w-7xl md:px-8 lg:px-0  px-5">
+          {/* Navbar */}
+          <Navbar />
 
-        {/* Main Content */}
-        <div className="flex-1 overflow-auto">
-          <Outlet />
-        </div>
-      </main>
-    </div>
+          {/* Main Content */}
+          <div className="flex-1 overflow-auto">
+            <Outlet />
+          </div>
+        </main>
+      </div>
+      {/* Footer */}
+      <Footer />
+    </>
   );
 }
 

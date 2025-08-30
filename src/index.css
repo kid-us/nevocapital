@@ -40,6 +40,7 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-cta: var(--cta);
+  --color-footer: var(--footer);
 }
 
 :root {
@@ -110,6 +111,7 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.552 0.016 285.938);
   --cta: #ba9a56;
+  --footer: #405244;
 }
 
 @layer base {

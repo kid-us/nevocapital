@@ -7,7 +7,7 @@ const Footer = () => {
     <div className="bg-footer py-5 mt-10">
       <div className="flex justify-center">
         <div className="container mx-auto w-7xl md:px-8 lg:px-0  px-5">
-          <div className="md:flex justify-between">
+          <div className="md:flex justify-between items-center">
             {/* Logo */}
             <div className="mb-8">
               <Image size={40} />

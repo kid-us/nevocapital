@@ -16,8 +16,8 @@ import InvestmentFundsPage from "./routes/investmentFunds";
 
 function Layout() {
   return (
-    <div className="flex justify-center items-start min-h-screen bg-gray-100 dark:bg-black/95">
-      <main className="max-w-7xl flex w-full dark:bg-black/95">
+    <div className="flex justify-center">
+      <main className="container mx-auto w-7xl md:px-8 lg:px-0  px-5">
         {/* Navbar */}
         <Navbar />
 

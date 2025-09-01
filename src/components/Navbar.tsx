@@ -8,7 +8,7 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <div className="flex justify-between items-center py-3 relative">
+    <div className="flex justify-between items-center py-3 relative lg:px-12">
       {/* Logo */}
       <Link to="/">
         <img src={logo} className="w-24" />

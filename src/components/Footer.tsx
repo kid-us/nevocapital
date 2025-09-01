@@ -1,6 +1,6 @@
+import { logo } from "@/assets";
 import { nav } from "@/constants/navs";
 import { Link } from "@tanstack/react-router";
-import { Image } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="md:flex justify-between items-center">
             {/* Logo */}
             <div className="mb-8">
-              <Image size={40} />
+              <img src={logo} className="w-24" />
             </div>
 
             {/* Links */}

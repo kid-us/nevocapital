@@ -7,12 +7,12 @@ import {
   Outlet,
 } from "@tanstack/react-router";
 import Navbar from "./components/Navbar";
-import HomePage from "./routes";
-import ContactPage from "./routes/contact";
-import CompanyPage from "./routes/company";
-import InvestWithUsPage from "./routes/investWithUs";
-import ClientPortalPage from "./routes/clientPortal";
-import InvestmentFundsPage from "./routes/investmentFunds";
+import HomePage from "./routes/Home";
+import ContactPage from "./routes/Contact";
+import CompanyPage from "./routes/Company";
+import InvestWithUsPage from "./routes/InvestWithUs";
+import ClientPortalPage from "./routes/ClientPortal";
+import InvestmentFundsPage from "./routes/InvestmentFunds";
 import Footer from "./components/Footer";
 
 function Layout() {
@@ -24,7 +24,7 @@ function Layout() {
           <Navbar />
 
           {/* Main Content */}
-          <div className="flex-1 overflow-auto">
+          <div className="flex-1 ">
             <Outlet />
           </div>
         </main>

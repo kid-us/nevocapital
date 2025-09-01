@@ -1,16 +1,17 @@
 import { nav } from "@/constants/navs";
 import { Link } from "@tanstack/react-router";
-import { Image, X, Menu } from "lucide-react";
+import { X, Menu } from "lucide-react";
 import { useState } from "react";
+import { logo } from "@/assets";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <div className="flex justify-between items-center py-6 relative">
+    <div className="flex justify-between items-center py-3 relative">
       {/* Logo */}
       <Link to="/">
-        <Image size={32} />
+        <img src={logo} className="w-24" />
       </Link>
 
       {/* Desktop Links */}
@@ -49,7 +50,7 @@ const Navbar = () => {
         <div className="flex justify-between p-4">
           {/* Logo */}
           <Link to="/">
-            <Image size={32} />
+            <img src={logo} className="w-24" />
           </Link>
           <button onClick={() => setMobileOpen(false)} aria-label="Close Menu">
             <X size={30} />

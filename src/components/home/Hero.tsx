@@ -10,10 +10,10 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="relative w-full max-w-2xl mx-auto">
+      <div className="relative w-full max-w-xl mx-auto">
         {/* Half circle background */}
-        <div className="w-full lg:h-[320px] h-[157px] border-t-2 border-cta rounded-t-full flex justify-center items-center">
-          <div className="flex justify-between h-full items-center md:space-x-10 space-x-4">
+        <div className="w-full lg:h-[280px] h-[157px] border-t-2 border-cta rounded-t-full flex flex-col justify-center items-center">
+          <div className="flex justify-between md:space-x-10 space-x-4 mt-8">
             <Link
               to="/contact"
               className="text-white font-semibold hover:underline text-xs md:text-[16px]"
@@ -33,6 +33,9 @@ const Hero = () => {
               Investor Portal
             </Link>
           </div>
+          <p className="lg:text-[13px] text-[10px] lg:mt-10 mt-5 text-zinc-400">
+            © 2025 Nevo Capital. All rights reserved.
+          </p>
         </div>
       </div>
     </div>

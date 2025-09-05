@@ -1,10 +1,17 @@
 import { footerLogo } from "@/assets";
 import { nav } from "@/constants/navs";
 import { Link } from "@tanstack/react-router";
+import { useLocation } from "@tanstack/react-router";
 
 const Footer = () => {
+  const location = useLocation();
+
   return (
-    <div className="bg-footer py-5 mt-10">
+    <div
+      className={`${
+        location.pathname === "/" && "hidden"
+      } bg-footer py-5 mt-10`}
+    >
       <div className="flex justify-center">
         <div className="container mx-auto w-7xl md:px-8 lg:px-0  px-5">
           <div className="md:flex justify-between items-center">

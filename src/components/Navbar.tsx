@@ -3,9 +3,12 @@ import { Link } from "@tanstack/react-router";
 import { X, Menu } from "lucide-react";
 import { useState } from "react";
 import { logo } from "@/assets";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [hoveredLink, setHoveredLink] = useState<string | null>(null);
+  const [isHovered, setIsHovered] = useState<boolean>(false);
 
   return (
     <div className="flex justify-between items-center py-3 relative lg:px-12">
@@ -15,19 +18,59 @@ const Navbar = () => {
       </Link>
 
       {/* Desktop Links */}
-      <div className="hidden md:flex lg:space-x-14 space-x-7">
+      <div
+        className="hidden md:flex lg:space-x-7 space-x-7 relative"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
         {nav.map((n) => (
-          <Link
+          <div
             key={n.path}
-            to={n.path}
-            activeProps={{
-              className:
-                "font-medium rounded underline underline-offset-6 decoration-cta text-white dark:text-black shadow transition-all duration-300",
+            className="relative"
+            onMouseEnter={() => {
+              setHoveredLink(n.path);
             }}
-            className="dark:text-white font-medium rounded hover:underline hover:underline-offset-4 decoration-cta transition-[underline-offset,decoration-color] duration-300"
+            onMouseLeave={() => {
+              setHoveredLink(null);
+            }}
           >
-            {n.label}
-          </Link>
+            <Link
+              to={n.path}
+              className="dark:text-white font-medium text-white px-2 relative z-10 py-4"
+            >
+              {n.label}
+            </Link>
+
+            {/* Hover underline */}
+            <AnimatePresence>
+              {hoveredLink === n.path && (
+                <motion.div
+                  layoutId="underline"
+                  className="absolute bottom-0 top-7 left-0 right-0 h-0.5 bg-cta rounded"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                />
+              )}
+            </AnimatePresence>
+
+            {/* Active link underline (only when not hovered) */}
+            <AnimatePresence>
+              {hoveredLink !== n.path && (
+                <Link
+                  to={n.path}
+                  className="absolute bottom-0 top-7 left-0 right-0 h-0.5 bg-cta rounded opacity-0"
+                  activeProps={{
+                    className: `${
+                      !isHovered &&
+                      "absolute bottom-0 top-7 left-0 right-0 h-0.5 bg-cta rounded opacity-100"
+                    }`,
+                  }}
+                />
+              )}
+            </AnimatePresence>
+          </div>
         ))}
       </div>
 
@@ -42,13 +85,12 @@ const Navbar = () => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed top-0 right-0 h-full w-full bg-white dark:bg-black shadow-lg transform transition-transform duration-300 z-20 ps-5  pt-2 ${
+        className={`fixed top-0 right-0 h-full w-full bg-white dark:bg-black shadow-lg transform transition-transform duration-300 z-20 ps-5 pt-2 ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         {/* Close Button */}
         <div className="flex justify-between p-4">
-          {/* Logo */}
           <Link to="/">
             <img src={logo} className="w-24" />
           </Link>
@@ -64,10 +106,6 @@ const Navbar = () => {
               key={n.path}
               to={n.path}
               onClick={() => setMobileOpen(false)}
-              activeProps={{
-                className:
-                  "font-medium rounded underline underline-offset-6 decoration-cta text-white dark:text-black shadow transition-all duration-300",
-              }}
               className="text-black dark:text-white font-medium text-lg hover:underline underline-offset-4 decoration-cta transition-all duration-300"
             >
               {n.label}

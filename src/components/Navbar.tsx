@@ -2,7 +2,7 @@ import { nav } from "@/constants/navs";
 import { Link } from "@tanstack/react-router";
 import { X, Menu } from "lucide-react";
 import { useState } from "react";
-import { logo } from "@/assets";
+import { hero, logo } from "@/assets";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
@@ -14,7 +14,7 @@ const Navbar = () => {
     <div className="flex justify-between items-center py-3 relative lg:px-12">
       {/* Logo */}
       <Link to="/">
-        <img src={logo} className="w-24" />
+        <img src={hero} className="w-24" />
       </Link>
 
       {/* Desktop Links */}

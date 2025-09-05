@@ -1,3 +1,5 @@
+import GlanceGridLarge from "@/components/investment-fund/GlanceLarge";
+import GlanceGridMobile from "@/components/investment-fund/GlanceSmall";
 import {
   BadgeCheck,
   CalendarDays,
@@ -32,7 +34,7 @@ const badges: Badges[] = [
   { id: 3, label: "Direct Lending" },
 ];
 
-const glance: Glance[] = [
+export const glance: Glance[] = [
   {
     id: 1,
     icon: TrendingUp,
@@ -170,40 +172,10 @@ const InvestmentFundsPage = () => {
 
         <div className="flex justify-center items-center w-full mt-10 md:mt-20 mb-10">
           {/* Large Device */}
-          <div className="md:flex hidden flex-wrap justify-center gap-6 md:gap-10 w-full max-w-5xl">
-            {glance.map((g) => (
-              <div
-                key={g.id}
-                className="basis-1/2 lg:basis-1/4 flex flex-col items-center justify-center border border-cta w-full h-28 md:w-full md:h-60 lg:w-full lg:h-64 rounded-full shadow-md hover:shadow-lg hover:bg-[#114536] transition-all duration-200"
-              >
-                <g.icon className="text-cta md:w-10 md:h-10 mb-4" />
-                <p className="text-xs md:text-sm font-semibold text-center">
-                  {g.label}
-                </p>
-                <p className="text-xs md:text-sm mt-2 font-bold text-center">
-                  {g.value}
-                </p>
-              </div>
-            ))}
-          </div>
+          <GlanceGridLarge />
 
           {/* Small Device */}
-          <div className="md:hidden grid grid-cols-2 gap-6 md:gap-10 w-full max-w-5xl">
-            {glance.map((g) => (
-              <div
-                key={g.id}
-                className="flex flex-col items-center justify-center border border-cta w-full h-40 md:w-full md:h-60 lg:w-full lg:h-64 rounded-full shadow-md hover:shadow-lg hover:bg-[#114536] transition-all duration-200"
-              >
-                <g.icon className="text-cta md:w-10 md:h-10 mb-4" />
-                <p className="text-xs md:text-sm font-semibold text-center">
-                  {g.label}
-                </p>
-                <p className="text-xs md:text-sm mt-2 font-bold text-center">
-                  {g.value}
-                </p>
-              </div>
-            ))}
-          </div>
+          <GlanceGridMobile />
         </div>
       </div>
     </div>

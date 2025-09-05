@@ -20,6 +20,12 @@ interface Glance {
   value: string;
 }
 
+const heroSection: Badges[] = [
+  { id: 1, label: "Private Credit Fund" },
+  { id: 2, label: "Private Credit Fund" },
+  { id: 3, label: "Private Credit Fund" },
+];
+
 const badges: Badges[] = [
   { id: 1, label: "Higher Yields" },
   { id: 2, label: "Stable & Predictable" },
@@ -61,13 +67,22 @@ const glance: Glance[] = [
 
 const InvestmentFundsPage = () => {
   return (
-    <div className="mt-20 md:mt-40 px-4 sm:px-6 lg:px-12">
+    <div className="mt-20 md:mt-50">
       <div className="flex flex-col items-center justify-center">
         {/* Circle with text */}
-        <div className="flex items-center justify-center border-4 border-cta rounded-full h-56 w-56 sm:h-72 sm:w-72 lg:h-80 lg:w-80">
-          <p className="text-2xl sm:text-3xl md:text-5xl uppercase px-6 sm:px-10 text-center">
-            Private Credit Fund
-          </p>
+        <div className="flex flex-wrap md:flex-nowrap justify-center md:gap-x-2 md:gap-y-3">
+          {heroSection.map((section) => (
+            <div
+              key={section.id}
+              className="flex items-center justify-center border-4 border-cta rounded-full 
+                 w-36 h-40 md:w-60 md:h-60 lg:w-72 lg:h-72
+                 basis-1/2 lg:basis-1/3"
+            >
+              <p className="text-xl md:text-4xl uppercase px-6 sm:px-10 text-center">
+                {section.label}
+              </p>
+            </div>
+          ))}
         </div>
 
         {/* Dashed line below */}
@@ -153,18 +168,37 @@ const InvestmentFundsPage = () => {
           capital.
         </p>
 
-        <div className="flex justify-center items-center w-full mt-10 md:mt-20">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 w-full max-w-5xl">
+        <div className="flex justify-center items-center w-full mt-10 md:mt-20 mb-10">
+          {/* Large Device */}
+          <div className="md:flex hidden flex-wrap justify-center gap-6 md:gap-10 w-full max-w-5xl">
             {glance.map((g) => (
               <div
                 key={g.id}
-                className="flex flex-col items-center justify-center border border-cta rounded-2xl p-6 shadow-md hover:shadow-lg transition"
+                className="basis-1/2 lg:basis-1/4 flex flex-col items-center justify-center border border-cta w-full h-28 md:w-full md:h-60 lg:w-full lg:h-64 rounded-full shadow-md hover:shadow-lg hover:bg-[#114536] transition-all duration-200"
               >
-                <g.icon className="text-cta w-10 h-10 sm:w-12 sm:h-12 mb-4" />
-                <p className="text-base sm:text-lg font-semibold text-center">
+                <g.icon className="text-cta md:w-10 md:h-10 mb-4" />
+                <p className="text-xs md:text-sm font-semibold text-center">
                   {g.label}
                 </p>
-                <p className="text-lg sm:text-xl mt-2 font-bold text-center">
+                <p className="text-xs md:text-sm mt-2 font-bold text-center">
+                  {g.value}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Small Device */}
+          <div className="md:hidden grid grid-cols-2 gap-6 md:gap-10 w-full max-w-5xl">
+            {glance.map((g) => (
+              <div
+                key={g.id}
+                className="flex flex-col items-center justify-center border border-cta w-full h-40 md:w-full md:h-60 lg:w-full lg:h-64 rounded-full shadow-md hover:shadow-lg hover:bg-[#114536] transition-all duration-200"
+              >
+                <g.icon className="text-cta md:w-10 md:h-10 mb-4" />
+                <p className="text-xs md:text-sm font-semibold text-center">
+                  {g.label}
+                </p>
+                <p className="text-xs md:text-sm mt-2 font-bold text-center">
                   {g.value}
                 </p>
               </div>

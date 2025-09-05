@@ -1,4 +1,4 @@
-import { logo } from "@/assets";
+import { footerLogo } from "@/assets";
 import { nav } from "@/constants/navs";
 import { Link } from "@tanstack/react-router";
 
@@ -9,9 +9,7 @@ const Footer = () => {
         <div className="container mx-auto w-7xl md:px-8 lg:px-0  px-5">
           <div className="md:flex justify-between items-center">
             {/* Logo */}
-            <div className="mb-8">
-              <img src={logo} className="w-24" />
-            </div>
+            <img src={footerLogo} className="w-60" />
 
             {/* Links */}
             <div>

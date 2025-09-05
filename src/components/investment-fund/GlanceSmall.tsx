@@ -90,7 +90,7 @@ const GlanceGridMobile = () => {
       </svg>
 
       {/* Items */}
-      <div className="md:hidden grid grid-cols-2 gap-6 w-full max-w-5xl mx-auto">
+      <div className="grid grid-cols-2 gap-6 w-full max-w-5xl mx-auto">
         {glance.map((g: any) => (
           <div
             key={g.id}

@@ -23,7 +23,7 @@ const GlanceGridLarge = () => {
   }, [glance]);
 
   return (
-    <div className="md:block hidden relative w-full" ref={containerRef}>
+    <div className="lg:block hidden relative w-full" ref={containerRef}>
       {/* SVG Lines */}
       <svg className="absolute inset-0 w-full h-full pointer-events-none">
         {positions.length >= 3 && (
@@ -75,7 +75,7 @@ const GlanceGridLarge = () => {
       </svg>
 
       {/* Items */}
-      <div className="md:flex hidden flex-wrap justify-center gap-6 md:gap-10 w-full max-w-5xl mx-auto">
+      <div className="lg:flex hidden flex-wrap justify-center gap-6 md:gap-10 w-full max-w-5xl mx-auto">
         {glance.map((g: any) => (
           <div
             key={g.id}

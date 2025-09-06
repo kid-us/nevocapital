@@ -1,3 +1,4 @@
+import { timeline } from "@/assets";
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight, Image } from "lucide-react";
 
@@ -148,70 +149,90 @@ const CompanyPage = () => {
             </div>
           ))}
         </div>
+      </div>
 
-        {/* Our Vision */}
-        <div className="mt-28">
-          <p className="text-5xl font-semibold">Our Vision</p>
-          <div className="md:grid grid-cols-2 gap-10">
-            <div>
-              <p className="mt-4 text-xl">
-                Strategic Growth, Built on Principles
-              </p>
+      {/* Our Vision */}
+      <div className="mt-28 h-full">
+        <p className="text-5xl font-semibold">Our Vision</p>
+        <div className="grid items-center lg:grid-cols-3 lg:gap-0 gap-y-10">
+          <div>
+            <p className="mt-4 text-xl">
+              Strategic Growth, Built on Principles
+            </p>
 
-              <p className="mt-3 md:text-lg text-sm">
-                Nevo Capital was founded to deliver institutional- quality
-                access to private markets. Our focus is on providing carefully
-                structured opportunities that prioritize capital protection and
-                consistent performance. While we continue to innovate within
-                private credit, our broader mission is to offer diversified
-                strategies that align with the long-term goals of sophisticated
-                investors
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Why Partner with US */}
-        <div className="my-32">
-          <div className="flex justify-center">
-            <p className="lg:text-6xl md:text-4xl text-3xl font-medium">
-              Why Partner with Us
+            <p className="mt-10 md:text-lg text-sm">
+              Nevo Capital was founded to deliver institutional- quality access
+              to private markets. Our focus is on providing carefully structured
+              opportunities that prioritize capital protection and consistent
+              performance. While we continue to innovate within private credit,
+              our broader mission is to offer diversified strategies that align
+              with the long-term goals of sophisticated investors
             </p>
           </div>
 
-          <div className="flex flex-col items-center justify-center mt-20">
-            <div className="flex flex-col items-center justify-center border-4 border-cta rounded-full w-36 h-36 md:w-60 md:h-60 lg:w-72 lg:h-72 hover:bg-footer transition-all duration-200">
-              <p className="text-xs md:text-2xl uppercase md:px-6 px-4 sm:px-10 text-center">
-                Institutional Quality
-              </p>
-              <hr className="border-2 w-[50%] border-footer mt-3" />
-              <p className="text-center md:mx-8 mx-3 mt-2 md:text-[16px] text-[9px]">
-                Built on principles of governance, compliance, and transparency.
+          <div className="relative col-span-2 flex justify-center">
+            <div className="absolute lg:left-40 -left-5 flex items-center justify-center border border-cta rounded-full p-5 w-32 h-32 md:w-40 md:h-40">
+              <p className="text-center font-medium md:text-lg text-sm">
+                Private Credit Fund
               </p>
             </div>
 
-            <div className="flex justify-between mt-5 md:space-x-20 space-x-2">
-              <div className="flex flex-col items-center justify-center border-4 border-cta rounded-full w-36 h-36 md:w-60 md:h-60 lg:w-72 lg:h-72 hover:bg-footer transition-all duration-200">
-                <p className="text-xs md:text-2xl uppercase md:px-6 px-4 sm:px-10 text-center">
-                  Specialized Expertise
-                </p>
-                <hr className="border-2 w-[50%] border-footer mt-3" />
-                <p className="text-center md:mx-8 mx-3 mt-2 md:text-[16px] text-[9px]">
-                  A leadership team with deep knowledge in real Estate and
-                  private markets.
-                </p>
-              </div>
+            <div className="absolute lg:right-40 -right-3 md:top-55 top-46 flex items-center justify-center border border-cta rounded-full p-5 w-32 h-32 md:w-40 md:h-40">
+              <p className="text-center font-medium md:text-lg text-sm">
+                Additional Real Estate Strategies
+              </p>
+            </div>
 
-              <div className="flex flex-col items-center justify-center border-4 border-cta rounded-full w-36 h-36 md:w-60 md:h-60 lg:w-72 lg:h-72 hover:bg-footer transition-all duration-200">
-                <p className="text-xs md:text-2xl uppercase md:px-6 px-4 sm:px-10 text-center">
-                  Aligned Interests
-                </p>
-                <hr className="border-2 w-[50%] border-footer mt-3" />
-                <p className="text-center md:mx-8 mx-3 mt-2 md:text-[16px] text-[9px]">
-                  We commit our own capital alongside yours—true partnership in
-                  every strategy.
-                </p>
-              </div>
+            <div className="absolute lg:left-40 -left-5 md:bottom-0 bottom-20 flex items-center justify-center border border-cta rounded-full p-5 w-32 h-32 md:w-40 md:h-40">
+              <p className="text-center font-medium md:text-lg text-sm">
+                Broader Alternative Investments
+              </p>
+            </div>
+            <img src={timeline} className="md:h-[550px] h-[450px]" />
+          </div>
+        </div>
+      </div>
+
+      {/* Why Partner with US */}
+      <div className="my-32">
+        <div className="flex justify-center">
+          <p className="lg:text-6xl md:text-4xl text-3xl font-medium">
+            Why Partner with Us
+          </p>
+        </div>
+
+        <div className="flex flex-col items-center justify-center mt-20">
+          <div className="flex flex-col items-center justify-center border-4 border-cta rounded-full w-36 h-36 md:w-60 md:h-60 lg:w-72 lg:h-72 hover:bg-footer transition-all duration-200">
+            <p className="text-xs md:text-2xl uppercase md:px-6 px-4 sm:px-10 text-center">
+              Institutional Quality
+            </p>
+            <hr className="border-2 w-[50%] border-footer mt-3" />
+            <p className="text-center md:mx-8 mx-3 mt-2 md:text-[16px] text-[9px]">
+              Built on principles of governance, compliance, and transparency.
+            </p>
+          </div>
+
+          <div className="flex justify-between mt-5 md:space-x-20 space-x-2">
+            <div className="flex flex-col items-center justify-center border-4 border-cta rounded-full w-36 h-36 md:w-60 md:h-60 lg:w-72 lg:h-72 hover:bg-footer transition-all duration-200">
+              <p className="text-xs md:text-2xl uppercase md:px-6 px-4 sm:px-10 text-center">
+                Specialized Expertise
+              </p>
+              <hr className="border-2 w-[50%] border-footer mt-3" />
+              <p className="text-center md:mx-8 mx-3 mt-2 md:text-[16px] text-[9px]">
+                A leadership team with deep knowledge in real Estate and private
+                markets.
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center justify-center border-4 border-cta rounded-full w-36 h-36 md:w-60 md:h-60 lg:w-72 lg:h-72 hover:bg-footer transition-all duration-200">
+              <p className="text-xs md:text-2xl uppercase md:px-6 px-4 sm:px-10 text-center">
+                Aligned Interests
+              </p>
+              <hr className="border-2 w-[50%] border-footer mt-3" />
+              <p className="text-center md:mx-8 mx-3 mt-2 md:text-[16px] text-[9px]">
+                We commit our own capital alongside yours—true partnership in
+                every strategy.
+              </p>
             </div>
           </div>
         </div>

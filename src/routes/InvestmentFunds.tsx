@@ -79,7 +79,7 @@ const InvestmentFundsPage = () => {
             <div
               key={section.id}
               onClick={() => setContent(section.state)}
-              className="flex items-center justify-center border-4 border-cta rounded-full w-36 h-40 md:w-60 md:h-60 lg:w-72 lg:h-72 basis-1/2 lg:basis-1/3 cursor-pointer"
+              className="flex items-center justify-center border-4 border-cta rounded-full w-36 h-40 md:w-60 md:h-60 lg:w-72 lg:h-72 basis-1/2 lg:basis-1/3 cursor-pointer hover:bg-footer transition-all duration-200"
             >
               <p className="text-xl md:text-4xl uppercase px-6 sm:px-10 text-center">
                 {section.label}

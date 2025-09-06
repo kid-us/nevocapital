@@ -14,6 +14,9 @@ import InvestWithUsPage from "./routes/InvestWithUs";
 import ClientPortalPage from "./routes/ClientPortal";
 import InvestmentFundsPage from "./routes/InvestmentFunds";
 import Footer from "./components/Footer";
+import Alex from "./routes/Alex";
+import David from "./routes/David";
+import Jochai from "./routes/Jochai";
 
 function Layout() {
   return (
@@ -56,6 +59,21 @@ const companyRoute = createRoute({
   getParentRoute: () => rootRoute,
   component: CompanyPage,
 });
+const alexRoute = createRoute({
+  path: "/company/alex",
+  getParentRoute: () => rootRoute,
+  component: Alex,
+});
+const davidRoute = createRoute({
+  path: "/company/david",
+  getParentRoute: () => rootRoute,
+  component: David,
+});
+const jochaiRoute = createRoute({
+  path: "/company/jochai",
+  getParentRoute: () => rootRoute,
+  component: Jochai,
+});
 const clientPortalRoute = createRoute({
   path: "/client-portals",
   getParentRoute: () => rootRoute,
@@ -77,6 +95,9 @@ const routeTree = rootRoute.addChildren([
   homeRoute,
   investmentFundRoute,
   companyRoute,
+  alexRoute,
+  davidRoute,
+  jochaiRoute,
   clientPortalRoute,
   contactRoute,
   investWithUsRoute,

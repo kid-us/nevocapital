@@ -9,5 +9,5 @@ export const nav: Nav[] = [
   { id: 2, label: "Company", path: "/company" },
   { id: 3, label: "Client Portals", path: "/client-portals" },
   { id: 4, label: "Contact", path: "/contact" },
-  { id: 5, label: "Invest with us", path: "/invest-with-us" },
+  // { id: 5, label: "Invest with us", path: "/invest-with-us" },
 ];

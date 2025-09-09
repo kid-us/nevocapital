@@ -2,25 +2,25 @@ import { nav } from "@/constants/navs";
 import { Link } from "@tanstack/react-router";
 import { X, Menu } from "lucide-react";
 import { useState } from "react";
-import { logo, mainLogo } from "@/assets";
+import { mainLogo } from "@/assets";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
   const [isHovered, setIsHovered] = useState<boolean>(false);
+  const [isInvestUsHovered, setIsInvestUsHovered] = useState<boolean>(false);
 
   return (
-    <div className="bg-background sticky top-0 w-full z-50">
+    <div className="bg-background sticky top-0 w-full z-50 border-b border-cta/5">
       <div className="w-full flex justify-between items-center py-3">
-        {/* Logo */}
-        <Link to="/">
-          <img src={mainLogo} className="w-24" />
-        </Link>
+        <motion.a whileHover={{ scale: 1.1 }} href="/">
+          <img src={mainLogo} className="w-24 relative" />
+        </motion.a>
 
         {/* Desktop Links */}
         <div
-          className="hidden md:flex lg:space-x-7 space-x-7 relative"
+          className="hidden md:flex items-center lg:space-x-7 space-x-7 relative"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
@@ -70,9 +70,35 @@ const Navbar = () => {
                     }}
                   />
                 )}
+                <Link
+                  to={n.path}
+                  className="absolute bottom-0 top-7 left-0 right-0 h-0.5 bg-cta rounded opacity-0"
+                  activeProps={{
+                    className: `${
+                      !isHovered &&
+                      "absolute bottom-0 top-7 left-0 right-0 h-0.5 bg-cta rounded opacity-100"
+                    }`,
+                  }}
+                />
               </AnimatePresence>
             </div>
           ))}
+
+          <Link
+            to="/invest-with-us"
+            className="flex items-center gap-x-2 dark:text-white font-medium text-white px-2 relative z-10 py-4 group !no-underline"
+            onMouseEnter={() => setIsInvestUsHovered(true)}
+            onMouseLeave={() => setIsInvestUsHovered(false)}
+          >
+            <motion.div
+              animate={{ x: isInvestUsHovered ? "calc(100% + 7.5rem)" : 0 }}
+              transition={{ type: "keyframes", stiffness: 200, damping: 15 }}
+              className="w-3 h-3 bg-cta rounded-full absolute -left-3 top-1/2 -translate-y-1/2"
+            />
+            <span className="relative transition-colors duration-300 group-hover:text-cta">
+              Invest with us
+            </span>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -93,7 +119,7 @@ const Navbar = () => {
           {/* Close Button */}
           <div className="flex justify-between p-4">
             <Link to="/">
-              <img src={logo} className="w-24" />
+              <img src={mainLogo} className="w-24" />
             </Link>
             <button
               onClick={() => setMobileOpen(false)}
@@ -115,6 +141,12 @@ const Navbar = () => {
                 {n.label}
               </Link>
             ))}
+            <Link
+              to={"/invest-with-us"}
+              className="text-black dark:text-white font-medium text-lg hover:underline underline-offset-4 decoration-cta transition-all duration-300"
+            >
+              Invest with us
+            </Link>
           </div>
         </div>
 

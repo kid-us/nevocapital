@@ -3,9 +3,9 @@ import { Link } from "@tanstack/react-router";
 
 const Hero = () => {
   return (
-    <div className="h-screen">
+    <div className="h-screen mt-32">
       <div className="h-[80dvh] flex flex-col items-center justify-center">
-        <div className="border-4 border-cta rounded-full p-10">
+        <div className="border border-cta rounded-full p-10">
           <img src={hero} alt="Nevo Capital" className="w-96" />
         </div>
       </div>

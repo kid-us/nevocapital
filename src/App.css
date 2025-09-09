@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 body {
-  font-family: "Mozilla Headline", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
-  scroll-behavior: smooth !important;
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* Custom Scrollbar */
@@ -30,3 +31,51 @@ body {
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #3b82f6;
 }
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer-text {
+  background-size: 200% auto;
+  animation: shimmer 2s linear infinite;
+}
+
+.animate-shimmer-border {
+  border-image: linear-gradient(
+    90deg,
+    #d1d5db,
+    #22d3ee,
+    #d1d5db
+  ) 1;
+  border-image-slice: 1;
+  animation: shimmer 3s linear infinite;
+  background-size: 200% auto;
+}
+

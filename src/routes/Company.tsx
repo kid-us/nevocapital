@@ -61,11 +61,11 @@ const ourTeam: OurTeam[] = [
 
 const CompanyPage = () => {
   return (
-    <div className="mt-20 md:mt-60 px-4 sm:px-6 lg:px-12">
+    <div className="mt-20 md:mt-60 lg:px-12">
       {/* Building a Platform for Alternative Investment Excellence */}
       <Reveal>
         <div className="flex flex-col items-center justify-center text-center">
-          <h1 className="text-2xl sm:text-3xl md:text-5xl uppercase px-4 sm:px-10">
+          <h1 className="text-xl sm:text-3xl md:text-5xl uppercase px-4 sm:px-10">
             Building a Platform for Alternative Investment Excellence
           </h1>
           <div className="relative mt-3 w-40 sm:w-60 md:w-[60%]">
@@ -83,7 +83,7 @@ const CompanyPage = () => {
       </Reveal>
 
       {/* Circles */}
-      <div className="mt-60 flex justify-center">
+      <div className="mt-24 md:mt-60 flex justify-center">
         <div className="flex flex-wrap justify-center lg:gap-10 gap-3 max-w-3xl">
           {ctaLists.map((cta) => (
             <Reveal key={cta.id}>
@@ -100,7 +100,7 @@ const CompanyPage = () => {
 
       {/* Who we are */}
       <Reveal>
-        <div className="flex flex-col items-center justify-center text-center mt-60">
+        <div className="mt-24 md:mt-60 flex flex-col items-center justify-center text-center">
           <h1 className="text-2xl sm:text-3xl md:text-5xl uppercase px-4 sm:px-10">
             Who We Are
           </h1>
@@ -123,7 +123,7 @@ const CompanyPage = () => {
 
       {/* Meet the team */}
       <Reveal>
-        <div className="flex flex-col mt-60">
+        <div className="mt-24 md:mt-60 flex flex-col">
           <h1 className="text-2xl sm:text-3xl md:text-5xl uppercase px-4 sm:px-10">
             Meet the Team
           </h1>
@@ -156,7 +156,7 @@ const CompanyPage = () => {
 
       {/* Our Vision */}
       <Reveal>
-        <div className="mt-60 h-full">
+        <div className="mt-24 md:mt-60 h-full">
           <h1 className="text-5xl font-semibold">Our Vision</h1>
           <div className="grid items-center lg:grid-cols-3 lg:gap-0 gap-y-10">
             <div>
@@ -176,19 +176,19 @@ const CompanyPage = () => {
             </div>
 
             <div className="relative col-span-2 flex justify-center">
-              <div className="absolute lg:left-40 -left-5 flex items-center justify-center border border-cta rounded-full p-5 w-32 h-32 md:w-40 md:h-40">
+              <div className="absolute lg:left-40 -left-0 flex items-center justify-center border border-cta rounded-full p-5 w-28 h-28 md:w-40 md:h-40">
                 <p className="text-center font-medium md:text-lg text-sm">
                   Private Credit Fund
                 </p>
               </div>
 
-              <div className="absolute lg:right-40 -right-3 md:top-55 top-46 flex items-center justify-center border border-cta rounded-full p-5 w-32 h-32 md:w-40 md:h-40">
+              <div className="absolute lg:right-40 -right-0 md:top-55 top-46 flex items-center justify-center border border-cta rounded-full p-5 w-28 h-28 md:w-40 md:h-40">
                 <p className="text-center font-medium md:text-lg text-sm">
                   Additional Real Estate Strategies
                 </p>
               </div>
 
-              <div className="absolute lg:left-40 -left-5 md:bottom-0 bottom-20 flex items-center justify-center border border-cta rounded-full p-5 w-32 h-32 md:w-40 md:h-40">
+              <div className="absolute lg:left-40 -left-0 md:bottom-0 bottom-20 flex items-center justify-center border border-cta rounded-full p-5 w-28 h-28 md:w-40 md:h-40">
                 <p className="text-center font-medium md:text-lg text-sm">
                   Broader Alternative Investments
                 </p>
@@ -201,7 +201,7 @@ const CompanyPage = () => {
 
       {/* Why Partner with US */}
       <Reveal>
-        <div className="mb-32 mt-60">
+        <div className="mt-24 md:mt-60 mb-32">
           <div className="flex justify-center">
             <h1 className="lg:text-5xl md:text-4xl text-3xl font-medium">
               Why Partner with Us

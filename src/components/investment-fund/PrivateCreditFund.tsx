@@ -96,7 +96,7 @@ const PrivateCreditFund = () => {
 
       {/*  What makes it private? */}
       <Reveal>
-        <div className="mt-60 text-center max-w-5xl">
+        <div className="mt-24 md:mt-60 text-center max-w-5xl">
           <h1 className="text-2xl md:text-5xl font-semibold playfair-display">
             What makes it private?
           </h1>
@@ -120,7 +120,7 @@ const PrivateCreditFund = () => {
       {/* Our Glance */}
       <Reveal>
         <>
-          <div className="flex flex-col md:flex-row md:justify-between items-center gap-4 mt-60 w-full max-w-7xl">
+          <div className="flex flex-col md:flex-row md:justify-between items-center gap-4 mt-24 md:mt-60 w-full max-w-7xl">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:w-72 font-semibold text-center md:text-left playfair-display">
               Our Fund at a Glance
             </h1>
@@ -136,7 +136,7 @@ const PrivateCreditFund = () => {
         </>
       </Reveal>
 
-      <div className="flex justify-center items-center w-full mt-60 mb-10 ">
+      <div className="flex justify-center items-center w-full mt-24 md:mt-60 mb-10 ">
         <GlanceGridLarge />
         <GlanceGridMobile />
       </div>

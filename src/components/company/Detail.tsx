@@ -42,21 +42,21 @@ const Detail = ({ data }: Props) => {
         <Reveal>
           <div>
             <p className="underline mt-3 text-lg">About {data.name}</p>
-            <p className="text-xl mt-1 mb-5">{data.about}</p>
+            <p className="text-sm lg:text-xl mt-1 mb-5">{data.about}</p>
           </div>
         </Reveal>
 
         <Reveal>
           <div>
             <p className="underline mt-3 text-lg">Background & Education</p>
-            <p className="text-xl mt-1 mb-5">{data.background}</p>
+            <p className="text-sm lg:text-xl mt-1 mb-5">{data.background}</p>
           </div>
         </Reveal>
 
         <Reveal>
           <div>
             <p className="underline mt-3 text-lg">Career Path</p>
-            <p className="text-xl mt-1 mb-5">{data.careerPath}</p>
+            <p className="text-sm lg:text-xl mt-1 mb-5">{data.careerPath}</p>
           </div>
         </Reveal>
 
@@ -65,14 +65,14 @@ const Detail = ({ data }: Props) => {
             <p className="underline mt-3 text-lg">
               Current Role at NEvo Capital
             </p>
-            <p className="text-xl mt-1 mb-5">{data.currentRole}</p>
+            <p className="text-sm lg:text-xl mt-1 mb-5">{data.currentRole}</p>
           </div>
         </Reveal>
 
         <Reveal>
           <div>
             <p className="underline mt-3 text-lg">Beyond Business</p>
-            <p className="text-xl mt-1 mb-5">{data.beyond}</p>
+            <p className="text-sm lg:text-xl mt-1 mb-5">{data.beyond}</p>
           </div>
         </Reveal>
 

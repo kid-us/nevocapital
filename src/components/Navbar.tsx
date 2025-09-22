@@ -15,7 +15,7 @@ const Navbar = () => {
     <div className="sticky top-0 w-full z-50 bg-white">
       <div className="w-full flex justify-between items-center">
         <motion.a
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.02 }}
           href="/"
           className="flex items-center space-x-3"
         >

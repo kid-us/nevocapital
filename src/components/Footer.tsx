@@ -60,6 +60,7 @@ const Footer = () => {
       </div>
 
       <div className="my-3 w-full h-[1px] bg-gradient-to-r from-transparent via-zinc-200 to-transparent" />
+      
       <div className="flex justify-between">
         <p className="text-xs text-zinc-500">
           © {date.getFullYear()} Nevo Capital. All rights reserved

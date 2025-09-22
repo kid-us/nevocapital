@@ -1,101 +1,72 @@
-import { footerLogo } from "@/assets";
-import { nav } from "@/constants/navs";
+import { logo } from "@/assets";
+import { nav } from "@/constants/nav";
 import { Link } from "@tanstack/react-router";
 import { useLocation } from "@tanstack/react-router";
+import { Mail, Phone } from "lucide-react";
 
 const Footer = () => {
   const location = useLocation();
+  const date = new Date();
 
   return (
     <div
-      className={`${
-        location.pathname === "/" && "hidden"
-      } bg-footer py-5 mt-10`}
+      className={`${location.pathname === "/" && "hidden"} max-w-6xl mx-auto mt-10 relative pt-2`}
     >
-      <div className="flex justify-center">
-        <div className="container mx-auto w-7xl md:px-8 lg:px-0  px-5">
-          <div className="md:flex justify-between items-center">
-            {/* Logo */}
-            <img src={footerLogo} className="w-60" />
+      {/* Gradient top border */}
+      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent" />
 
-            {/* Links */}
-            <div>
-              <div className="grid lg:grid-cols-5 md:grid-cols-4 grid-cols-2 lg:gap-x-16  gap-y-3 gap-x-5">
-                {nav.map((n) => (
-                  <Link
-                    key={n.path}
-                    to={n.path}
-                    activeProps={{
-                      className:
-                        "font-medium rounded underline underline-offset-6 decoration-cta text-white dark:text-black shadow transition-all duration-300",
-                    }}
-                    className="dark:text-white font-medium rounded hover:underline hover:underline-offset-4 decoration-cta transition-[underline-offset,decoration-color] duration-300 lg:text-center text-justify text-sm"
-                  >
-                    {n.label}
-                  </Link>
-                ))}
-              </div>
-              {/* Contact Us / Investor Tool */}
-              <div className="grid grid-cols-2 mt-7 gap-x-5">
-                <div>
-                  <h1 className="font-bold lg:text-xl text-lg mb-3">
-                    Contact US
-                  </h1>
-                  <p className="text-sm">Phone: +1-248-450-4836</p>
-                  <p className="text-sm">Email: info@nevo-capital.com</p>
-                </div>
-                <div>
-                  <h1 className="font-bold text-xl mb-3">Investor Tools</h1>
-                  <Link
-                    to="/invest-with-us"
-                    className="text-cta text-sm uppercase"
-                  >
-                    Investor with us
-                  </Link>
-                </div>
-              </div>
+      <div className="md:flex justify-between items-center">
+        <div>
+          {/* Logo */}
+          <div className="flex items-center space-x-3">
+            <img src={logo} className="w-15" />
+            <h1 className="font-bold mt-2">Nevo Capital</h1>
+          </div>
+          {/* Contact Info */}
+          <div className="flex space-x-4 mt-2">
+            <div className="flex space-x-2">
+              <Phone size={16} />
+              <p className="text-xs">+1-248-450-4836</p>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <Mail size={16} />
+              <p className="text-xs">info@nevo-capital.com</p>
             </div>
           </div>
-          {/* Horizontal Line */}
-          <div className="relative">
-            <div className="absolute -top-[4.5px] -left-1 bg-cta w-3 h-3 rounded-full"></div>
-            <hr className="my-10 border-2 border-cta" />
-            <div className="absolute -top-[4.5px] -right-1 bg-cta w-3 h-3 rounded-full"></div>
-          </div>
+        </div>
 
-          {/* Paragraph */}
-          <div className="">
-            <p className="text-center text-xs">
-              The information presented in this Website is provided for general
-              informational purposes only and this Website does not constitute
-              an offer, solicitation or recommendation to sell or an offer to
-              buy any securities, investment products or investment advisory
-              services. The information in this Website is not intended to
-              provide and should not be relied upon for, accounting, legal, tax
-              advice or investment recommendations. Each user is encouraged to
-              consult with its own tax, legal, accounting, financial and/or
-              other advisors regarding the information and matters contained in
-              this Website. Revere does not represent that any securities,
-              financial instruments, products or services are suitable or
-              appropriate for all clients or investors. Decisions based on
-              information contained on this Website are the sole responsibility
-              of the user.
-            </p>
-            <p className="text-center mt-4 text-xs">
-              PAST PERFORMANCE IS NOT NECESSARILY A RELIABLE INDICATOR OF FUTURE
-              PERFORMANCE. INVESTMENTS ARE SUBJECT TO A WIDE VARIETY OF RISKS
-              AND CONSIDERATIONS.
-            </p>
-
-            <p className="text-center text-xs my-5">
-              © 2025. All Rights Reserved.{" "}
-              <Link to="/" className="text-cta underline">
-                Privacy Policy
+        {/* Links */}
+        <div>
+          <div className="flex space-x-5">
+            {nav.map((n) => (
+              <Link
+                key={n.path}
+                to={n.path}
+                className="dark:text-white font-medium rounded hover:underline hover:underline-offset-4 decoration-cta transition-[underline-offset,decoration-color] duration-300 lg:text-center text-justify text-xs"
+              >
+                {n.label}
               </Link>
-              .
-            </p>
+            ))}
+            {/* Invest with Us */}
+            <Link
+              to={"/invest-with-us"}
+              className="dark:text-white font-medium rounded hover:underline hover:underline-offset-4 decoration-cta transition-[underline-offset,decoration-color] duration-300 lg:text-center text-justify text-sm"
+            >
+              Invest with Us
+            </Link>
           </div>
         </div>
+      </div>
+
+      <div className="my-3 w-full h-[1px] bg-gradient-to-r from-transparent via-zinc-200 to-transparent" />
+      <div className="flex justify-between">
+        <p className="text-xs text-zinc-500">
+          © {date.getFullYear()} Nevo Capital. All rights reserved
+        </p>
+        <Link to="/" className="underline text-xs">
+          Privacy Policy
+        </Link>
       </div>
     </div>
   );

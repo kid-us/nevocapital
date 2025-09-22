@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { ArrowRight, X } from "lucide-react";
 import { hero } from "@/assets";
 import HeroBg from "@/components/HeroBg";
@@ -10,6 +10,7 @@ export const Route = createFileRoute("/")({
 });
 
 function RouteComponent() {
+  const navigate = useNavigate();
   const [disclaimerOpen, setDisclaimerOpen] = useState(false);
   const date = new Date();
 
@@ -53,6 +54,7 @@ function RouteComponent() {
         </div>
       </div>
 
+      {/* Hero Section */}
       <div className="relative flex flex-col items-center justify-center h-[93dvh] -mb-6 overflow-hidden">
         {/* Hero BG */}
         <HeroBg />
@@ -61,7 +63,10 @@ function RouteComponent() {
           <img src={hero} className="w-[350px]" />
         </div>
 
-        <Button className="w-40 group mb-20 text-sm">
+        <Button
+          onClick={() => navigate({ to: "/investment-funds" })}
+          className="w-40 group mb-20 text-sm"
+        >
           Learn More{" "}
           <ArrowRight className="group-hover:translate-x-2 transition-all duration-200" />
         </Button>

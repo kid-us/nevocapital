@@ -21,10 +21,13 @@ import specialized from "./specialized.svg";
 import specializedHover from "./specialized-hover.svg";
 import stable from "./stable.svg";
 import targetInvestor from "./target-investor.svg";
+import hero from "./hero.svg";
+import background from "./background.svg";
 
 export {
   logo,
   alex,
+  hero,
   jochai,
   david,
   alexFamily,
@@ -45,4 +48,5 @@ export {
   specializedHover,
   stable,
   targetInvestor,
+  background,
 };

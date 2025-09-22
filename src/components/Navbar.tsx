@@ -12,10 +12,10 @@ const Navbar = () => {
   const [isInvestUsHovered, setIsInvestUsHovered] = useState<boolean>(false);
 
   return (
-    <div className="bg-background sticky top-0 w-full z-50">
+    <div className="sticky top-0 w-full z-50">
       <div className="w-full flex justify-between items-center">
         <motion.a whileHover={{ scale: 1.1 }} href="/">
-          <img src={logo} className="w-20 relative" />
+          <img src={logo} className="w-24 relative" />
         </motion.a>
 
         {/* Desktop Links */}
@@ -48,7 +48,7 @@ const Navbar = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    transition={{ duration: 0.8 }}
+                    transition={{ duration: 0.5 }}
                   />
                 )}
               </AnimatePresence>

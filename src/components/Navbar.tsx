@@ -14,8 +14,13 @@ const Navbar = () => {
   return (
     <div className="sticky top-0 w-full z-50">
       <div className="w-full flex justify-between items-center">
-        <motion.a whileHover={{ scale: 1.1 }} href="/">
+        <motion.a
+          whileHover={{ scale: 1.1 }}
+          href="/"
+          className="flex items-center space-x-3"
+        >
           <img src={logo} className="w-24 relative" />
+          <h1 className="text-xl font-bold mt-2">Nevo Capital</h1>
         </motion.a>
 
         {/* Desktop Links */}

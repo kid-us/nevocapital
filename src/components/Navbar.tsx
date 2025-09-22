@@ -12,7 +12,7 @@ const Navbar = () => {
   const [isInvestUsHovered, setIsInvestUsHovered] = useState<boolean>(false);
 
   return (
-    <div className="sticky top-0 w-full z-50">
+    <div className="sticky top-0 w-full z-50 bg-white">
       <div className="w-full flex justify-between items-center">
         <motion.a
           whileHover={{ scale: 1.1 }}

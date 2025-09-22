@@ -23,6 +23,8 @@ import stable from "./stable.svg";
 import targetInvestor from "./target-investor.svg";
 import hero from "./hero.svg";
 import background from "./background.svg";
+import yieldGraph from "./yieldGraph.svg";
+import graph2 from "./graph2.svg";
 
 export {
   logo,
@@ -49,4 +51,6 @@ export {
   stable,
   targetInvestor,
   background,
+  yieldGraph,
+  graph2,
 };

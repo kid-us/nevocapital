@@ -7,7 +7,7 @@ const HeroBg = () => {
     ) as NodeListOf<SVGLineElement>;
     const defaultColor = "#CDCDCD";
     const highlightColor = "#fabe1a";
-    const defaultOpacity = 0.4;
+    const defaultOpacity = 0.1;
     const highlightOpacity = 1;
     const transitionDuration = 1000; // Transition duration for wave effect
     const delay = 50; // Delay between lines for wave-like effect
@@ -59,7 +59,7 @@ const HeroBg = () => {
         x2="62.5"
         y2="463.5"
         stroke="#CDCDCD"
-        strokeOpacity="0.4"
+        strokeOpacity="0.1"
         strokeWidth="5"
         strokeLinecap="round"
       />
@@ -69,7 +69,7 @@ const HeroBg = () => {
         x2="121.5"
         y2="480.5"
         stroke="#CDCDCD"
-        strokeOpacity="0.4"
+        strokeOpacity="0.1"
         strokeWidth="5"
         strokeLinecap="round"
       />
@@ -79,7 +79,7 @@ const HeroBg = () => {
         x2="182.5"
         y2="572.5"
         stroke="#CDCDCD"
-        strokeOpacity="0.4"
+        strokeOpacity="0.1"
         strokeWidth="5"
         strokeLinecap="round"
       />
@@ -89,7 +89,7 @@ const HeroBg = () => {
         x2="242.5"
         y2="478.5"
         stroke="#CDCDCD"
-        strokeOpacity="0.4"
+        strokeOpacity="0.1"
         strokeWidth="5"
         strokeLinecap="round"
       />
@@ -99,7 +99,7 @@ const HeroBg = () => {
         x2="302.5"
         y2="430.5"
         stroke="#CDCDCD"
-        strokeOpacity="0.4"
+        strokeOpacity="0.1"
         strokeWidth="5"
         strokeLinecap="round"
       />
@@ -109,7 +109,7 @@ const HeroBg = () => {
         x2="362.5"
         y2="412.5"
         stroke="#CDCDCD"
-        strokeOpacity="0.4"
+        strokeOpacity="0.1"
         strokeWidth="5"
         strokeLinecap="round"
       />
@@ -119,7 +119,7 @@ const HeroBg = () => {
         x2="422.5"
         y2="329.5"
         stroke="#CDCDCD"
-        strokeOpacity="0.4"
+        strokeOpacity="0.1"
         strokeWidth="5"
         strokeLinecap="round"
       />
@@ -129,7 +129,7 @@ const HeroBg = () => {
         x2="482.5"
         y2="442.5"
         stroke="#CDCDCD"
-        strokeOpacity="0.4"
+        strokeOpacity="0.1"
         strokeWidth="5"
         strokeLinecap="round"
       />
@@ -139,7 +139,7 @@ const HeroBg = () => {
         x2="542.5"
         y2="375.5"
         stroke="#CDCDCD"
-        strokeOpacity="0.4"
+        strokeOpacity="0.1"
         strokeWidth="5"
         strokeLinecap="round"
       />
@@ -149,7 +149,7 @@ const HeroBg = () => {
         x2="602.5"
         y2="329.5"
         stroke="#CDCDCD"
-        strokeOpacity="0.4"
+        strokeOpacity="0.1"
         strokeWidth="5"
         strokeLinecap="round"
       />
@@ -159,7 +159,7 @@ const HeroBg = () => {
         x2="662.5"
         y2="296.5"
         stroke="#CDCDCD"
-        strokeOpacity="0.4"
+        strokeOpacity="0.1"
         strokeWidth="5"
         strokeLinecap="round"
       />
@@ -169,7 +169,7 @@ const HeroBg = () => {
         x2="722.5"
         y2="329.5"
         stroke="#CDCDCD"
-        strokeOpacity="0.4"
+        strokeOpacity="0.1"
         strokeWidth="5"
         strokeLinecap="round"
       />
@@ -179,7 +179,7 @@ const HeroBg = () => {
         x2="782.5"
         y2="296.5"
         stroke="#CDCDCD"
-        strokeOpacity="0.4"
+        strokeOpacity="0.1"
         strokeWidth="5"
         strokeLinecap="round"
       />
@@ -189,7 +189,7 @@ const HeroBg = () => {
         x2="842.5"
         y2="269.5"
         stroke="#CDCDCD"
-        strokeOpacity="0.4"
+        strokeOpacity="0.1"
         strokeWidth="5"
         strokeLinecap="round"
       />
@@ -199,7 +199,7 @@ const HeroBg = () => {
         x2="902.5"
         y2="329.5"
         stroke="#CDCDCD"
-        strokeOpacity="0.4"
+        strokeOpacity="0.1"
         strokeWidth="5"
         strokeLinecap="round"
       />
@@ -209,7 +209,7 @@ const HeroBg = () => {
         x2="962.5"
         y2="277.5"
         stroke="#CDCDCD"
-        strokeOpacity="0.4"
+        strokeOpacity="0.1"
         strokeWidth="5"
         strokeLinecap="round"
       />
@@ -219,7 +219,7 @@ const HeroBg = () => {
         x2="1022.5"
         y2="256.5"
         stroke="#CDCDCD"
-        strokeOpacity="0.4"
+        strokeOpacity="0.1"
         strokeWidth="5"
         strokeLinecap="round"
       />
@@ -229,7 +229,7 @@ const HeroBg = () => {
         x2="1082.5"
         y2="240.5"
         stroke="#CDCDCD"
-        strokeOpacity="0.4"
+        strokeOpacity="0.1"
         strokeWidth="5"
         strokeLinecap="round"
       />
@@ -239,7 +239,7 @@ const HeroBg = () => {
         x2="1142.5"
         y2="153.5"
         stroke="#CDCDCD"
-        strokeOpacity="0.4"
+        strokeOpacity="0.1"
         strokeWidth="5"
         strokeLinecap="round"
       />
@@ -249,7 +249,7 @@ const HeroBg = () => {
         x2="1202.5"
         y2="174.5"
         stroke="#CDCDCD"
-        strokeOpacity="0.4"
+        strokeOpacity="0.1"
         strokeWidth="5"
         strokeLinecap="round"
       />
@@ -259,7 +259,7 @@ const HeroBg = () => {
         x2="1262.5"
         y2="116.5"
         stroke="#CDCDCD"
-        strokeOpacity="0.4"
+        strokeOpacity="0.1"
         strokeWidth="5"
         strokeLinecap="round"
       />
@@ -269,7 +269,7 @@ const HeroBg = () => {
         x2="1322.5"
         y2="259.5"
         stroke="#CDCDCD"
-        strokeOpacity="0.4"
+        strokeOpacity="0.1"
         strokeWidth="5"
         strokeLinecap="round"
       />
@@ -279,7 +279,7 @@ const HeroBg = () => {
         x2="1382.5"
         y2="116.5"
         stroke="#CDCDCD"
-        strokeOpacity="0.4"
+        strokeOpacity="0.1"
         strokeWidth="5"
         strokeLinecap="round"
       />
@@ -289,7 +289,7 @@ const HeroBg = () => {
         x2="2.5"
         y2="430.5"
         stroke="#CDCDCD"
-        strokeOpacity="0.4"
+        strokeOpacity="0.1"
         strokeWidth="5"
         strokeLinecap="round"
       />

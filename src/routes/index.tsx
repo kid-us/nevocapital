@@ -7,6 +7,13 @@ import { useState } from "react";
 
 export const Route = createFileRoute("/")({
   component: RouteComponent,
+  head: () => ({
+    meta: [
+      { name: "description" },
+      { content: "Nevo Capital Team members" },
+      { title: "Nevo Capital - Company" },
+    ],
+  }),
 });
 
 function RouteComponent() {

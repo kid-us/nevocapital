@@ -16,6 +16,9 @@ import { ArrowUpRight } from "lucide-react";
 
 export const Route = createFileRoute("/company/")({
   component: companyPage,
+  head: () => ({
+    meta: [{ title: "Company" }],
+  }),
 });
 
 interface TheTeam {
@@ -85,6 +88,7 @@ const contents: Content[] = [
 ];
 
 function companyPage() {
+  // useEffect(())
   return (
     <div className="max-w-3xl mx-auto mt-24">
       <Reveal>

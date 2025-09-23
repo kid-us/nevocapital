@@ -50,11 +50,8 @@ function RouteComponent() {
 
   return (
     <div>
-      {/* Hero Section */}
-      <div className=" px-4 sm:px-6 lg:px-12"></div>
-
       {/* Contact Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 px-4 sm:px-6 md:px-20 py-12 md:py-28">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:px-20 px-6 py-16 md:py-28">
         <Reveal>
           <div className="flex flex-col justify-center text-center">
             <h1 className="text-4xl font-bold text-start">

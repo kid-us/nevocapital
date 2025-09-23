@@ -13,6 +13,7 @@ import directLending from "./direct-lending.svg";
 import firstPosition from "./first-position.svg";
 import higherYields from "./higher-yields.svg";
 import institutional from "./institutional.svg";
+import institutionalPng from "./Institutional.png";
 import institutionalHover from "./institutional-hover.svg";
 import lockUp from "./lock-up.svg";
 import minimumInvestment from "./minimum-investment.svg";
@@ -53,4 +54,5 @@ export {
   background,
   yieldGraph,
   graph2,
+  institutionalPng,
 };

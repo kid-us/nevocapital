@@ -4,8 +4,8 @@ import {
   alignedHover,
   comapnyGraph,
   david,
-  institutional,
   institutionalHover,
+  institutionalPng,
   jochai,
   specialized,
   specializedHover,
@@ -68,7 +68,7 @@ const contents: Content[] = [
     id: 1,
     desc: "Built on principles of governance, compliance, and transparency.",
     hoverImg: institutionalHover,
-    img: institutional,
+    img: institutionalPng,
     title: "Institutional Quality",
   },
   {
@@ -123,7 +123,7 @@ function companyPage() {
       <Reveal>
         <div className="lg:mt-16 mt-10">
           <h1 className="lg:text-3xl text-xl">Meet the Team</h1>
-          <div className="grid grid-cols-3 gap-5 mt-5">
+          <div className="grid md:grid-cols-3 grid-cols-1 gap-5 mt-5">
             {teams.map((team) => (
               <div key={team.id}>
                 <div className="bg-[#ebebeb]">
@@ -166,29 +166,38 @@ function companyPage() {
             with the long-term goals of sophisticated investors.
           </p>
           <div className="relative mt-8">
-            <div className="grid grid-cols-3">
-              <div>
-                <p className="text-sm">Present</p>
-                <div className="h-6 border-l"></div>
-                <p className="mt-3 text-sm font-semibold">
-                  Private Credit Fund
-                </p>
+            <div className="grid lg:grid-cols-3">
+              <div className="lg:block flex items-center">
+                <div className="lg:hidden block w-6 border-t"></div>
+                <div className="lg:mt-0 mt-10 ms-2">
+                  <p className="text-sm">Present</p>
+                  <div className="lg:block hidden h-6 border-l"></div>
+                  <p className="lg:mt-3 mt-1 text-sm font-semibold">
+                    Private Credit Fund
+                  </p>
+                </div>
               </div>
-              <div>
-                <p className="text-sm">Near Future</p>
-                <div className="h-6 border-l"></div>
-                <p className="mt-3 text-sm font-semibold">
-                  Additional Real State Strategies
-                </p>
+              <div className="lg:block flex items-center">
+                <div className="lg:hidden block w-6 border-t"></div>
+                <div className="lg:mt-0 mt-5 ms-2">
+                  <p className="text-sm">Near Future</p>
+                  <div className="lg:block hidden h-6 border-l"></div>
+                  <p className="lg:mt-3 mt-1 text-sm font-semibold">
+                    Additional Real State Strategies
+                  </p>
+                </div>
               </div>
-              <div>
-                <p className="text-sm">Long Run</p>
-                <div className="h-6 border-l"></div>
-                <p className="mt-3 text-sm font-semibold">
-                  Broader Alternative Investments
-                </p>
+              <div className="lg:block flex items-center">
+                <div className="lg:hidden block w-6 border-t"></div>
+                <div className="lg:mt-0 mt-5 ms-2">
+                  <p className="text-sm">Long Run</p>
+                  <div className="lg:block hidden h-6 border-l"></div>
+                  <p className="lg:mt-3 mt-1 text-sm font-semibold">
+                    Broader Alternative Investments
+                  </p>
+                </div>
               </div>
-              <div className="absolute left-0 top-5 my-3 w-full h-[2px] bg-gradient-to-r from-transparent via-zinc-300 to-transparent" />
+              <div className="absolute left-0 top-5 my-3 lg:w-full lg:h-[2px] w-[2px] h-full bg-gradient-to-r from-transparent via-zinc-300 to-transparent" />
             </div>
           </div>
         </div>

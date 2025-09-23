@@ -12,15 +12,15 @@ const Navbar = () => {
   const [isInvestUsHovered, setIsInvestUsHovered] = useState<boolean>(false);
 
   return (
-    <div className="sticky top-0 w-full z-50 bg-white">
+    <div className="sticky top-0 w-full z-50 bg-white lg:px-0 px-5 lg:pt-0 pt-5">
       <div className="w-full flex justify-between items-center">
         <motion.a
           whileHover={{ scale: 1.02 }}
           href="/"
           className="flex items-center space-x-3"
         >
-          <img src={logo} className="w-24 relative" />
-          <h1 className="text-xl font-bold mt-2">Nevo Capital</h1>
+          <img src={logo} className="lg:w-24 w-16 relative" />
+          <h1 className="lg:text-xl font-bold mt-2">Nevo Capital</h1>
         </motion.a>
 
         {/* Desktop Links */}
@@ -109,25 +109,30 @@ const Navbar = () => {
           onClick={() => setMobileOpen(true)}
           aria-label="Open Menu"
         >
-          <Menu size={30} />
+          <Menu size={20} />
         </button>
 
         {/* Mobile Menu Overlay */}
         <div
-          className={`fixed top-0 right-0 h-full w-full bg-white dark:bg-black shadow-lg transform transition-transform duration-300 z-20 ps-5 pt-2 ${
+          className={`fixed top-0 right-0 h-full bg-white w-[90%] shadow-lg transform transition-transform duration-300 z-20 ps-5 pt-2 ${
             mobileOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
           {/* Close Button */}
           <div className="flex justify-between p-4">
-            <Link to="/">
-              <img src={logo} className="w-24" />
-            </Link>
+            <motion.a
+              whileHover={{ scale: 1.02 }}
+              href="/"
+              className="flex items-center space-x-3"
+            >
+              <img src={logo} className="lg:w-24 w-16 relative" />
+              <h1 className="lg:text-xl font-bold mt-2">Nevo Capital</h1>
+            </motion.a>
             <button
               onClick={() => setMobileOpen(false)}
               aria-label="Close Menu"
             >
-              <X size={30} />
+              <X size={20} />
             </button>
           </div>
 
@@ -138,14 +143,14 @@ const Navbar = () => {
                 key={n.path}
                 to={n.path}
                 onClick={() => setMobileOpen(false)}
-                className="font-medium text-lg hover:underline underline-offset-4 decoration-primary transition-all duration-300"
+                className="font-medium hover:underline underline-offset-4 decoration-primary transition-all duration-300"
               >
                 {n.label}
               </Link>
             ))}
             <Link
               to={"/invest-with-us"}
-              className="font-medium text-lg hover:underline underline-offset-4 decoration-primary transition-all duration-300"
+              className="font-medium hover:underline underline-offset-4 decoration-primary transition-all duration-300"
             >
               Invest with us
             </Link>

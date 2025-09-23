@@ -25,7 +25,7 @@ function RouteComponent() {
     <>
       {/* Disclaimer Modal */}
       <div
-        className={`fixed bottom-0 w-full left-0 bg-black py-5 px-36 z-10 transition-transform duration-300 ease-in-out ${
+        className={`fixed bottom-0 w-full left-0 bg-black py-5 lg:px-36 p-10 z-10 transition-transform duration-300 ease-in-out ${
           disclaimerOpen ? "translate-y-0" : "translate-y-full"
         }`}
       >
@@ -67,7 +67,7 @@ function RouteComponent() {
         <HeroBg />
 
         <div className="flex flex-col mb-4">
-          <img src={hero} className="w-[350px]" />
+          <img src={hero} className="lg:w-[350px] w-[300px]" />
         </div>
 
         <Button

@@ -106,7 +106,7 @@ function InvestmentFunds() {
         {/* Private Credit */}
         <Reveal>
           <div id="PrivateCredit">
-            <h1 className="lg:text-3xl text-2xl">What is Private Credit?</h1>
+            <h1 className="lg:text-3xl text-xl">What is Private Credit?</h1>
             <p className="text-zinc-400 mt-4">
               A powerful asset class designed for predictable returns
             </p>
@@ -136,7 +136,7 @@ function InvestmentFunds() {
         {/* What makes it private */}
         <Reveal>
           <div id="WhatMakesItPrivate" className="lg:mt-16 mt-10">
-            <h1 className="text-3xl">What makes it private?</h1>
+            <h1 className="lg:text-3xl text-xl">What makes it private?</h1>
             <p className="text-sm mt-4">
               Unlike public bonds, these opportunities aren’t traded on open
               markets. Instead, they’re negotiated, illiquid transactions that
@@ -158,7 +158,7 @@ function InvestmentFunds() {
         {/* Fund at a Glance */}
         <Reveal>
           <div id="FundGlance" className="lg:mt-16 mt-10">
-            <h1 className="text-3xl">Our Fund at a Glance</h1>
+            <h1 className="lg:text-3xl text-xl">Our Fund at a Glance</h1>
             <p className="mt-4 text-sm">
               Our Private Credit Fund provides short-term, real estate-backed
               financing for fix-and-flip projects. By combining speed,

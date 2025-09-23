@@ -1,11 +1,13 @@
-import { Link } from "@tanstack/react-router";
-import { X, Menu } from "lucide-react";
+import { Link, useLocation } from "@tanstack/react-router";
+import { X, Menu, Phone, Mail } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { nav } from "@/constants/nav";
 import { logo } from "@/assets";
 
 const Navbar = () => {
+  const location = useLocation();
+
   const [mobileOpen, setMobileOpen] = useState(false);
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
   const [isHovered, setIsHovered] = useState<boolean>(false);
@@ -119,7 +121,7 @@ const Navbar = () => {
           }`}
         >
           {/* Close Button */}
-          <div className="flex justify-between p-4">
+          <div className="flex justify-between px-4">
             <motion.a
               whileHover={{ scale: 1.02 }}
               href="/"
@@ -137,12 +139,15 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Links */}
-          <div className="flex flex-col space-y-6 p-4">
+          <div className="flex flex-col space-y-6 p-4 mt-5">
             {nav.map((n) => (
               <Link
                 key={n.path}
                 to={n.path}
                 onClick={() => setMobileOpen(false)}
+                activeProps={{
+                  className: "underline decoration-2 underline-offset-3",
+                }}
                 className="font-medium hover:underline underline-offset-4 decoration-primary transition-all duration-300"
               >
                 {n.label}
@@ -150,10 +155,27 @@ const Navbar = () => {
             ))}
             <Link
               to={"/invest-with-us"}
-              className="font-medium hover:underline underline-offset-4 decoration-primary transition-all duration-300"
+              className="relative font-medium hover:underline underline-offset-4 decoration-primary transition-all duration-300"
             >
+              <p
+                className={`w-2 h-2 bg-primary rounded-full absolute ${location.pathname === "/invest-with-us" ? "right-40" : "-left-3"} top-1/2 -translate-y-1/2`}
+              ></p>
               Invest with us
             </Link>
+          </div>
+
+          {/* Contact Info */}
+          <div className="absolute bottom-3 flex flex-col space-y-4 border-t pt-3 px-4">
+            <p>Contact Information</p>
+            <div className="flex space-x-2">
+              <Phone size={16} />
+              <p className="text-xs">+1-248-450-4836</p>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <Mail size={16} />
+              <p className="text-xs">info@nevo-capital.com</p>
+            </div>
           </div>
         </div>
 

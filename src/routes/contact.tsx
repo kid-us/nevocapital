@@ -68,12 +68,12 @@ function RouteComponent() {
                 <p className="text-start font-semibold mb-5">
                   Contact Information
                 </p>
-                <div className="flex items-center space-x-2 text-zinc-500 mb-5">
+                <div className="flex items-center space-x-2 text-zinc-600 mb-5">
                   <Phone size={16} />
                   <p className="text-sm">+1-248-450-4836</p>
                 </div>
 
-                <div className="flex items-center space-x-2 text-zinc-500">
+                <div className="flex items-center space-x-2 text-zinc-600">
                   <Mail size={16} />
                   <p className="textsms">info@nevo-capital.com</p>
                 </div>

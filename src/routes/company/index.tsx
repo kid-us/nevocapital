@@ -96,7 +96,7 @@ function companyPage() {
           <h1 className="lg:text-3xl text-xl">
             Building a Platform for Alternative Investment Excellence
           </h1>
-          <p className="mt-4 text-sm text-zinc-500">
+          <p className="mt-4 text-sm text-zinc-600">
             Nevo Capital is a fund management firm focused on delivering
             institutional-quality opportunities in private markets—starting with
             our flagship Private Credit Fund.
@@ -107,7 +107,7 @@ function companyPage() {
           {/* Who We are */}
           <div className="lg:mt-16 mt-10">
             <h1 className="lg:text-3xl text-xl">Who We Are</h1>
-            <p className="text-sm mt-4 text-zinc-500">
+            <p className="text-sm mt-4 text-zinc-600">
               Nevo Capital is a boutique investment management firm dedicated to
               offering curated alternative strategies for accredited,
               non-accredited investors and family offices. We bring together
@@ -130,7 +130,7 @@ function companyPage() {
                   <img src={team.img} alt={team.name} className="pt-5" />
                 </div>
                 <p className="font-bold mt-4 text-lg">{team.name}</p>
-                <p className="text-sm text-zinc-500">{team.position}</p>
+                <p className="text-sm text-zinc-600">{team.position}</p>
                 <Link
                   to="/company/$companyId"
                   params={{
@@ -154,10 +154,10 @@ function companyPage() {
       <Reveal>
         <div className="lg:mt-16 mt-10">
           <h1 className="lg:text-3xl text-xl">Our Vision</h1>
-          <p className="text-sm text-zinc-500 mt-3">
+          <p className="text-sm text-zinc-600 mt-3">
             Strategic Growth, Built on Principles
           </p>
-          <p className="mt-4 text-sm">
+          <p className="mt-4 text-sm text-zinc-600">
             Nevo Capital was founded to deliver institutional-quality access to
             private markets. Our focus is on providing carefully structured
             opportunities that prioritize capital protection and consistent
@@ -226,7 +226,7 @@ function companyPage() {
               </div>
               <div className="flex flex-col lg:col-span-3">
                 <p className="font-semibold">{content.title}</p>
-                <p className="text-zinc-500 text-sm">{content.desc}</p>
+                <p className="text-zinc-600 text-sm">{content.desc}</p>
               </div>
             </div>
           ))}

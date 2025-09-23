@@ -86,18 +86,20 @@ function CompanyMembersPage() {
   return (
     <div>
       {selectedMember && (
-        <div className="max-w-3xl mx-auto mt-24">
-          <h1 className="text-2xl">{selectedMember.name}</h1>
+        <div className="lg:max-w-3xl mx-auto lg:mt-24 mt-16 px-6 lg:px-0">
+          <h1 className="lg:text-2xl text-xl">{selectedMember.name}</h1>
           <p className="text-sm text-zinc-500">{selectedMember.role}</p>
           <Reveal>
-            <div className="grid grid-cols-2 gap-y-5 mt-5">
+            <div className="grid lg:grid-cols-2 gap-y-5 mt-5">
               <img
                 src={selectedMember.image}
                 alt={selectedMember.name}
                 className="h-full object-cover w-[320px]"
               />
               <div>
-                <h3 className="text-2xl">About {selectedMember.name}</h3>
+                <h3 className="lg:text-2xl text-xl">
+                  About {selectedMember.name}
+                </h3>
                 <hr className="border-primary my-4" />
                 <p className="text-sm text-zinc-500">{selectedMember.about}</p>
 
@@ -115,8 +117,8 @@ function CompanyMembersPage() {
 
           {/* Background and Education */}
           <Reveal>
-            <div className="mt-14">
-              <h1 className="text-2xl">Background & Education</h1>
+            <div className="lg:mt-14 mt-8">
+              <h1 className="lg:text-2xl text-xl">Background & Education</h1>
               <p className="mt-3 text-sm text-zinc-600">
                 {selectedMember.backgroundEducation}
               </p>
@@ -125,8 +127,8 @@ function CompanyMembersPage() {
 
           {/* Current Role */}
           <Reveal>
-            <div className="mt-14">
-              <h1 className="text-2xl">Career Path</h1>
+            <div className="lg:mt-14 mt-8">
+              <h1 className="lg:text-2xl text-xl">Career Path</h1>
               <p className="mt-3 text-sm text-zinc-600">
                 {selectedMember.careerPath}
               </p>
@@ -135,8 +137,10 @@ function CompanyMembersPage() {
 
           {/* Current Role at Nevo Capital */}
           <Reveal>
-            <div className="mt-14">
-              <h1 className="text-2xl">Current Role at Nevo Capital</h1>
+            <div className="lg:mt-14 mt-8">
+              <h1 className="lg:text-2xl text-xl">
+                Current Role at Nevo Capital
+              </h1>
               <p className="mt-3 text-sm text-zinc-600">
                 {selectedMember.currentRole}
               </p>
@@ -145,8 +149,8 @@ function CompanyMembersPage() {
 
           {/* Beyond Business */}
           <Reveal>
-            <div className="mt-14">
-              <h1 className="text-2xl">Beyond Business</h1>
+            <div className="lg:mt-14 mt-8">
+              <h1 className="lg:text-2xl text-xl">Beyond Business</h1>
               <p className="mt-3 text-sm text-zinc-600">
                 {selectedMember.beyondBusiness}
               </p>

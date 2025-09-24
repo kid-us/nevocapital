@@ -26,6 +26,12 @@ import hero from "./hero.svg";
 import background from "./background.svg";
 import yieldGraph from "./yieldGraph.svg";
 import graph2 from "./graph2.svg";
+import grid from "./grid.svg";
+import dollar from "./dollar.svg";
+import building from "./building.svg";
+import invest from "./invest.svg";
+import hammer from "./hammer.svg";
+import lockUp2 from "./lockup.svg";
 
 export {
   logo,
@@ -55,4 +61,10 @@ export {
   yieldGraph,
   graph2,
   institutionalPng,
+  grid,
+  building,
+  dollar,
+  hammer,
+  invest,
+  lockUp2,
 };

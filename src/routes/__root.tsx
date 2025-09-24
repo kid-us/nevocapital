@@ -35,7 +35,7 @@ const RootLayout = () => {
           onClick={() => {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
-          className="flex justify-center items-center bg-primary fixed bottom-5 right-20 rounded-full w-10 h-10 border border-zinc-300 shadow cursor-pointer transition-opacity duration-300"
+          className="flex justify-center items-center bg-primary fixed bottom-5 md:right-20 right-10 rounded-full w-10 h-10 border border-zinc-300 shadow cursor-pointer transition-opacity duration-300"
         >
           <ArrowUpFromDot size={15} />
         </button>

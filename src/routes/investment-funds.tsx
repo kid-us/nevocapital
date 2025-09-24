@@ -1,19 +1,21 @@
 import { useState, useEffect } from "react";
 import {
   directLending,
-  firstPosition,
   graph2,
+  grid,
   higherYields,
-  lockUp,
-  minimumInvestment,
-  regulation,
-  stable,
-  targetInvestor,
   yieldGraph,
+  invest,
+  dollar,
+  building,
+  hammer,
+  lockUp2,
+  stable,
 } from "@/assets";
 import { createFileRoute } from "@tanstack/react-router";
 import Reveal from "@/components/Revel";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 export const Route = createFileRoute("/investment-funds")({
   component: InvestmentFunds,
@@ -42,13 +44,13 @@ const contents: Contents[] = [
   { id: 3, title: "Direct Lending", img: directLending },
 ];
 
-const ourGlance: Contents[] = [
-  { id: 1, img: targetInvestor, title: "Target Investor Return 10%+ annually" },
-  { id: 2, img: minimumInvestment, title: "Minimum Investment $50,000" },
-  { id: 3, img: regulation, title: "Regulation Type Reg D 506(b), 3(C)(1)" },
-  { id: 4, img: firstPosition, title: "First Position Line on Real property" },
-  { id: 5, img: lockUp, title: "Lock Up Period 12 months" },
-];
+// const ourGlance: Contents[] = [
+//   { id: 1, img: targetInvestor, title: "Target Investor Return 10%+ annually" },
+//   { id: 2, img: minimumInvestment, title: "Minimum Investment $50,000" },
+//   { id: 3, img: regulation, title: "Regulation Type Reg D 506(b), 3(C)(1)" },
+//   { id: 4, img: firstPosition, title: "First Position Line on Real property" },
+//   { id: 5, img: lockUp, title: "Lock Up Period 12 months" },
+// ];
 
 function InvestmentFunds() {
   const [currentSection, setCurrentSection] = useState<string>("PrivateCredit");
@@ -111,7 +113,7 @@ function InvestmentFunds() {
               : "translate-x-0 opacity-100 visible"
           }`}
         >
-          <div className="sticky top-84 space-y-4 border-r pt-44">
+          <div className="sticky top-44 space-y-4 border-r pt-44">
             {tabs.map((tab) => (
               <Reveal key={tab.id}>
                 <p
@@ -214,7 +216,204 @@ function InvestmentFunds() {
             </p>
           </Reveal>
 
-          <div className="my-6 lg:grid md:grid-cols-2 gap-5">
+          <div className="mt-10 relative">
+            <img src={grid} alt="Grid" className="w-full" />
+            {/* Large Device */}
+            <div className="md:block hidden">
+              {/* Target Return */}
+              <motion.div
+                initial={{ x: -200, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 50,
+                  damping: 20,
+                  duration: 0.6,
+                }}
+                className="md:w-[265px] w-[150px] md:absolute top-5 left-5 z-10"
+              >
+                <img src={invest} className="w-full" alt="Invest" />
+                <p className={"text-xs md:text[15px] md:mt-0 mt-1"}>
+                  Target Investor Return 10% + annually
+                </p>
+              </motion.div>
+              {/* Minimum Investor */}
+              <motion.div
+                initial={{ x: 200, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 50,
+                  damping: 20,
+                  duration: 0.6,
+                }}
+                className="md:w-[265px] w-[150px] md:absolute top-21 right-5 z-10"
+              >
+                <img src={dollar} className="w-full" alt="Dollar" />
+                <p className={"text-xs md:text[15px] md:mt-0 mt-1"}>
+                  Minimum Investment $50,000
+                </p>
+              </motion.div>
+
+              {/* Regulation Type */}
+              <motion.div
+                initial={{ x: -200, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 50,
+                  damping: 20,
+                  duration: 0.6,
+                }}
+                className="md:w-[265px] w-[150px] md:absolute top-52 left-5 z-10"
+              >
+                <img src={hammer} className="w-full" alt="Regulation" />
+                <p className={"text-xs md:text[15px] md:mt-0 mt-1"}>
+                  Regulation Type Reg D 506(b), 3(c)(1)
+                </p>
+              </motion.div>
+
+              {/* First Position */}
+              <motion.div
+                initial={{ x: 200, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 50,
+                  damping: 20,
+                  duration: 0.6,
+                }}
+                className="md:w-[265px] w-[150px] md:absolute top-67 right-5 z-10"
+              >
+                <img src={building} className="w-full" alt="Property" />
+                <p className={"text-xs md:text[15px] md:mt-0 mt-1"}>
+                  First Position Line on Real Property
+                </p>
+              </motion.div>
+
+              {/* Lock Up */}
+              <motion.div
+                initial={{ x: -200, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 50,
+                  damping: 20,
+                  duration: 0.6,
+                }}
+                className="md:w-[265px] w-[150px] md:absolute top-98 left-5 z-10"
+              >
+                <img src={lockUp2} className="w-full" alt="12 Month" />
+                <p className={"text-xs md:text[15px] md:mt-0 mt-1"}>
+                  Lock Up Period 12 Months
+                </p>
+              </motion.div>
+            </div>
+
+            {/* Small Device */}
+            <div className="md:hidden grid grid-cols-2 gap-x-4 absolute top-0 space-y-5">
+              {/* Target Return */}
+              <motion.div
+                initial={{ x: -200, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 50,
+                  damping: 20,
+                  duration: 0.6,
+                }}
+                className="md:w-[265px] w-[150px] md:absolute top-5 left-5 z-10"
+              >
+                <img src={invest} className="w-full" alt="Invest" />
+                <p className={"text-xs md:text[15px] md:mt-0 mt-1"}>
+                  Target Investor Return 10% + annually
+                </p>
+              </motion.div>
+              {/* Minimum Investor */}
+              <motion.div
+                initial={{ x: 200, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 50,
+                  damping: 20,
+                  duration: 0.6,
+                }}
+                className="md:w-[265px] w-[150px] md:absolute top-21 right-5 z-10"
+              >
+                <img src={dollar} className="w-full" alt="Dollar" />
+                <p className={"text-xs md:text[15px] md:mt-0 mt-1"}>
+                  Minimum Investment $50,000
+                </p>
+              </motion.div>
+
+              {/* Regulation Type */}
+              <motion.div
+                initial={{ x: -200, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 50,
+                  damping: 20,
+                  duration: 0.6,
+                }}
+                className="md:w-[265px] w-[150px] md:absolute top-52 left-5 z-10"
+              >
+                <img src={hammer} className="w-full" alt="Regulation" />
+                <p className={"text-xs md:text[15px] md:mt-0 mt-1"}>
+                  Regulation Type Reg D 506(b), 3(c)(1)
+                </p>
+              </motion.div>
+
+              {/* First Position */}
+              <motion.div
+                initial={{ x: 200, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 50,
+                  damping: 20,
+                  duration: 0.6,
+                }}
+                className="md:w-[265px] w-[150px] md:absolute top-67 right-5 z-10"
+              >
+                <img src={building} className="w-full" alt="Property" />
+                <p className={"text-xs md:text[15px] md:mt-0 mt-1"}>
+                  First Position Line on Real Property
+                </p>
+              </motion.div>
+
+              {/* Lock Up */}
+              <motion.div
+                initial={{ x: -200, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 50,
+                  damping: 20,
+                  duration: 0.6,
+                }}
+                className="md:w-[265px] w-[150px] md:absolute top-98 left-5 z-10"
+              >
+                <img src={lockUp2} className="w-full" alt="12 Month" />
+                <p className={"text-xs md:text[15px] md:mt-0 mt-1"}>
+                  Lock Up Period 12 Months
+                </p>
+              </motion.div>
+            </div>
+          </div>
+
+          {/* <div className="my-6 lg:grid md:grid-cols-2 gap-5">
             {ourGlance.map((glance) => (
               <Reveal key={glance.id}>
                 <div className="lg:my-0 my-5">
@@ -223,7 +422,7 @@ function InvestmentFunds() {
                 </div>
               </Reveal>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
 

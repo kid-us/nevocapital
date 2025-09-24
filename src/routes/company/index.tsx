@@ -14,6 +14,7 @@ import Reveal from "@/components/Revel";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { useEffect, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export const Route = createFileRoute("/company/")({
   component: companyPage,
@@ -89,9 +90,11 @@ const contents: Content[] = [
 ];
 
 function companyPage() {
+  const [hideSidebarLink, setHideSidebarLink] = useState<boolean>(false);
   const [currentSection, setCurrentSection] =
     useState<string>("BuildingPlatform");
 
+  // Observer
   useEffect(() => {
     const sections = document.querySelectorAll<HTMLElement>("h1[id], div[id]");
 
@@ -116,6 +119,11 @@ function companyPage() {
       sections.forEach((section) => observer.unobserve(section));
     };
   }, []);
+
+  // Toggle handler
+  const toggleSidebarLink = () => {
+    setHideSidebarLink(!hideSidebarLink);
+  };
 
   return (
     <div className="lg:grid lg:grid-cols-12 gap-x-5 lg:max-w-5xl max-w-3xl mx-auto lg:mt-24 mt-16 lg:px-0 px-6">
@@ -305,30 +313,46 @@ function companyPage() {
       </div>
 
       {/* Right Sidebar Links */}
-      <div className="lg:block hidden col-span-3">
-        <div className="sticky top-28 flex flex-col space-y-2">
-          {[
-            {
-              id: "BuildingPlatform",
-              label:
-                "Building a Platform for Alternative Investment Excellence",
-            },
-            // { id: "WhoWeAre", label: "Who We Are" },
-            { id: "MeetTheTeam", label: "Meet the Team" },
-            { id: "OurVision", label: "Our Vision" },
-            { id: "WhyPartnerWithUs", label: "Why Partner With Us" },
-          ].map((link) => (
-            <Reveal key={link.id}>
-              <a
-                href={`#${link.id}`}
-                className={`text-sm cursor-pointer ${
-                  currentSection === link.id ? "font-bold" : "text-zinc-500"
-                }`}
-              >
-                {link.label}
-              </a>
-            </Reveal>
-          ))}
+      <div className="lg:block hidden col-span-3 relative">
+        {/* Toggle Button (always visible) */}
+        <div
+          onClick={toggleSidebarLink}
+          className="absolute top-10 -right-8 cursor-pointer z-20 bg-primary/50 hover:bg-primary transition-all duration-200 h-10 mt-5 w-5 flex items-center"
+        >
+          {hideSidebarLink ? <ChevronLeft /> : <ChevronRight />}
+        </div>
+
+        {/* Hideable Sidebar Links */}
+        <div
+          className={`relative transition-all duration-300 ease-in-out ${
+            hideSidebarLink
+              ? "translate-x-full opacity-0 invisible"
+              : "translate-x-0 opacity-100 visible"
+          }`}
+        >
+          <div className="sticky top-28 flex flex-col space-y-2">
+            {[
+              {
+                id: "BuildingPlatform",
+                label:
+                  "Building a Platform for Alternative Investment Excellence",
+              },
+              { id: "MeetTheTeam", label: "Meet the Team" },
+              { id: "OurVision", label: "Our Vision" },
+              { id: "WhyPartnerWithUs", label: "Why Partner With Us" },
+            ].map((link) => (
+              <Reveal key={link.id}>
+                <a
+                  href={`#${link.id}`}
+                  className={`text-sm cursor-pointer ${
+                    currentSection === link.id ? "font-bold" : "text-zinc-500"
+                  }`}
+                >
+                  {link.label}
+                </a>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </div>
     </div>

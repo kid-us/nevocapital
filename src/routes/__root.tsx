@@ -11,7 +11,7 @@ const RootLayout = () => {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY < 200) {
+      if (window.scrollY > 200) {
         setShowScrollTop(true);
       } else {
         setShowScrollTop(false);

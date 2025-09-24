@@ -91,22 +91,30 @@ function companyPage() {
   // useEffect(())
   return (
     <div className="max-w-3xl mx-auto lg:mt-24 mt-16 lg:px-0 px-6">
-      <Reveal>
-        <div>
+      <div>
+        <Reveal>
           <h1 className="lg:text-3xl text-xl">
             Building a Platform for Alternative Investment Excellence
           </h1>
+        </Reveal>
+        <Reveal>
           <p className="mt-4 text-sm text-zinc-600">
             Nevo Capital is a fund management firm focused on delivering
             institutional-quality opportunities in private markets—starting with
             our flagship Private Credit Fund.
           </p>
+        </Reveal>
 
+        <Reveal>
           <img src={comapnyGraph} className="my-10" alt="Company" />
+        </Reveal>
 
-          {/* Who We are */}
-          <div className="lg:mt-28 mt-16">
+        {/* Who We are */}
+        <div className="lg:mt-28 mt-16">
+          <Reveal>
             <h1 className="lg:text-3xl text-xl">Who We Are</h1>
+          </Reveal>
+          <Reveal>
             <p className="text-sm mt-4 text-zinc-600">
               Nevo Capital is a boutique investment management firm dedicated to
               offering curated alternative strategies for accredited,
@@ -115,17 +123,19 @@ function companyPage() {
               forward-thinking approach to build a diverse portfolio of
               opportunities.
             </p>
-          </div>
+          </Reveal>
         </div>
-      </Reveal>
+      </div>
 
       {/* Meet the Team */}
-      <Reveal>
-        <div className="lg:mt-28 mt-16">
+      <div className="lg:mt-28 mt-16">
+        <Reveal>
           <h1 className="lg:text-3xl text-xl">Meet the Team</h1>
-          <div className="grid md:grid-cols-3 grid-cols-1 gap-5 mt-5">
-            {teams.map((team) => (
-              <div key={team.id}>
+        </Reveal>
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-5 mt-5">
+          {teams.map((team) => (
+            <Reveal key={team.id}>
+              <div>
                 <div className="bg-[#ebebeb]">
                   <img src={team.img} alt={team.name} className="pt-5" />
                 </div>
@@ -145,18 +155,22 @@ function companyPage() {
                   />
                 </Link>
               </div>
-            ))}
-          </div>
+            </Reveal>
+          ))}
         </div>
-      </Reveal>
+      </div>
 
       {/* Our Vision */}
-      <Reveal>
-        <div className="lg:mt-28 mt-16">
+      <div className="lg:mt-28 mt-16">
+        <Reveal>
           <h1 className="lg:text-3xl text-xl">Our Vision</h1>
+        </Reveal>
+        <Reveal>
           <p className="text-sm text-zinc-600 mt-3">
             Strategic Growth, Built on Principles
           </p>
+        </Reveal>
+        <Reveal>
           <p className="mt-4 text-sm text-zinc-600">
             Nevo Capital was founded to deliver institutional-quality access to
             private markets. Our focus is on providing carefully structured
@@ -165,49 +179,76 @@ function companyPage() {
             our broader mission is to offer diversified strategies that align
             with the long-term goals of sophisticated investors.
           </p>
-          <div className="relative mt-8">
-            <div className="grid lg:grid-cols-3">
-              <div className="lg:block flex items-center">
+        </Reveal>
+
+        <div className="relative mt-8">
+          <div className="grid lg:grid-cols-3">
+            <div className="lg:block flex items-center">
+              <Reveal>
                 <div className="lg:hidden block w-6 border-t"></div>
-                <div className="lg:mt-0 mt-10 ms-2">
+              </Reveal>
+              <div className="lg:mt-0 mt-10 ms-2">
+                <Reveal>
                   <p className="text-sm">Present</p>
+                </Reveal>
+                <Reveal>
                   <div className="lg:block hidden h-6 border-l"></div>
+                </Reveal>
+                <Reveal>
                   <p className="lg:mt-3 mt-1 text-sm font-semibold">
                     Private Credit Fund
                   </p>
-                </div>
+                </Reveal>
               </div>
-              <div className="lg:block flex items-center">
+            </div>
+            <div className="lg:block flex items-center">
+              <Reveal>
                 <div className="lg:hidden block w-6 border-t"></div>
-                <div className="lg:mt-0 mt-5 ms-2">
+              </Reveal>
+              <div className="lg:mt-0 mt-5 ms-2">
+                <Reveal>
                   <p className="text-sm">Near Future</p>
+                </Reveal>
+                <Reveal>
                   <div className="lg:block hidden h-6 border-l"></div>
+                </Reveal>
+                <Reveal>
                   <p className="lg:mt-3 mt-1 text-sm font-semibold">
                     Additional Real State Strategies
                   </p>
-                </div>
+                </Reveal>
               </div>
-              <div className="lg:block flex items-center">
+            </div>
+            <div className="lg:block flex items-center">
+              <Reveal>
                 <div className="lg:hidden block w-6 border-t"></div>
-                <div className="lg:mt-0 mt-5 ms-2">
+              </Reveal>
+              <div className="lg:mt-0 mt-5 ms-2">
+                <Reveal>
                   <p className="text-sm">Long Run</p>
+                </Reveal>
+                <Reveal>
                   <div className="lg:block hidden h-6 border-l"></div>
+                </Reveal>
+                <Reveal>
                   <p className="lg:mt-3 mt-1 text-sm font-semibold">
                     Broader Alternative Investments
                   </p>
-                </div>
+                </Reveal>
               </div>
-              <div className="absolute left-0 top-5 my-3 lg:w-full lg:h-[2px] w-[2px] h-full bg-gradient-to-r from-transparent via-zinc-300 to-transparent" />
             </div>
+            <div className="absolute left-0 top-5 my-3 lg:w-full lg:h-[2px] w-[2px] h-full bg-gradient-to-r from-transparent via-zinc-300 to-transparent" />
           </div>
         </div>
-      </Reveal>
+      </div>
 
       {/* Why Partner with us */}
-      <Reveal>
-        <div className="lg:mt-28 mt-16 mb-10">
+      <div className="lg:mt-28 mt-16 mb-10">
+        <Reveal>
           <h1 className="lg:text-3xl text-xl mb-4">Why Partner With Us</h1>
-          {contents.map((content) => (
+        </Reveal>
+        {contents.map((content) => (
+          <Reveal key={content.id}>
             <div
               key={content.id}
               className="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-1 items-center gap-5 mt-2"
@@ -229,9 +270,9 @@ function companyPage() {
                 <p className="text-zinc-600 text-sm">{content.desc}</p>
               </div>
             </div>
-          ))}
-        </div>
-      </Reveal>
+          </Reveal>
+        ))}
+      </div>
     </div>
   );
 }

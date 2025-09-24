@@ -105,7 +105,7 @@ function companyPage() {
           <img src={comapnyGraph} className="my-10" alt="Company" />
 
           {/* Who We are */}
-          <div className="lg:mt-16 mt-10">
+          <div className="lg:mt-28 mt-16">
             <h1 className="lg:text-3xl text-xl">Who We Are</h1>
             <p className="text-sm mt-4 text-zinc-600">
               Nevo Capital is a boutique investment management firm dedicated to
@@ -121,7 +121,7 @@ function companyPage() {
 
       {/* Meet the Team */}
       <Reveal>
-        <div className="lg:mt-16 mt-10">
+        <div className="lg:mt-28 mt-16">
           <h1 className="lg:text-3xl text-xl">Meet the Team</h1>
           <div className="grid md:grid-cols-3 grid-cols-1 gap-5 mt-5">
             {teams.map((team) => (
@@ -152,7 +152,7 @@ function companyPage() {
 
       {/* Our Vision */}
       <Reveal>
-        <div className="lg:mt-16 mt-10">
+        <div className="lg:mt-28 mt-16">
           <h1 className="lg:text-3xl text-xl">Our Vision</h1>
           <p className="text-sm text-zinc-600 mt-3">
             Strategic Growth, Built on Principles
@@ -205,7 +205,7 @@ function companyPage() {
 
       {/* Why Partner with us */}
       <Reveal>
-        <div className="lg:mt-16 mt-10 mb-10">
+        <div className="lg:mt-28 mt-16 mb-10">
           <h1 className="lg:text-3xl text-xl mb-4">Why Partner With Us</h1>
           {contents.map((content) => (
             <div

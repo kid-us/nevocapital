@@ -135,7 +135,7 @@ function InvestmentFunds() {
 
         {/* What makes it private */}
         <Reveal>
-          <div id="WhatMakesItPrivate" className="lg:mt-16 mt-10">
+          <div id="WhatMakesItPrivate" className="lg:mt-28 mt-16">
             <h1 className="lg:text-3xl text-xl">What makes it private?</h1>
             <p className="text-sm mt-4">
               Unlike public bonds, these opportunities aren’t traded on open
@@ -157,7 +157,7 @@ function InvestmentFunds() {
 
         {/* Fund at a Glance */}
         <Reveal>
-          <div id="FundGlance" className="lg:mt-16 mt-10">
+          <div id="FundGlance" className="lg:mt-28 mt-16">
             <h1 className="lg:text-3xl text-xl">Our Fund at a Glance</h1>
             <p className="mt-4 text-sm">
               Our Private Credit Fund provides short-term, real estate-backed

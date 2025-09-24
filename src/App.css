@@ -17,6 +17,7 @@ body {
   font-family: "Mozilla Headline", sans-serif;
   font-optical-sizing: auto;
   text-align: justify;
+  scroll-behavior: smooth !important;
 }
 
 /* Custom Scrollbar */

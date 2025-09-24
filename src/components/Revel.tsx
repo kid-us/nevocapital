@@ -8,7 +8,7 @@ interface Props {
 const Reveal = ({ children }: Props) => {
   const ref = useRef(null);
 
-  const isInView = useInView(ref, { once: false });
+  const isInView = useInView(ref, { once: true });
 
   const mainControls = useAnimation();
 

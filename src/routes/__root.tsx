@@ -3,15 +3,45 @@ import "../App.css";
 
 import { createRootRoute, Outlet } from "@tanstack/react-router";
 import Footer from "@/components/Footer";
+import { ArrowUpFromDot } from "lucide-react";
+import { useEffect, useState } from "react";
 
-const RootLayout = () => (
-  <div className="max-w-6xl mx-auto">
-    <Navbar />
-    <div className="mt-10">
-      <Outlet />
+const RootLayout = () => {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.scrollY < 200) {
+        setShowScrollTop(true);
+      } else {
+        setShowScrollTop(false);
+      }
+    };
+
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
+  return (
+    <div className="max-w-6xl mx-auto">
+      <Navbar />
+      <div className="mt-10">
+        <Outlet />
+      </div>
+      <Footer />
+
+      {showScrollTop && (
+        <button
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+          className="flex justify-center items-center bg-primary fixed bottom-5 right-20 rounded-full w-10 h-10 border border-zinc-300 shadow cursor-pointer transition-opacity duration-300"
+        >
+          <ArrowUpFromDot size={15} />
+        </button>
+      )}
     </div>
-    <Footer />
-  </div>
-);
+  );
+};
 
 export const Route = createRootRoute({ component: RootLayout });

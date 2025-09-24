@@ -27,7 +27,7 @@ const Navbar = () => {
 
         {/* Desktop Links */}
         <div
-          className="hidden md:flex items-center lg:space-x-10 space-x-7 relative"
+          className="hidden lg:flex items-center lg:space-x-10 space-x-7 relative"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
@@ -107,7 +107,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden z-10"
+          className="lg:hidden z-10"
           onClick={() => setMobileOpen(true)}
           aria-label="Open Menu"
         >

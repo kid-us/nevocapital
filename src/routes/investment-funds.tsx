@@ -24,7 +24,7 @@ interface TabProps {
   title: string;
 }
 
-interface Contents {
+export interface Contents {
   id: number;
   img: string;
   title: string;
@@ -68,7 +68,7 @@ function InvestmentFunds() {
       },
       {
         root: null,
-        rootMargin: "-50% 0px -50% 0px",
+        rootMargin: "20% 0px -50% 0px",
         threshold: 0,
       }
     );

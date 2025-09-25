@@ -50,12 +50,14 @@ const Footer = () => {
               </div>
             ))}
             {/* Invest with Us */}
-            <Link
-              to={"/invest-with-us"}
-              className="dark:text-white font-medium rounded hover:underline hover:underline-offset-4 decoration-cta transition-[underline-offset,decoration-color] duration-300 lg:text-center text-justify text-xs"
-            >
-              Invest with Us
-            </Link>
+            <div>
+              <Link
+                to={"/invest-with-us"}
+                className="dark:text-white font-medium rounded hover:underline hover:underline-offset-4 decoration-cta transition-[underline-offset,decoration-color] duration-300 lg:text-center text-justify text-xs"
+              >
+                Invest with Us
+              </Link>
+            </div>
           </div>
         </div>
       </div>

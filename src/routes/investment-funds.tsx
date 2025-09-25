@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import {
   directLending,
-  graph2,
+  // graph2,
   grid,
   higherYields,
   yieldGraph,
@@ -196,9 +196,9 @@ function InvestmentFunds() {
           <Reveal>
             <img src={yieldGraph} alt="Yield Graph" className="my-10 w-full" />
           </Reveal>
-          <Reveal>
+          {/* <Reveal>
             <img src={graph2} alt="Yield Graph" className="my-10 w-full" />
-          </Reveal>
+          </Reveal> */}
         </div>
 
         {/* Fund at a Glance */}
@@ -431,7 +431,7 @@ function InvestmentFunds() {
         {/* Toggle Button (always visible) */}
         <div
           onClick={toggleSidebarLink}
-          className="absolute top-0 -right-8 cursor-pointer z-20 bg-primary/50 hover:bg-primary transition-all duration-200 h-10 mt-5 w-5 flex items-center"
+          className="absolute top-0 -right-8 cursor-pointer z-20 bg-primary/50 hover:bg-primary transition-all duration-200 h-16 mt-5 w-5 flex items-center"
         >
           {hideSidebarLink ? <ChevronLeft /> : <ChevronRight />}
         </div>

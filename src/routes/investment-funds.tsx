@@ -4,7 +4,7 @@ import {
   // graph2,
   grid,
   higherYields,
-  yieldGraph,
+  // yieldGraph,
   invest,
   dollar,
   building,
@@ -16,6 +16,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import Reveal from "@/components/Revel";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { ChartBarLabel } from "@/components/Chart";
 
 export const Route = createFileRoute("/investment-funds")({
   component: InvestmentFunds,
@@ -197,7 +198,7 @@ function InvestmentFunds() {
           </Reveal>
 
           <Reveal>
-            <img src={yieldGraph} alt="Yield Graph" className="my-10 w-full" />
+            <ChartBarLabel />
           </Reveal>
           {/* <Reveal>
             <img src={graph2} alt="Yield Graph" className="my-10 w-full" />

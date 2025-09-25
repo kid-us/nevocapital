@@ -17,6 +17,7 @@ import Reveal from "@/components/Revel";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { ChartBarLabel } from "@/components/Chart";
+import type { TOC } from "./company";
 
 export const Route = createFileRoute("/investment-funds")({
   component: InvestmentFunds,
@@ -53,6 +54,12 @@ const contents: Contents[] = [
 //   { id: 5, img: lockUp, title: "Lock Up Period 12 months" },
 // ];
 
+const toc: TOC[] = [
+  { id: "PrivateCredit", label: "What is Private Credit?" },
+  { id: "WhatMakesItPrivate", label: "What makes it private?" },
+  { id: "FundGlance", label: "Our Fund at a Glance" },
+];
+
 function InvestmentFunds() {
   const [currentSection, setCurrentSection] = useState<string>("PrivateCredit");
   const [hideSidebarTab, setHideSidebarTab] = useState<boolean>(false);
@@ -61,28 +68,38 @@ function InvestmentFunds() {
     "Private Credit Fund"
   );
 
+  // Toc Tracker
   useEffect(() => {
-    const sections = document.querySelectorAll("div[id]");
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setCurrentSection(entry.target.id);
+    scrollTo(0, 0);
+
+    const handleScroll = () => {
+      let current = "";
+      for (const t of toc) {
+        const el = document.getElementById(t.id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 100) {
+            current = t.id;
           }
-        });
-      },
-      {
-        root: null,
-        rootMargin: "20% 0px -50% 0px",
-        threshold: 0,
+        }
       }
-    );
 
-    sections.forEach((section) => observer.observe(section));
+      if (window.scrollY < 150) {
+        current = toc[0].id;
+      }
 
-    return () => {
-      sections.forEach((section) => observer.unobserve(section));
+      if (
+        window.innerHeight + window.scrollY >=
+        document.body.offsetHeight - 50
+      ) {
+        current = toc[toc.length - 1].id;
+      }
+
+      setCurrentSection(current);
     };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // Toggle sidebar visibility

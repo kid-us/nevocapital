@@ -39,6 +39,11 @@ interface Content {
   hoverImg: string;
 }
 
+export interface TOC {
+  id: string;
+  label: string;
+}
+
 // Teams
 const teams: TheTeam[] = [
   {
@@ -89,35 +94,54 @@ const contents: Content[] = [
   },
 ];
 
+const toc: TOC[] = [
+  {
+    id: "BuildingPlatform",
+    label: "Building a Platform for Alternative Investment Excellence",
+  },
+  { id: "WhoWeAre", label: "Who We Are" },
+  { id: "MeetTheTeam", label: "Meet the Team" },
+  { id: "OurVision", label: "Our Vision" },
+  { id: "WhyPartnerWithUs", label: "Why Partner With Us" },
+];
+
 function companyPage() {
   const [hideSidebarLink, setHideSidebarLink] = useState<boolean>(false);
   const [currentSection, setCurrentSection] =
     useState<string>("BuildingPlatform");
 
-  // Observer
+  // Toc Tracker
   useEffect(() => {
-    const sections = document.querySelectorAll<HTMLElement>("h1[id], div[id]");
+    scrollTo(0, 0);
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setCurrentSection(entry.target.id);
+    const handleScroll = () => {
+      let current = "";
+      for (const t of toc) {
+        const el = document.getElementById(t.id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 100) {
+            current = t.id;
           }
-        });
-      },
-      {
-        root: null,
-        rootMargin: "20% 0px -50% 0px",
-        threshold: 0,
+        }
       }
-    );
 
-    sections.forEach((section) => observer.observe(section));
+      if (window.scrollY < 150) {
+        current = toc[0].id;
+      }
 
-    return () => {
-      sections.forEach((section) => observer.unobserve(section));
+      if (
+        window.innerHeight + window.scrollY >=
+        document.body.offsetHeight - 50
+      ) {
+        current = toc[toc.length - 1].id;
+      }
+
+      setCurrentSection(current);
     };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // Toggle handler
@@ -333,24 +357,15 @@ function companyPage() {
             }`}
           >
             <div className="flex flex-col space-y-2">
-              {[
-                {
-                  id: "BuildingPlatform",
-                  label:
-                    "Building a Platform for Alternative Investment Excellence",
-                },
-                { id: "MeetTheTeam", label: "Meet the Team" },
-                { id: "OurVision", label: "Our Vision" },
-                { id: "WhyPartnerWithUs", label: "Why Partner With Us" },
-              ].map((link) => (
-                <Reveal key={link.id}>
+              {toc.map((t) => (
+                <Reveal key={t.id}>
                   <a
-                    href={`#${link.id}`}
+                    href={`#${t.id}`}
                     className={`text-sm cursor-pointer ${
-                      currentSection === link.id ? "font-bold" : "text-zinc-500"
+                      currentSection === t.id ? "font-bold" : "text-zinc-500"
                     }`}
                   >
-                    {link.label}
+                    {t.label}
                   </a>
                 </Reveal>
               ))}

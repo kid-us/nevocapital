@@ -96,38 +96,41 @@ function InvestmentFunds() {
   return (
     <div className="relative lg:grid grid-cols-12 gap-x-5 lg:mt-24 mt-16 mb-20">
       {/* Left Tabs */}
-      <div className="col-span-2 lg:flex hidden flex-col relative">
-        {/* Toggle Button (always visible) */}
-        <div
-          onClick={toggleSidebarTab}
-          className="absolute top-44 -left-8 cursor-pointer z-20 bg-primary/50 hover:bg-primary transition-all duration-200 h-16 mt-10 w-5 flex items-center"
-        >
-          {hideSidebarTab ? <ChevronRight /> : <ChevronLeft />}
-        </div>
+      <div className="col-span-2 lg:flex hidden flex-col relative border-r">
+        {/* Sticky Sidebar Container */}
+        <div className="sticky top-60">
+          {/* Toggle Button (moves with the sidebar) */}
+          <div
+            onClick={toggleSidebarTab}
+            className="absolute -left-8 top-3 cursor-pointer z-20 bg-primary/50 hover:bg-primary transition-all duration-200 h-10 w-5 flex items-center justify-center"
+          >
+            {hideSidebarTab ? <ChevronRight /> : <ChevronLeft />}
+          </div>
 
-        {/* Sidebar Tabs (hideable content) */}
-        <div
-          className={`relative transition-all duration-300 ease-in-out ${
-            hideSidebarTab
-              ? "translate-x-[-100%] opacity-0 invisible"
-              : "translate-x-0 opacity-100 visible"
-          }`}
-        >
-          <div className="sticky top-44 space-y-4 border-r pt-44">
-            {tabs.map((tab) => (
-              <Reveal key={tab.id}>
-                <p
-                  onClick={() => setCurrentTabSection(tab.title)}
-                  className={`ps-4 h-10 flex items-center w-full text-sm cursor-pointer ${
-                    currentTabSection === tab.title
-                      ? "text-black font-medium bg-[#ebebeb]"
-                      : "text-zinc-500"
-                  }`}
-                >
-                  {tab.title}
-                </p>
-              </Reveal>
-            ))}
+          {/* Sidebar Tabs (hideable content) */}
+          <div
+            className={`relative transition-all duration-300 ease-in-out ${
+              hideSidebarTab
+                ? "translate-x-[-100%] opacity-0 invisible"
+                : "translate-x-0 opacity-100 visible"
+            }`}
+          >
+            <div className="flex flex-col space-y-4">
+              {tabs.map((tab) => (
+                <Reveal key={tab.id}>
+                  <p
+                    onClick={() => setCurrentTabSection(tab.title)}
+                    className={`ps-4 h-10 flex items-center w-full text-sm cursor-pointer ${
+                      currentTabSection === tab.title
+                        ? "text-black font-medium bg-[#ebebeb]"
+                        : "text-zinc-500 hover:bg-[#ebebeb]"
+                    }`}
+                  >
+                    {tab.title}
+                  </p>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -171,7 +174,7 @@ function InvestmentFunds() {
         </div>
 
         {/* What makes it private */}
-        <div id="WhatMakesItPrivate" className="lg:mt-28 mt-16">
+        <div id="WhatMakesItPrivate" className="lg:pt-28 pt-16">
           <Reveal>
             <h1 className="lg:text-3xl text-xl">What makes it private?</h1>
           </Reveal>
@@ -202,7 +205,7 @@ function InvestmentFunds() {
         </div>
 
         {/* Fund at a Glance */}
-        <div id="FundGlance" className="lg:mt-28 mt-16">
+        <div id="FundGlance" className="lg:pt-28 pt-16">
           <Reveal>
             <h1 className="lg:text-3xl text-xl">Our Fund at a Glance</h1>
           </Reveal>
@@ -428,39 +431,42 @@ function InvestmentFunds() {
 
       {/* Right Sidebar Links */}
       <div className="lg:block hidden col-span-2 relative">
-        {/* Toggle Button (always visible) */}
-        <div
-          onClick={toggleSidebarLink}
-          className="absolute top-0 -right-8 cursor-pointer z-20 bg-primary/50 hover:bg-primary transition-all duration-200 h-16 mt-5 w-5 flex items-center"
-        >
-          {hideSidebarLink ? <ChevronLeft /> : <ChevronRight />}
-        </div>
+        {/* Sticky Sidebar Container */}
+        <div className="sticky top-60">
+          {/* Toggle Button (moves with the sidebar) */}
+          <div
+            onClick={toggleSidebarLink}
+            className="absolute -right-8 top-0 cursor-pointer z-20 bg-primary/50 hover:bg-primary transition-all duration-200 h-10 w-5 flex items-center justify-center"
+          >
+            {hideSidebarLink ? <ChevronLeft /> : <ChevronRight />}
+          </div>
 
-        {/* Sidebar Links (hideable content) */}
-        <div
-          className={`relative transition-all duration-300 ease-in-out ${
-            hideSidebarLink
-              ? "translate-x-full opacity-0 invisible"
-              : "translate-x-0 opacity-100 visible"
-          }`}
-        >
-          <div className="sticky top-28 flex flex-col space-y-2">
-            {[
-              { id: "PrivateCredit", label: "What is Private Credit?" },
-              { id: "WhatMakesItPrivate", label: "What makes it private?" },
-              { id: "FundGlance", label: "Our Fund at a Glance" },
-            ].map((link) => (
-              <Reveal key={link.id}>
-                <a
-                  href={`#${link.id}`}
-                  className={`text-sm cursor-pointer ${
-                    currentSection === link.id ? "font-bold" : "text-zinc-500"
-                  }`}
-                >
-                  {link.label}
-                </a>
-              </Reveal>
-            ))}
+          {/* Sidebar Links (hideable content) */}
+          <div
+            className={`relative transition-all duration-300 ease-in-out ${
+              hideSidebarLink
+                ? "translate-x-full opacity-0 invisible"
+                : "translate-x-0 opacity-100 visible"
+            }`}
+          >
+            <div className="flex flex-col space-y-2">
+              {[
+                { id: "PrivateCredit", label: "What is Private Credit?" },
+                { id: "WhatMakesItPrivate", label: "What makes it private?" },
+                { id: "FundGlance", label: "Our Fund at a Glance" },
+              ].map((link) => (
+                <Reveal key={link.id}>
+                  <a
+                    href={`#${link.id}`}
+                    className={`text-sm cursor-pointer ${
+                      currentSection === link.id ? "font-bold" : "text-zinc-500"
+                    }`}
+                  >
+                    {link.label}
+                  </a>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -314,44 +314,47 @@ function companyPage() {
 
       {/* Right Sidebar Links */}
       <div className="lg:block hidden col-span-3 relative">
-        {/* Toggle Button (always visible) */}
-        <div
-          onClick={toggleSidebarLink}
-          className="absolute top-10 -right-8 cursor-pointer z-20 bg-primary/50 hover:bg-primary transition-all duration-200 h-10 mt-5 w-5 flex items-center"
-        >
-          {hideSidebarLink ? <ChevronLeft /> : <ChevronRight />}
-        </div>
+        {/* Sticky Sidebar Container */}
+        <div className="sticky top-60">
+          {/* Toggle Button (moves with the sidebar) */}
+          <div
+            onClick={toggleSidebarLink}
+            className="absolute -right-8 cursor-pointer z-20 bg-primary/50 hover:bg-primary transition-all duration-200 h-10 w-5 flex items-center justify-center"
+          >
+            {hideSidebarLink ? <ChevronLeft /> : <ChevronRight />}
+          </div>
 
-        {/* Hideable Sidebar Links */}
-        <div
-          className={`relative transition-all duration-300 ease-in-out ${
-            hideSidebarLink
-              ? "translate-x-full opacity-0 invisible"
-              : "translate-x-0 opacity-100 visible"
-          }`}
-        >
-          <div className="sticky top-28 flex flex-col space-y-2">
-            {[
-              {
-                id: "BuildingPlatform",
-                label:
-                  "Building a Platform for Alternative Investment Excellence",
-              },
-              { id: "MeetTheTeam", label: "Meet the Team" },
-              { id: "OurVision", label: "Our Vision" },
-              { id: "WhyPartnerWithUs", label: "Why Partner With Us" },
-            ].map((link) => (
-              <Reveal key={link.id}>
-                <a
-                  href={`#${link.id}`}
-                  className={`text-sm cursor-pointer ${
-                    currentSection === link.id ? "font-bold" : "text-zinc-500"
-                  }`}
-                >
-                  {link.label}
-                </a>
-              </Reveal>
-            ))}
+          {/* Hideable Sidebar Links */}
+          <div
+            className={`relative transition-all duration-300 ease-in-out ${
+              hideSidebarLink
+                ? "translate-x-full opacity-0 invisible"
+                : "translate-x-0 opacity-100 visible"
+            }`}
+          >
+            <div className="flex flex-col space-y-2">
+              {[
+                {
+                  id: "BuildingPlatform",
+                  label:
+                    "Building a Platform for Alternative Investment Excellence",
+                },
+                { id: "MeetTheTeam", label: "Meet the Team" },
+                { id: "OurVision", label: "Our Vision" },
+                { id: "WhyPartnerWithUs", label: "Why Partner With Us" },
+              ].map((link) => (
+                <Reveal key={link.id}>
+                  <a
+                    href={`#${link.id}`}
+                    className={`text-sm cursor-pointer ${
+                      currentSection === link.id ? "font-bold" : "text-zinc-500"
+                    }`}
+                  >
+                    {link.label}
+                  </a>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </div>
       </div>

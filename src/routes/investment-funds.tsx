@@ -14,7 +14,6 @@ import {
 } from "@/assets";
 import { createFileRoute } from "@tanstack/react-router";
 import Reveal from "@/components/Revel";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { ChartBarLabel } from "@/components/Chart";
 import type { TOC } from "./company";
@@ -46,14 +45,6 @@ const contents: Contents[] = [
   { id: 3, title: "Direct Lending", img: directLending },
 ];
 
-// const ourGlance: Contents[] = [
-//   { id: 1, img: targetInvestor, title: "Target Investor Return 10%+ annually" },
-//   { id: 2, img: minimumInvestment, title: "Minimum Investment $50,000" },
-//   { id: 3, img: regulation, title: "Regulation Type Reg D 506(b), 3(C)(1)" },
-//   { id: 4, img: firstPosition, title: "First Position Line on Real property" },
-//   { id: 5, img: lockUp, title: "Lock Up Period 12 months" },
-// ];
-
 const toc: TOC[] = [
   { id: "PrivateCredit", label: "What is Private Credit?" },
   { id: "WhatMakesItPrivate", label: "What makes it private?" },
@@ -62,8 +53,6 @@ const toc: TOC[] = [
 
 function InvestmentFunds() {
   const [currentSection, setCurrentSection] = useState<string>("PrivateCredit");
-  const [hideSidebarTab, setHideSidebarTab] = useState<boolean>(false);
-  const [hideSidebarLink, setHideSidebarLink] = useState<boolean>(false);
   const [currentTabSection, setCurrentTabSection] = useState<string>(
     "Private Credit Fund"
   );
@@ -102,36 +91,13 @@ function InvestmentFunds() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Toggle sidebar visibility
-  const toggleSidebarTab = () => {
-    setHideSidebarTab(!hideSidebarTab);
-  };
-
-  const toggleSidebarLink = () => {
-    setHideSidebarLink(!hideSidebarLink);
-  };
-
   return (
     <div className="relative lg:grid grid-cols-12 gap-x-5 lg:mt-24 mt-16 mb-20">
       {/* Left Tabs */}
       <div className="col-span-2 lg:flex hidden flex-col relative border-r">
-        {/* Sticky Sidebar Container */}
         <div className="sticky top-60">
-          {/* Toggle Button (moves with the sidebar) */}
           <div
-            onClick={toggleSidebarTab}
-            className="absolute -left-8 top-3 cursor-pointer z-20 bg-primary/50 hover:bg-primary transition-all duration-200 h-10 w-5 flex items-center justify-center"
-          >
-            {hideSidebarTab ? <ChevronRight /> : <ChevronLeft />}
-          </div>
-
-          {/* Sidebar Tabs (hideable content) */}
-          <div
-            className={`relative transition-all duration-300 ease-in-out ${
-              hideSidebarTab
-                ? "translate-x-[-100%] opacity-0 invisible"
-                : "translate-x-0 opacity-100 visible"
-            }`}
+            className={`relative transition-all duration-300 ease-in-out translate-x-0 opacity-100 visible`}
           >
             <div className="flex flex-col space-y-4">
               {tabs.map((tab) => (
@@ -217,9 +183,6 @@ function InvestmentFunds() {
           <Reveal>
             <ChartBarLabel />
           </Reveal>
-          {/* <Reveal>
-            <img src={graph2} alt="Yield Graph" className="my-10 w-full" />
-          </Reveal> */}
         </div>
 
         {/* Fund at a Glance */}
@@ -433,39 +396,14 @@ function InvestmentFunds() {
               </motion.div>
             </div>
           </div>
-
-          {/* <div className="my-6 lg:grid md:grid-cols-2 gap-5">
-            {ourGlance.map((glance) => (
-              <Reveal key={glance.id}>
-                <div className="lg:my-0 my-5">
-                  <img src={glance.img} alt={glance.title} />
-                  <p className="mt-2 lg:mt-0">{glance.title}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div> */}
         </div>
       </div>
 
       {/* Right Sidebar Links */}
       <div className="lg:block hidden col-span-2 relative">
-        {/* Sticky Sidebar Container */}
         <div className="sticky top-60">
-          {/* Toggle Button (moves with the sidebar) */}
           <div
-            onClick={toggleSidebarLink}
-            className="absolute -right-8 top-0 cursor-pointer z-20 bg-primary/50 hover:bg-primary transition-all duration-200 h-10 w-5 flex items-center justify-center"
-          >
-            {hideSidebarLink ? <ChevronLeft /> : <ChevronRight />}
-          </div>
-
-          {/* Sidebar Links (hideable content) */}
-          <div
-            className={`relative transition-all duration-300 ease-in-out ${
-              hideSidebarLink
-                ? "translate-x-full opacity-0 invisible"
-                : "translate-x-0 opacity-100 visible"
-            }`}
+            className={`relative transition-all duration-300 ease-in-out translate-x-0 opacity-100 visible`}
           >
             <div className="flex flex-col space-y-2">
               {[

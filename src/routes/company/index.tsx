@@ -14,7 +14,6 @@ import Reveal from "@/components/Revel";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { useEffect, useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export const Route = createFileRoute("/company/")({
   component: companyPage,
@@ -106,7 +105,6 @@ const toc: TOC[] = [
 ];
 
 function companyPage() {
-  const [hideSidebarLink, setHideSidebarLink] = useState<boolean>(false);
   const [currentSection, setCurrentSection] =
     useState<string>("BuildingPlatform");
 
@@ -143,11 +141,6 @@ function companyPage() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // Toggle handler
-  const toggleSidebarLink = () => {
-    setHideSidebarLink(!hideSidebarLink);
-  };
 
   return (
     <div className="lg:grid lg:grid-cols-12 gap-x-5 lg:max-w-5xl max-w-3xl mx-auto lg:mt-24 mt-16 lg:px-0 px-6">
@@ -338,23 +331,9 @@ function companyPage() {
 
       {/* Right Sidebar Links */}
       <div className="lg:block hidden col-span-3 relative">
-        {/* Sticky Sidebar Container */}
         <div className="sticky top-60">
-          {/* Toggle Button (moves with the sidebar) */}
           <div
-            onClick={toggleSidebarLink}
-            className="absolute -right-8 cursor-pointer z-20 bg-primary/50 hover:bg-primary transition-all duration-200 h-10 w-5 flex items-center justify-center"
-          >
-            {hideSidebarLink ? <ChevronLeft /> : <ChevronRight />}
-          </div>
-
-          {/* Hideable Sidebar Links */}
-          <div
-            className={`relative transition-all duration-300 ease-in-out ${
-              hideSidebarLink
-                ? "translate-x-full opacity-0 invisible"
-                : "translate-x-0 opacity-100 visible"
-            }`}
+            className={`relative transition-all duration-300 ease-in-out translate-x-0 opacity-100 visible`}
           >
             <div className="flex flex-col space-y-2">
               {toc.map((t) => (

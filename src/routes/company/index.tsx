@@ -152,7 +152,7 @@ function companyPage() {
             </h1>
           </Reveal>
           <Reveal>
-            <p className="mt-4 text-sm text-zinc-600">
+            <p className="mt-7 text-sm text-zinc-600">
               Nevo Capital is a fund management firm focused on delivering
               institutional-quality opportunities in private markets—starting
               with our flagship Private Credit Fund.
@@ -160,11 +160,11 @@ function companyPage() {
           </Reveal>
 
           <Reveal>
-            <img src={comapnyGraph} className="my-10" alt="Company" />
+            <img src={comapnyGraph} className="my-16" alt="Company" />
           </Reveal>
 
           {/* Who We are */}
-          <div id="WhoWeAre" className=" pt-16">
+          <div id="WhoWeAre" className="pt-16">
             <Reveal>
               <h1 className="lg:text-3xl text-xl">Who We Are</h1>
             </Reveal>
@@ -182,7 +182,7 @@ function companyPage() {
         </div>
 
         {/* Meet the Team */}
-        <div id="MeetTheTeam" className="lg:pt-28 pt-16">
+        <div id="MeetTheTeam" className="lg:pt-32 pt-20">
           <Reveal>
             <h1 className="lg:text-3xl text-xl">Meet the Team</h1>
           </Reveal>
@@ -215,7 +215,7 @@ function companyPage() {
         </div>
 
         {/* Our Vision */}
-        <div id="OurVision" className="lg:pt-28 pt-16">
+        <div id="OurVision" className="lg:pt-32 pt-20">
           <Reveal>
             <h1 className="lg:text-3xl text-xl">Our Vision</h1>
           </Reveal>
@@ -297,7 +297,7 @@ function companyPage() {
         </div>
 
         {/* Why Partner with us */}
-        <div id="WhyPartnerWithUs" className="lg:pt-28 pt-16 mb-10">
+        <div id="WhyPartnerWithUs" className="lg:pt-32 pt-20 mb-10">
           <Reveal>
             <h1 className="lg:text-3xl text-xl mb-4">Why Partner With Us</h1>
           </Reveal>

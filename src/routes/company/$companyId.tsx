@@ -118,10 +118,10 @@ function CompanyMembersPage() {
             </BreadcrumbList>
           </Breadcrumb>
 
-          <h1 className="lg:text-2xl text-xl mt-8">{selectedMember.name}</h1>
+          <h1 className="lg:text-2xl text-xl mt-10">{selectedMember.name}</h1>
           <p className="text-sm text-zinc-500">{selectedMember.role}</p>
           <Reveal>
-            <div className="grid lg:grid-cols-2 gap-y-5 mt-5">
+            <div className="grid lg:grid-cols-2 gap-y-5 mt-8">
               <img
                 src={selectedMember.image}
                 alt={selectedMember.name}
@@ -148,7 +148,7 @@ function CompanyMembersPage() {
 
           {/* Background and Education */}
           <Reveal>
-            <div className="lg:mt-14 mt-8">
+            <div className="lg:mt-16 mt-10">
               <h1 className="lg:text-2xl text-xl">Background & Education</h1>
               <p className="mt-3 text-sm text-zinc-600">
                 {selectedMember.backgroundEducation}
@@ -158,7 +158,7 @@ function CompanyMembersPage() {
 
           {/* Current Role */}
           <Reveal>
-            <div className="lg:mt-14 mt-8">
+            <div className="lg:mt-16 mt-10">
               <h1 className="lg:text-2xl text-xl">Career Path</h1>
               <p className="mt-3 text-sm text-zinc-600">
                 {selectedMember.careerPath}
@@ -168,7 +168,7 @@ function CompanyMembersPage() {
 
           {/* Current Role at Nevo Capital */}
           <Reveal>
-            <div className="lg:mt-14 mt-8">
+            <div className="lg:mt-16 mt-10">
               <h1 className="lg:text-2xl text-xl">
                 Current Role at Nevo Capital
               </h1>
@@ -180,7 +180,7 @@ function CompanyMembersPage() {
 
           {/* Beyond Business */}
           <Reveal>
-            <div className="lg:mt-14 mt-8">
+            <div className="lg:mt-16 mt-10">
               <h1 className="lg:text-2xl text-xl">Beyond Business</h1>
               <p className="mt-3 text-sm text-zinc-600">
                 {selectedMember.beyondBusiness}

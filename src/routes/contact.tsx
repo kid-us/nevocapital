@@ -52,8 +52,6 @@ function RouteComponent() {
     <div>
       {/* Contact Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:px-20 px-6 py-5 md:py-28">
-        {/* <Reveal>
-        </Reveal> */}
         <div className="flex flex-col justify-center text-center">
           <h1 className="md:text-4xl text-2xl font-bold text-start">
             Connect with Nevo Capital
@@ -82,8 +80,6 @@ function RouteComponent() {
           </div>
         </div>
 
-        {/* <Reveal>
-        </Reveal> */}
         <div className="flex items-center justify-center w-full">
           <Form {...form}>
             <form
@@ -184,7 +180,7 @@ function RouteComponent() {
               {/* Submit Button */}
               <Button
                 type="submit"
-                className="w-full bg-black h-11 mt-5 hover:bg-black/80 transition-all duration-200"
+                className="w-full bg-primary h-11 mt-5 hover:bg-primary/70 hover:text-zinc-500 transition-all duration-200"
               >
                 Submit
               </Button>

@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react";
 import {
   directLending,
-  // graph2,
   grid,
   higherYields,
-  // yieldGraph,
   invest,
   dollar,
   building,
@@ -127,12 +125,12 @@ function InvestmentFunds() {
             <h1 className="lg:text-3xl text-xl">What is Private Credit?</h1>
           </Reveal>
           <Reveal>
-            <p className="text-zinc-400 mt-4">
+            <p className="text-zinc-400 mt-5">
               A powerful asset class designed for predictable returns
             </p>
           </Reveal>
           <Reveal>
-            <p className="mt-5 text-sm">
+            <p className="mt-8 text-sm">
               Private credit—sometimes called private lending—is built on a
               simple idea: lending directly to borrowers for a fixed return.
               Unlike equities that swing with markets, private credit focuses on
@@ -140,8 +138,9 @@ function InvestmentFunds() {
               returns—without stock market volatility.
             </p>
           </Reveal>
+
           {/* Contents */}
-          <div className="my-6 grid lg:grid-cols-3 md:grid-cols-2 gap-5">
+          <div className="my-10 grid lg:grid-cols-3 md:grid-cols-2 gap-5">
             {contents.map((content) => (
               <Reveal key={content.id}>
                 <div className="w-full">
@@ -158,7 +157,7 @@ function InvestmentFunds() {
         </div>
 
         {/* What makes it private */}
-        <div id="WhatMakesItPrivate" className="lg:pt-28 pt-16">
+        <div id="WhatMakesItPrivate" className="lg:pt-32 pt-20">
           <Reveal>
             <h1 className="lg:text-3xl text-xl">What makes it private?</h1>
           </Reveal>
@@ -186,7 +185,7 @@ function InvestmentFunds() {
         </div>
 
         {/* Fund at a Glance */}
-        <div id="FundGlance" className="lg:pt-28 pt-16">
+        <div id="FundGlance" className="lg:pt-32 pt-20">
           <Reveal>
             <h1 className="lg:text-3xl text-xl">Our Fund at a Glance</h1>
           </Reveal>

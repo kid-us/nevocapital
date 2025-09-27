@@ -56,3 +56,8 @@ h6 {
   font-weight: 700;
   font-style: normal;
 }
+
+::selection {
+  background-color: #e0b84d;
+  color: #222;
+}

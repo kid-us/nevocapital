@@ -6,7 +6,7 @@ const HeroBg = () => {
       ".background-svg line"
     ) as NodeListOf<SVGLineElement>;
     const defaultColor = "#CDCDCD";
-    const highlightColor = "#fabe1a";
+    const highlightColor = "#e0b84d";
     const defaultOpacity = 0.1;
     const highlightOpacity = 1;
     const transitionDuration = 1000; // Transition duration for wave effect

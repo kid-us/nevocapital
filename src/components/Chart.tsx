@@ -10,12 +10,7 @@ import {
 } from "recharts";
 
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  type ChartConfig,
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-} from "@/components/ui/chart";
+import { type ChartConfig, ChartContainer } from "@/components/ui/chart";
 
 export const description = "A bar chart with a label";
 
@@ -53,7 +48,7 @@ export function ChartBarLabel() {
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 1, ease: "easeOut" }}
     >
       <Card className="border-none pb-0 mt-10">
         <CardContent className="p-0 m-0">
@@ -84,11 +79,12 @@ export function ChartBarLabel() {
                 axisLine={false}
                 tickMargin={10}
               />
-              <ChartTooltip
-                cursor={false}
-                content={<ChartTooltipContent hideLabel />}
-              />
-              <Bar dataKey="value" fill="#fabe1a" radius={0}>
+              <Bar
+                dataKey="value"
+                fill="#E0B84D"
+                radius={0}
+                animationDuration={2000}
+              >
                 <LabelList
                   position="top"
                   offset={12}

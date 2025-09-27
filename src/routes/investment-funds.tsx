@@ -217,10 +217,23 @@ function InvestmentFunds() {
                 className="md:w-[265px] w-[150px] md:absolute top-5 left-5 z-10"
               >
                 <img src={invest} className="w-full" alt="Invest" />
-                <p className={"text-xs md:text[15px] md:mt-0 mt-1"}>
+                <motion.p
+                  initial={{ y: -40, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 60,
+                    damping: 18,
+                    duration: 0.8,
+                    delay: 0.3,
+                  }}
+                  className={"text-xs md:text-[16px] md:mt-2 mt-1"}
+                >
                   Target Investor Return 10% + annually
-                </p>
+                </motion.p>
               </motion.div>
+
               {/* Minimum Investor */}
               <motion.div
                 initial={{ x: 200, opacity: 0 }}
@@ -235,9 +248,21 @@ function InvestmentFunds() {
                 className="md:w-[265px] w-[150px] md:absolute top-21 right-5 z-10"
               >
                 <img src={dollar} className="w-full" alt="Dollar" />
-                <p className={"text-xs md:text[15px] md:mt-0 mt-1"}>
+                <motion.p
+                  initial={{ y: -40, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 60,
+                    damping: 18,
+                    duration: 0.8,
+                    delay: 0.3,
+                  }}
+                  className={"text-xs md:text-[16px] md:mt-2 mt-1"}
+                >
                   Minimum Investment $50,000
-                </p>
+                </motion.p>
               </motion.div>
 
               {/* Regulation Type */}
@@ -254,9 +279,21 @@ function InvestmentFunds() {
                 className="md:w-[265px] w-[150px] md:absolute top-52 left-5 z-10"
               >
                 <img src={hammer} className="w-full" alt="Regulation" />
-                <p className={"text-xs md:text[15px] md:mt-0 mt-1"}>
+                <motion.p
+                  initial={{ y: -40, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 60,
+                    damping: 18,
+                    duration: 0.8,
+                    delay: 0.3,
+                  }}
+                  className={"text-xs md:text-[16px] md:mt-2 mt-1"}
+                >
                   Regulation Type Reg D 506(b), 3(c)(1)
-                </p>
+                </motion.p>
               </motion.div>
 
               {/* First Position */}
@@ -273,9 +310,21 @@ function InvestmentFunds() {
                 className="md:w-[265px] w-[150px] md:absolute top-67 right-5 z-10"
               >
                 <img src={building} className="w-full" alt="Property" />
-                <p className={"text-xs md:text[15px] md:mt-0 mt-1"}>
+                <motion.p
+                  initial={{ y: -40, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 60,
+                    damping: 18,
+                    duration: 0.8,
+                    delay: 0.3,
+                  }}
+                  className={"text-xs md:text-[16px] md:mt-2 mt-1"}
+                >
                   First Position Line on Real Property
-                </p>
+                </motion.p>
               </motion.div>
 
               {/* Lock Up */}
@@ -292,9 +341,21 @@ function InvestmentFunds() {
                 className="md:w-[265px] w-[150px] md:absolute top-98 left-5 z-10"
               >
                 <img src={lockUp2} className="w-full" alt="12 Month" />
-                <p className={"text-xs md:text[15px] md:mt-0 mt-1"}>
+                <motion.p
+                  initial={{ y: -40, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 60,
+                    damping: 18,
+                    duration: 0.8,
+                    delay: 0.3,
+                  }}
+                  className={"text-xs md:text-[16px] md:mt-2 mt-1"}
+                >
                   Lock Up Period 12 Months
-                </p>
+                </motion.p>
               </motion.div>
             </div>
 
@@ -314,10 +375,23 @@ function InvestmentFunds() {
                 className="md:w-[265px] w-[150px] md:absolute top-5 left-5 z-10"
               >
                 <img src={invest} className="w-full" alt="Invest" />
-                <p className={"text-xs md:text[15px] md:mt-0 mt-1"}>
+                <motion.p
+                  initial={{ y: -40, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 60,
+                    damping: 18,
+                    duration: 0.8,
+                    delay: 0.3,
+                  }}
+                  className={"text-xs md:text-[16px] md:mt-2 mt-1"}
+                >
                   Target Investor Return 10% + annually
-                </p>
+                </motion.p>
               </motion.div>
+
               {/* Minimum Investor */}
               <motion.div
                 initial={{ x: 200, opacity: 0 }}
@@ -332,9 +406,21 @@ function InvestmentFunds() {
                 className="md:w-[265px] w-[150px] md:absolute top-21 right-5 z-10"
               >
                 <img src={dollar} className="w-full" alt="Dollar" />
-                <p className={"text-xs md:text[15px] md:mt-0 mt-1"}>
+                <motion.p
+                  initial={{ y: -40, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 60,
+                    damping: 18,
+                    duration: 0.8,
+                    delay: 0.3,
+                  }}
+                  className={"text-xs md:text-[16px] md:mt-2 mt-1"}
+                >
                   Minimum Investment $50,000
-                </p>
+                </motion.p>
               </motion.div>
 
               {/* Regulation Type */}
@@ -351,9 +437,21 @@ function InvestmentFunds() {
                 className="md:w-[265px] w-[150px] md:absolute top-52 left-5 z-10"
               >
                 <img src={hammer} className="w-full" alt="Regulation" />
-                <p className={"text-xs md:text[15px] md:mt-0 mt-1"}>
+                <motion.p
+                  initial={{ y: -40, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 60,
+                    damping: 18,
+                    duration: 0.8,
+                    delay: 0.3,
+                  }}
+                  className={"text-xs md:text-[16px] md:mt-2 mt-1"}
+                >
                   Regulation Type Reg D 506(b), 3(c)(1)
-                </p>
+                </motion.p>
               </motion.div>
 
               {/* First Position */}
@@ -370,9 +468,21 @@ function InvestmentFunds() {
                 className="md:w-[265px] w-[150px] md:absolute top-67 right-5 z-10"
               >
                 <img src={building} className="w-full" alt="Property" />
-                <p className={"text-xs md:text[15px] md:mt-0 mt-1"}>
+                <motion.p
+                  initial={{ y: -40, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 60,
+                    damping: 18,
+                    duration: 0.8,
+                    delay: 0.3,
+                  }}
+                  className={"text-xs md:text-[16px] md:mt-2 mt-1"}
+                >
                   First Position Line on Real Property
-                </p>
+                </motion.p>
               </motion.div>
 
               {/* Lock Up */}
@@ -389,9 +499,21 @@ function InvestmentFunds() {
                 className="md:w-[265px] w-[150px] md:absolute top-98 left-5 z-10"
               >
                 <img src={lockUp2} className="w-full" alt="12 Month" />
-                <p className={"text-xs md:text[15px] md:mt-0 mt-1"}>
+                <motion.p
+                  initial={{ y: -40, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 60,
+                    damping: 18,
+                    duration: 0.8,
+                    delay: 0.3,
+                  }}
+                  className={"text-xs md:text-[16px] md:mt-2 mt-1"}
+                >
                   Lock Up Period 12 Months
-                </p>
+                </motion.p>
               </motion.div>
             </div>
           </div>

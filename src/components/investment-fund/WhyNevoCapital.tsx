@@ -72,9 +72,9 @@ const WhyNevoCapital = () => {
 
       {infos.map((info) => (
         <Reveal key={info.title}>
-          <div className="p-5 border-2 border-primary mb-5 bg-primary/10">
+          <div className="md:p-5 p-3 border-2 border-primary mb-5 bg-primary/10">
             <p className="font-bold">{info.title}</p>
-            <p className="text-zinc-500">{info.desc}</p>
+            <p className="text-zinc-500 md:text-[15px] text-sm">{info.desc}</p>
           </div>
         </Reveal>
       ))}

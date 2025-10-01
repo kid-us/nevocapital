@@ -5,12 +5,13 @@ import type { TOC } from "./company";
 import WhatMakesItPrivate from "@/components/investment-fund/WhatMakesItPrivate";
 import FundAtGlance from "@/components/investment-fund/FundAtGlance";
 import PrivateCredit from "@/components/investment-fund/PrivateCredit";
+import WhyNevoCapital from "@/components/investment-fund/WhyNevoCapital";
 
 export const Route = createFileRoute("/investment-funds")({
   component: InvestmentFunds,
 });
 
-interface TabProps {
+export interface TabProps {
   id: number;
   title: string;
 }
@@ -30,6 +31,7 @@ const tabs: TabProps[] = [
 const toc: TOC[] = [
   { id: "PrivateCredit", label: "What is Private Credit?" },
   { id: "WhatMakesItPrivate", label: "What makes it private?" },
+  { id: "WhyNevoCapital", label: "Why Nevo Capital" },
   { id: "FundGlance", label: "Our Fund at a Glance" },
 ];
 
@@ -74,7 +76,7 @@ function InvestmentFunds() {
   }, []);
 
   return (
-    <div className="relative lg:grid grid-cols-12 gap-x-5 lg:mt-24 mt-16 mb-20">
+    <div className="relative lg:grid grid-cols-12 gap-x-5 mb-20">
       {/* Left Tabs */}
       <div className="col-span-2 lg:flex hidden flex-col relative border-r">
         <div className="sticky top-60">
@@ -104,13 +106,18 @@ function InvestmentFunds() {
       {/* Main Content */}
       <div className="col-span-8 lg:px-8 px-6">
         {/* Private Credit */}
-        <div id="PrivateCredit">
+        <div id="PrivateCredit" className="lg:pt-20 pt-16">
           <PrivateCredit />
         </div>
 
         {/* What makes it private */}
         <div id="WhatMakesItPrivate" className="lg:pt-32 pt-20">
           <WhatMakesItPrivate />
+        </div>
+
+        {/* Why Nevo Capital */}
+        <div id="WhyNevoCapital" className="lg:pt-32 pt-20">
+          <WhyNevoCapital />
         </div>
 
         {/* Fund at a Glance */}
@@ -126,11 +133,7 @@ function InvestmentFunds() {
             className={`relative transition-all duration-300 ease-in-out translate-x-0 opacity-100 visible`}
           >
             <div className="flex flex-col space-y-2">
-              {[
-                { id: "PrivateCredit", label: "What is Private Credit?" },
-                { id: "WhatMakesItPrivate", label: "What makes it private?" },
-                { id: "FundGlance", label: "Our Fund at a Glance" },
-              ].map((link) => (
+              {toc.map((link) => (
                 <Reveal key={link.id}>
                   <a
                     href={`#${link.id}`}

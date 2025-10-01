@@ -32,6 +32,9 @@ import building from "./building.svg";
 import invest from "./invest.svg";
 import hammer from "./hammer.svg";
 import lockUp2 from "./lockup.svg";
+import longLineArrow from "./long-line-arrow.svg";
+import leftArrow from "./leftArrow.svg";
+import rightArrow from "./rightArrow.svg";
 
 export {
   logo,
@@ -67,4 +70,7 @@ export {
   hammer,
   invest,
   lockUp2,
+  longLineArrow,
+  leftArrow,
+  rightArrow,
 };

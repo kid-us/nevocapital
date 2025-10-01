@@ -6,6 +6,7 @@ import WhatMakesItPrivate from "@/components/investment-fund/WhatMakesItPrivate"
 import FundAtGlance from "@/components/investment-fund/FundAtGlance";
 import PrivateCredit from "@/components/investment-fund/PrivateCredit";
 import WhyNevoCapital from "@/components/investment-fund/WhyNevoCapital";
+import FromCapitalReturns from "@/components/investment-fund/FromCapitalReturns";
 
 export const Route = createFileRoute("/investment-funds")({
   component: InvestmentFunds,
@@ -33,6 +34,7 @@ const toc: TOC[] = [
   { id: "WhatMakesItPrivate", label: "What makes it private?" },
   { id: "WhyNevoCapital", label: "Why Nevo Capital" },
   { id: "FundGlance", label: "Our Fund at a Glance" },
+  { id: "FromCapitalReturns", label: "From Capital to Returns" },
 ];
 
 function InvestmentFunds() {
@@ -90,8 +92,8 @@ function InvestmentFunds() {
                     onClick={() => setCurrentTabSection(tab.title)}
                     className={`ps-4 h-10 flex items-center w-full text-sm cursor-pointer ${
                       currentTabSection === tab.title
-                        ? "text-black font-medium bg-[#ebebeb]"
-                        : "text-zinc-500 hover:bg-[#ebebeb]"
+                        ? "text-primary font-medium bg-primary/10"
+                        : "text-zinc-500 hover:bg-primary/10"
                     }`}
                   >
                     {tab.title}
@@ -123,6 +125,11 @@ function InvestmentFunds() {
         {/* Fund at a Glance */}
         <div id="FundGlance" className="lg:pt-32 pt-20">
           <FundAtGlance />
+        </div>
+
+        {/* From Capital to Returns */}
+        <div id="FromCapitalReturns" className="lg:pt-32 pt-20">
+          <FromCapitalReturns />
         </div>
       </div>
 

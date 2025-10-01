@@ -35,6 +35,7 @@ import lockUp2 from "./lockup.svg";
 import longLineArrow from "./long-line-arrow.svg";
 import leftArrow from "./leftArrow.svg";
 import rightArrow from "./rightArrow.svg";
+import layer from "./layer.svg";
 
 export {
   logo,
@@ -73,4 +74,5 @@ export {
   longLineArrow,
   leftArrow,
   rightArrow,
+  layer,
 };

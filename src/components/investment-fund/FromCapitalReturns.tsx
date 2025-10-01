@@ -22,7 +22,7 @@ const FromCapitalReturns = () => {
       <div className="grid grid-cols-7 mt-16">
         <div className="md:flex hidden items-center">
           <Reveal>
-            <img src={longLineArrow} />
+            <img src={longLineArrow} alt="Line Arrow" />
           </Reveal>
         </div>
 
@@ -42,14 +42,14 @@ const FromCapitalReturns = () => {
             {/* Right Arrow */}
             <div className="col-span-2 md:flex hidden items-center">
               <Reveal>
-                <img src={rightArrow} />
+                <img src={rightArrow} alt="Right Arrow" />
               </Reveal>
             </div>
 
             {/* Left Arrow */}
             <div className="col-span-2 md:flex hidden items-center">
               <Reveal>
-                <img src={leftArrow} />
+                <img src={leftArrow} alt="Left Arrow" />
               </Reveal>
             </div>
 
@@ -84,14 +84,14 @@ const FromCapitalReturns = () => {
             {/* Right Arrow */}
             <div className="col-span-2 md:flex hidden items-center">
               <Reveal>
-                <img src={rightArrow} />
+                <img src={rightArrow} alt="Right Arrow" />
               </Reveal>
             </div>
 
             {/* Left Arrow */}
             <div className="col-span-2 md:flex hidden items-center">
               <Reveal>
-                <img src={leftArrow} />
+                <img src={leftArrow} alt="Left Arrow" />
               </Reveal>
             </div>
 

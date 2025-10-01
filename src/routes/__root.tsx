@@ -23,10 +23,12 @@ const RootLayout = () => {
   }, []);
 
   return (
-    <div className="max-w-6xl mx-auto">
+    <div>
       <Navbar />
-      <div className="mt-10">
-        <Outlet />
+      <div className="max-w-6xl mx-auto">
+        <div className="mt-10">
+          <Outlet />
+        </div>
       </div>
       <Footer />
 

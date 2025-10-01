@@ -21,6 +21,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone } from "lucide-react";
+import { layer } from "@/assets";
 
 const contactSchema = z.object({
   fullName: z.string().min(2, "Full name is required"),
@@ -50,8 +51,15 @@ function RouteComponent() {
 
   return (
     <div>
+      <div className="relative">
+        <img
+          src={layer}
+          alt="Layer"
+          className="absolute md:-top-20 -top-10 overflow-hidden"
+        />
+      </div>
       {/* Contact Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:px-20 px-6 py-5 md:py-28">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:px-20 px-6 pt-10 pb-20 md:py-28">
         <div className="flex flex-col justify-center text-center">
           <h1 className="md:text-4xl text-2xl font-bold text-start">
             Connect with Nevo Capital

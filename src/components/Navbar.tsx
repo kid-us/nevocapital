@@ -166,7 +166,7 @@ const Navbar = () => {
             </div>
 
             {/* Contact Info */}
-            <div className="absolute bottom-3 flex flex-col space-y-4 border-t pt-3 px-4">
+            <div className="absolute bottom-10 flex flex-col space-y-4 border-t pt-3 px-4">
               <p>Contact Information</p>
               <div className="flex space-x-2">
                 <Phone size={16} />

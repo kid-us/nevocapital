@@ -10,16 +10,18 @@ const Footer = () => {
 
   return (
     <div
-      className={`${location.pathname === "/" && "hidden"} max-w-6xl mx-auto mt-10 relative pt-2 lg:px-0 px-6 bg-white z-50`}
+      className={`${location.pathname === "/" && "hidden"} max-w-6xl mx-auto mt-10 relative pt-2 lg:px-0 px-6 bg-white z-10`}
     >
-      {/* Layer only on contact page */}
-      {location.pathname === "/contact" && (
-        <img
-          src={layer}
-          alt="Layer"
-          className="absolute -top-20 w-full object-cover h-20 rotate-180"
-        />
-      )}
+      <div className="overflow-hidden">
+        {/* Layer only on contact page */}
+        {location.pathname === "/contact" && (
+          <img
+            src={layer}
+            alt="Layer"
+            className="absolute -top-20 left-0 w-full object-cover h-20 rotate-180"
+          />
+        )}
+      </div>
 
       {/* Gradient top border */}
       <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent" />

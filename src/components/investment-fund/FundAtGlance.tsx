@@ -10,11 +10,11 @@ const FundAtGlance = () => {
       </Reveal>
       <Reveal>
         <p className="mt-4 text-sm">
-          Our Private Credit Fund provides short-term, real estate-backed
-          financing for fix-and-flip projects. By combining speed, technology,
-          flexibility, and rigorous underwriting, we aim to deliver stable,
-          attractive returns while prioritizing the protection of investor
-          capital.
+          The Nevo Capital Private Credit Fund provides short-term, real
+          estate-backed financing for fix-and-flip projects. By combining speed,
+          technology, flexibility, and rigorous underwriting, we aim to deliver
+          stable, attractive returns while prioritizing the protection of
+          investor capital.
         </p>
       </Reveal>
 

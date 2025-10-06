@@ -24,9 +24,9 @@ export interface Contents {
 }
 
 const tabs: TabProps[] = [
-  { id: 1, title: "Real State Fund" },
+  { id: 1, title: "Core Real Estate Fund" },
   { id: 2, title: "Private Credit Fund" },
-  { id: 3, title: "Semi-Private Fund" },
+  { id: 3, title: "Diversified Alternatives Fund" },
 ];
 
 const toc: TOC[] = [

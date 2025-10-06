@@ -23,9 +23,9 @@ const PrivateCredit = () => {
         <p className="mt-8 text-sm">
           Private credit—sometimes called private lending—is built on a simple
           idea: lending directly to borrowers for a fixed return. Unlike
-          equities that swing with markets, private credit focuses on steady,
+          equities that swing with the market, private credit focuses on steady,
           predictable income—typically through interest or preferred
-          returns—without stock market volatility.
+          returns—without the volatility of public markets.
         </p>
       </Reveal>
 

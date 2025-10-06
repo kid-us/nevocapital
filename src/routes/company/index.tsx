@@ -72,24 +72,31 @@ const teams: TheTeam[] = [
 const contents: Content[] = [
   {
     id: 1,
-    desc: "Built on principles of governance, compliance, and transparency.",
+    desc: "Deep knowledge in real estate and private markets, applied with disciplined risk management.",
     hoverImg: institutionalHover,
     img: institutionalPng,
-    title: "Institutional Quality",
+    title: "Specialized Expertise",
   },
   {
     id: 2,
-    desc: "A leadership team with deep knowledge in real Estate and private markets.",
+    desc: "Deep knowledge in real estate and private markets, applied with disciplined risk management.",
     hoverImg: specializedHover,
     img: specialized,
     title: "Specialized Expertise",
   },
   {
     id: 3,
-    desc: "We commit our own capital alongside yours—true partnership in every strategy.",
+    desc: " We invest our own capital alongside yours—true partnership in every strategy.",
     hoverImg: alignedHover,
     img: aligned,
     title: "Aligned Interests",
+  },
+  {
+    id: 4,
+    desc: " From underwriting to monitoring, we integrate advanced technology to enhance speed, precision, and transparency across every stage of the investment process.",
+    hoverImg: specializedHover,
+    img: specialized,
+    title: "Technology-Enabled Advantage",
   },
 ];
 
@@ -98,9 +105,9 @@ const toc: TOC[] = [
     id: "BuildingPlatform",
     label: "Building a Platform for Alternative Investment Excellence",
   },
-  { id: "WhoWeAre", label: "Who We Are" },
+  { id: "WhoWeAre", label: "A Boutique Platform with Institutional Standards" },
   { id: "MeetTheTeam", label: "Meet the Team" },
-  { id: "OurVision", label: "Our Vision" },
+  { id: "OurVision", label: "Strategic Growth, Built on Principles" },
   { id: "WhyPartnerWithUs", label: "Why Partner With Us" },
 ];
 
@@ -163,19 +170,22 @@ function companyPage() {
             <img src={comapnyGraph} className="my-16" alt="Company" />
           </Reveal>
 
-          {/* Who We are */}
+          {/* A Boutique Platform with Institutional Standards */}
           <div id="WhoWeAre" className="pt-16">
             <Reveal>
-              <h1 className="lg:text-3xl text-xl">Who We Are</h1>
+              <h1 className="lg:text-3xl text-xl">
+                A Boutique Platform with Institutional Standards
+              </h1>
             </Reveal>
             <Reveal>
               <p className="text-sm mt-4 text-zinc-600">
-                Nevo Capital is a boutique investment management firm dedicated
-                to offering curated alternative strategies for accredited,
-                non-accredited investors and family offices. We bring together
-                deep expertise, disciplined risk management, and a
-                forward-thinking approach to build a diverse portfolio of
-                opportunities.
+                Nevo Capital is a boutique investment management firm offering
+                carefully structured opportunities in private markets. We serve
+                accredited and non-accredited investors as well as family
+                offices, combining rigorous underwriting, disciplined risk
+                management, and a forward-looking strategy. By embedding
+                technology into every stage of our process—from deal sourcing to
+                monitoring—we ensure efficiency, precision, and transparency.
               </p>
             </Reveal>
           </div>
@@ -185,6 +195,14 @@ function companyPage() {
         <div id="MeetTheTeam" className="lg:pt-32 pt-20">
           <Reveal>
             <h1 className="lg:text-3xl text-xl">Meet the Team</h1>
+          </Reveal>
+          <Reveal>
+            <p className="text-sm mt-4 text-zinc-600">
+              Our leadership team combines expertise in real estate, private
+              credit, and investment management. Each member brings hands-on
+              execution experience and a shared commitment to investor-first
+              principles. Photos of each member~
+            </p>
           </Reveal>
           <div className="grid md:grid-cols-3 grid-cols-1 gap-5 mt-5">
             {teams.map((team) => (
@@ -217,7 +235,9 @@ function companyPage() {
         {/* Our Vision */}
         <div id="OurVision" className="lg:pt-32 pt-20">
           <Reveal>
-            <h1 className="lg:text-3xl text-xl">Our Vision</h1>
+            <h1 className="lg:text-3xl text-xl">
+              Strategic Growth, Built on Principles
+            </h1>
           </Reveal>
           <Reveal>
             <p className="text-sm text-zinc-600 mt-3">
@@ -226,12 +246,14 @@ function companyPage() {
           </Reveal>
           <Reveal>
             <p className="mt-4 text-sm text-zinc-600">
-              Nevo Capital was founded to deliver institutional-quality access
-              to private markets. Our focus is on providing carefully structured
-              opportunities that prioritize capital protection and consistent
-              performance. While we continue to innovate within private credit,
-              our broader mission is to offer diversified strategies that align
-              with the long-term goals of sophisticated investors.
+              Nevo Capital was founded with a simple vision: to make
+              institutional-quality private market investments accessible to
+              investors seeking stability, growth, and diversification. We focus
+              first on our Private Credit Fund, while building a platform
+              designed to expand into long-term real estate growth and,
+              ultimately, a broader spectrum of alternative strategies. Our goal
+              is long-term value creation grounded in discipline, transparency,
+              and innovation.
             </p>
           </Reveal>
 
@@ -243,14 +265,15 @@ function companyPage() {
                 </Reveal>
                 <div className="lg:mt-0 mt-10 ms-2">
                   <Reveal>
-                    <p className="text-sm">Present</p>
+                    <p className="text-sm">Today</p>
                   </Reveal>
                   <Reveal>
                     <div className="lg:block hidden h-6 border-l"></div>
                   </Reveal>
                   <Reveal>
-                    <p className="lg:mt-3 mt-1 text-sm font-semibold">
-                      Private Credit Fund
+                    <p className="lg:mt-3 mt-1 text-xs font-semibold">
+                      Private Credit Fund (short-term, real estate-backed
+                      lending)
                     </p>
                   </Reveal>
                 </div>
@@ -267,8 +290,9 @@ function companyPage() {
                     <div className="lg:block hidden h-6 border-l"></div>
                   </Reveal>
                   <Reveal>
-                    <p className="lg:mt-3 mt-1 text-sm font-semibold">
-                      Additional Real State Strategies
+                    <p className="lg:mt-3 mt-1 text-xs font-semibold">
+                      Core Real Estate Fund (long-term, income-producing and
+                      growth-oriented properties)
                     </p>
                   </Reveal>
                 </div>
@@ -285,8 +309,9 @@ function companyPage() {
                     <div className="lg:block hidden h-6 border-l"></div>
                   </Reveal>
                   <Reveal>
-                    <p className="lg:mt-3 mt-1 text-sm font-semibold">
-                      Broader Alternative Investments
+                    <p className="lg:mt-3 mt-1 text-xs font-semibold">
+                      Diversified Alternatives Platform (multi-strategy
+                      alternative platform for portfolio diversification)
                     </p>
                   </Reveal>
                 </div>
@@ -321,7 +346,7 @@ function companyPage() {
                 </div>
                 <div className="flex flex-col md:col-span-3">
                   <p className="font-semibold">{content.title}</p>
-                  <p className="text-zinc-600 text-sm">{content.desc}</p>
+                  <p className="text-zinc-600 text-sm mt-1">{content.desc}</p>
                 </div>
               </div>
             </Reveal>

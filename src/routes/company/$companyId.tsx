@@ -1,15 +1,9 @@
 import { alexFamily, davidFamily, jochaiFamily } from "@/assets";
 import Reveal from "@/components/Revel";
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight, Linkedin } from "lucide-react";
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { ArrowUpRight, ChevronLeft, Linkedin } from "lucide-react";
 import { useEffect } from "react";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+import { Button } from "@/components/ui/button";
 // Route
 export const Route = createFileRoute("/company/$companyId")({
   component: CompanyMembersPage,
@@ -87,6 +81,7 @@ const teamsInfo: CompanyMembers[] = [
 ];
 
 function CompanyMembersPage() {
+  const navigate = useNavigate();
   const { companyId } = Route.useParams();
 
   // Scroll to top
@@ -100,28 +95,20 @@ function CompanyMembersPage() {
     <div>
       {selectedMember && (
         <div className="lg:max-w-3xl mx-auto lg:mt-24 mt-16 px-6 lg:px-0">
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <Link
-                  to="/company"
-                  className="text-zinc-400 hover:underline hover:text-black font-bold"
-                  hash="MeetTheTeam"
-                >
-                  Back
-                </Link>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage>{selectedMember.name}</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-
-          <h1 className="lg:text-2xl text-xl mt-10">{selectedMember.name}</h1>
-          <p className="text-sm text-zinc-500">{selectedMember.role}</p>
+          <div className="flex justify-between items-center mt-10">
+            <div>
+              <h1 className="lg:text-2xl text-xl">{selectedMember.name}</h1>
+              <p className="text-sm text-zinc-500">{selectedMember.role}</p>
+            </div>
+            <Button
+              onClick={() => navigate({ to: "/company", hash: "MeetTheTeam" })}
+              className="rounded-full w-9 h-9"
+            >
+              <ChevronLeft />
+            </Button>
+          </div>
           <Reveal>
-            <div className="grid lg:grid-cols-2 gap-y-5 mt-8">
+            <div className="grid lg:grid-cols-2 gap-y-5 mt-7">
               <img
                 src={selectedMember.image}
                 alt={selectedMember.name}

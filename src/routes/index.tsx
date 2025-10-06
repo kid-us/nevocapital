@@ -30,35 +30,38 @@ function RouteComponent() {
         }`}
       >
         <div className="flex justify-between">
-          <h4 className="font-semibold mb-3 text-white text-lg">Disclaimer</h4>
+          <h4 className="font-semibold mb-3 text-white text-lg">
+            General Disclaimer
+          </h4>
           <X
             onClick={() => setDisclaimerOpen(false)}
             className="text-white cursor-pointer"
           />
         </div>
-        <p className="text-xs text-zinc-300">
-          The information presented in this Website is provided for general
-          informational purposes only and this Website does not constitute an
-          offer, solicitation or recommendation to sell or an offer to buy any
-          securities, investment products or investment advisory services. The
-          information in this Website is not intended to provide and should not
-          be relied upon for, accounting, legal, tax advice or investment
-          recommendations. Each user is encouraged to consult with its own tax,
-          legal, accounting, financial and/or other advisors regarding the
-          information and matters contained in this Website. Revere does not
-          represent that any securities, financial instruments, products or
-          services are suitable or appropriate for all clients or investors.
-          Decisions based on information contained on this Website are the sole
-          responsibility of the user.
+        <p className="text-xs text-zinc-300 mb-1">
+          The information provided on this website, including any links to other
+          websites, is for general information purposes only and is neither
+          investment advice nor a recommendation that a particular product or
+          service is suitable for any particular investor. Therefore, nothing
+          contained on this website or in any linked website should ever be
+          relied upon by anyone in making any investment-related decision.
         </p>
-        <div className="flex items-center text-white mt-5">
-          <p className="w-2 h-2 bg-white rounded-full" />
-          <p className="font-semibold text-xs ms-2">
-            PAST PERFORMANCE IS NOT NECESSARILY A RELIABLE INDICATOR OF FUTURE
-            PERFORMANCE. INVESTMENTS ARE SUBJECT TO A WIDE VARIETY OF RISKS AND
-            CONSIDERATIONS.
-          </p>
-        </div>
+        <p className="text-xs text-zinc-300">
+          Investing generally, particularly in real estate, is speculative and
+          involves significant risk. For more information about certain of the
+          material risks and limitations associated with Heitman’s investment
+          advisory products, strategies and services, please see the current
+          Form ADV Part 2A brochures for Heitman’s registered advisory firm
+          entities, which are available on the SEC’s Investment Adviser Public
+          Disclosure website at{" "}
+          <a href="https://adviserinfo.sec.gov" className="text-blue-400">
+            https://adviserinfo.sec.gov.
+          </a>{" "}
+          Investors should consider their investment objectives, and should seek
+          their own independent advice in relation to any investment, financial,
+          legal, tax, accounting or regulatory risks and evaluate their own risk
+          tolerance before investing.
+        </p>
       </div>
 
       {/* Hero Section */}

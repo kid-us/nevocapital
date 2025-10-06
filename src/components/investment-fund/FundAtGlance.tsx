@@ -47,7 +47,7 @@ const FundAtGlance = () => {
                 duration: 0.8,
                 delay: 0.3,
               }}
-              className={"text-xs md:text-[16px] md:mt-2 mt-1"}
+              className={"text-xs md:text-[16px] md:mt-2 mt-1 font-bold"}
             >
               Target Investor Return 10% + annually
             </motion.p>
@@ -78,7 +78,7 @@ const FundAtGlance = () => {
                 duration: 0.8,
                 delay: 0.3,
               }}
-              className={"text-xs md:text-[16px] md:mt-2 mt-1"}
+              className={"text-xs md:text-[16px] md:mt-2 mt-1 font-bold"}
             >
               Minimum Investment $50,000
             </motion.p>
@@ -109,7 +109,7 @@ const FundAtGlance = () => {
                 duration: 0.8,
                 delay: 0.3,
               }}
-              className={"text-xs md:text-[16px] md:mt-2 mt-1"}
+              className={"text-xs md:text-[16px] md:mt-2 mt-1 font-bold"}
             >
               Regulation Type Reg D 506(b), 3(c)(1)
             </motion.p>
@@ -140,7 +140,7 @@ const FundAtGlance = () => {
                 duration: 0.8,
                 delay: 0.3,
               }}
-              className={"text-xs md:text-[16px] md:mt-2 mt-1"}
+              className={"text-xs md:text-[16px] md:mt-2 mt-1 font-bold"}
             >
               First Position Line on Real Property
             </motion.p>
@@ -171,7 +171,7 @@ const FundAtGlance = () => {
                 duration: 0.8,
                 delay: 0.3,
               }}
-              className={"text-xs md:text-[16px] md:mt-2 mt-1"}
+              className={"text-xs md:text-[16px] md:mt-2 mt-1 font-bold"}
             >
               Lock Up Period 12 Months
             </motion.p>
@@ -206,7 +206,7 @@ const FundAtGlance = () => {
                   duration: 0.8,
                   delay: 0.3,
                 }}
-                className="text-xs mt-1"
+                className="text-xs mt-1 font-bold"
               >
                 Target Investor Return 10% + annually
               </motion.p>
@@ -237,7 +237,7 @@ const FundAtGlance = () => {
                   duration: 0.8,
                   delay: 0.3,
                 }}
-                className="text-xs mt-1"
+                className="text-xs mt-1 font-bold"
               >
                 Minimum Investment $50,000
               </motion.p>
@@ -268,7 +268,7 @@ const FundAtGlance = () => {
                   duration: 0.8,
                   delay: 0.3,
                 }}
-                className="text-xs mt-1"
+                className="text-xs mt-1 font-bold"
               >
                 Regulation Type Reg D 506(b), 3(c)(1)
               </motion.p>
@@ -299,7 +299,7 @@ const FundAtGlance = () => {
                   duration: 0.8,
                   delay: 0.3,
                 }}
-                className="text-xs mt-1"
+                className="text-xs mt-1 font-bold"
               >
                 First Position Line on Real Property
               </motion.p>
@@ -330,7 +330,7 @@ const FundAtGlance = () => {
                   duration: 0.8,
                   delay: 0.3,
                 }}
-                className="text-xs mt-1"
+                className="text-xs mt-1 font-bold"
               >
                 Lock Up Period 12 Months
               </motion.p>

@@ -7,6 +7,8 @@ import FundAtGlance from "@/components/investment-fund/FundAtGlance";
 import PrivateCredit from "@/components/investment-fund/PrivateCredit";
 import WhyNevoCapital from "@/components/investment-fund/WhyNevoCapital";
 import FromCapitalReturns from "@/components/investment-fund/FromCapitalReturns";
+import LookingAhead from "@/components/investment-fund/LookingAhead";
+import ReadyToGrow from "@/components/investment-fund/ReadyToGrow";
 
 export const Route = createFileRoute("/investment-funds")({
   component: InvestmentFunds,
@@ -32,9 +34,11 @@ const tabs: TabProps[] = [
 const toc: TOC[] = [
   { id: "PrivateCredit", label: "What is Private Credit?" },
   { id: "WhatMakesItPrivate", label: "What makes it private?" },
-  { id: "WhyNevoCapital", label: "Why Nevo Capital" },
   { id: "FundGlance", label: "Our Fund at a Glance" },
   { id: "FromCapitalReturns", label: "From Capital to Returns" },
+  { id: "WhyNevoCapital", label: "Why Nevo Capital" },
+  { id: "LookingAhead", label: "Looking Ahead: Expanding Opportunities" },
+  { id: "ReadyToGrow", label: " Ready to Grow with Nevo Capital?" },
 ];
 
 function InvestmentFunds() {
@@ -117,11 +121,6 @@ function InvestmentFunds() {
           <WhatMakesItPrivate />
         </div>
 
-        {/* Why Nevo Capital */}
-        <div id="WhyNevoCapital" className="lg:pt-32 pt-20">
-          <WhyNevoCapital />
-        </div>
-
         {/* Fund at a Glance */}
         <div id="FundGlance" className="lg:pt-32 pt-20">
           <FundAtGlance />
@@ -130,6 +129,21 @@ function InvestmentFunds() {
         {/* From Capital to Returns */}
         <div id="FromCapitalReturns" className="lg:pt-32 pt-20">
           <FromCapitalReturns />
+        </div>
+
+        {/* Why Nevo Capital */}
+        <div id="WhyNevoCapital" className="lg:pt-32 pt-20">
+          <WhyNevoCapital />
+        </div>
+
+        {/*  Looking Ahead: Expanding Opportunities  */}
+        <div id="LookingAhead" className="lg:pt-32 pt-20">
+          <LookingAhead />
+        </div>
+
+        {/* Ready to Grow with Nevo Capital?  */}
+        <div id="ReadyToGrow" className="lg:pt-32 pt-20">
+          <ReadyToGrow />
         </div>
       </div>
 

@@ -20,10 +20,12 @@ const FromCapitalReturns = () => {
       </Reveal>
 
       <div className="grid grid-cols-7 mt-16">
-        <div className="md:flex hidden items-center">
-          <Reveal>
-            <img src={longLineArrow} alt="Line Arrow" />
-          </Reveal>
+        <div className="relative md:flex hidden items-center">
+          <div className="absolute left-8">
+            <Reveal>
+              <img src={longLineArrow} alt="Line Arrow" />
+            </Reveal>
+          </div>
         </div>
 
         <div className="col-span-6">
@@ -40,17 +42,21 @@ const FromCapitalReturns = () => {
             </div>
 
             {/* Right Arrow */}
-            <div className="col-span-2 md:flex hidden items-center">
-              <Reveal>
-                <img src={rightArrow} alt="Right Arrow" />
-              </Reveal>
+            <div className="relative col-span-2 md:flex hidden items-center">
+              <div className="absolute top-20 -left-20">
+                <Reveal>
+                  <img src={rightArrow} alt="Right Arrow" />
+                </Reveal>
+              </div>
             </div>
 
             {/* Left Arrow */}
-            <div className="col-span-2 md:flex hidden items-center">
-              <Reveal>
-                <img src={leftArrow} alt="Left Arrow" />
-              </Reveal>
+            <div className="relative col-span-2 md:flex hidden items-center">
+              <div className="absolute top-28 right-10">
+                <Reveal>
+                  <img src={leftArrow} alt="Left Arrow" />
+                </Reveal>
+              </div>
             </div>
 
             <div className="col-span-2 md:w-[200px] w-full">
@@ -82,17 +88,21 @@ const FromCapitalReturns = () => {
             </div>
 
             {/* Right Arrow */}
-            <div className="col-span-2 md:flex hidden items-center">
-              <Reveal>
-                <img src={rightArrow} alt="Right Arrow" />
-              </Reveal>
+            <div className="relative col-span-2 md:flex hidden items-center">
+              <div className="absolute top-20 -left-20">
+                <Reveal>
+                  <img src={rightArrow} alt="Right Arrow" />
+                </Reveal>
+              </div>
             </div>
 
             {/* Left Arrow */}
-            <div className="col-span-2 md:flex hidden items-center">
-              <Reveal>
-                <img src={leftArrow} alt="Left Arrow" />
-              </Reveal>
+            <div className="relative col-span-2 md:flex hidden items-center">
+              <div className="absolute top-24 right-10">
+                <Reveal>
+                  <img src={leftArrow} alt="Left Arrow" />
+                </Reveal>
+              </div>
             </div>
 
             <div className="col-span-2 md:w-[200px] w-full">

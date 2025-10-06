@@ -36,9 +36,9 @@ const WhyNevoCapital = () => {
 
       {infos.map((info) => (
         <Reveal key={info.title}>
-          <div className="md:p-5 p-3 border-2 border-primary mb-5 bg-primary/10">
+          <div className="md:p-5 p-3 border-2 border-primary mb-5 bg-primary/5 hover:scale-103 hover:bg-primary hover:text-white transition-all duration-500 group">
             <p className="font-bold">{info.title}</p>
-            <p className="text-zinc-500 md:text-[15px] text-sm mt-1">
+            <p className="text-zinc-500 group-hover:text-zinc-200 md:text-[15px] text-sm mt-1">
               {info.desc}
             </p>
           </div>

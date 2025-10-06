@@ -67,8 +67,8 @@ function RouteComponent() {
 
           <div className="mt-5">
             <p className="text-start text-lg">
-              Whether you're exploring investment opportunities or have
-              questions, our team is here to assist.
+              Whether you’re exploring investment opportunities or simply have
+              questions, the Nevo Capital team is here to help.
             </p>
 
             <div className="mt-5">

@@ -117,32 +117,32 @@ function InvestmentFunds() {
         </div>
 
         {/* What makes it private */}
-        <div id="WhatMakesItPrivate" className="lg:pt-32 pt-20">
+        <div id="WhatMakesItPrivate" className="lg:pt-44 pt-20">
           <WhatMakesItPrivate />
         </div>
 
         {/* Fund at a Glance */}
-        <div id="FundGlance" className="lg:pt-32 pt-20">
+        <div id="FundGlance" className="lg:pt-44 pt-20">
           <FundAtGlance />
         </div>
 
         {/* From Capital to Returns */}
-        <div id="FromCapitalReturns" className="lg:pt-32 pt-20">
+        <div id="FromCapitalReturns" className="lg:pt-44 pt-20">
           <FromCapitalReturns />
         </div>
 
         {/* Why Nevo Capital */}
-        <div id="WhyNevoCapital" className="lg:pt-32 pt-20">
+        <div id="WhyNevoCapital" className="lg:pt-44 pt-20">
           <WhyNevoCapital />
         </div>
 
         {/*  Looking Ahead: Expanding Opportunities  */}
-        <div id="LookingAhead" className="lg:pt-32 pt-20">
+        <div id="LookingAhead" className="lg:pt-44 pt-20">
           <LookingAhead />
         </div>
 
         {/* Ready to Grow with Nevo Capital?  */}
-        <div id="ReadyToGrow" className="lg:pt-32 pt-20">
+        <div id="ReadyToGrow" className="lg:pt-44 pt-20">
           <ReadyToGrow />
         </div>
       </div>

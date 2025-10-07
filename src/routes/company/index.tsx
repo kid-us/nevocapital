@@ -192,7 +192,7 @@ function companyPage() {
         </div>
 
         {/* Meet the Team */}
-        <div id="MeetTheTeam" className="lg:pt-32 pt-20">
+        <div id="MeetTheTeam" className="lg:pt-44 pt-20">
           <Reveal>
             <h1 className="lg:text-3xl text-xl">Meet the Team</h1>
           </Reveal>
@@ -233,7 +233,7 @@ function companyPage() {
         </div>
 
         {/* Our Vision */}
-        <div id="OurVision" className="lg:pt-32 pt-20">
+        <div id="OurVision" className="lg:pt-44 pt-20">
           <Reveal>
             <h1 className="lg:text-3xl text-xl">
               Strategic Growth, Built on Principles
@@ -322,7 +322,7 @@ function companyPage() {
         </div>
 
         {/* Why Partner with us */}
-        <div id="WhyPartnerWithUs" className="lg:pt-32 pt-20 mb-10">
+        <div id="WhyPartnerWithUs" className="lg:pt-44 pt-20 mb-10">
           <Reveal>
             <h1 className="lg:text-3xl text-xl mb-4">Why Partner With Us</h1>
           </Reveal>

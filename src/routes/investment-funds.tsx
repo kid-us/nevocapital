@@ -159,7 +159,9 @@ function InvestmentFunds() {
                   <a
                     href={`#${link.id}`}
                     className={`text-sm cursor-pointer ${
-                      currentSection === link.id ? "font-bold" : "text-zinc-500"
+                      currentSection === link.id
+                        ? "font-medium"
+                        : "text-zinc-700"
                     }`}
                   >
                     {link.label}

@@ -373,7 +373,7 @@ function companyPage() {
                   <a
                     href={`#${t.id}`}
                     className={` cursor-pointer ${
-                      currentSection === t.id ? "font-bold" : "text-zinc-500"
+                      currentSection === t.id ? "font-medium" : "text-zinc-700"
                     }`}
                   >
                     {t.label}

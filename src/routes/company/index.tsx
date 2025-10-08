@@ -110,7 +110,7 @@ const toc: TOC[] = [
   { id: "MeetTheTeam", label: "Meet the Team" },
   { id: "OurVision", label: "Strategic Growth, Built on Principles" },
   { id: "WhyPartnerWithUs", label: "Why Partner With Us" },
-  { id: "ReadyToGrow", label: "Ready to Grow" },
+  { id: "ReadyToGrow", label: "Ready to Grow with Nevo Capital?" },
 ];
 
 function companyPage() {

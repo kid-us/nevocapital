@@ -36,6 +36,7 @@ import longLineArrow from "./long-line-arrow.svg";
 import leftArrow from "./leftArrow.svg";
 import rightArrow from "./rightArrow.svg";
 import layer from "./layer.svg";
+import fromReturn from "./fromReturn.svg";
 
 export {
   logo,
@@ -75,4 +76,5 @@ export {
   leftArrow,
   rightArrow,
   layer,
+  fromReturn,
 };

@@ -4,6 +4,7 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { ArrowUpRight, ChevronLeft, Linkedin } from "lucide-react";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import ReadyToGrow from "@/components/investment-fund/ReadyToGrow";
 // Route
 export const Route = createFileRoute("/company/$companyId")({
   component: CompanyMembersPage,
@@ -174,6 +175,11 @@ function CompanyMembersPage() {
               </p>
             </div>
           </Reveal>
+
+          {/* Ready to Grow */}
+          <div className="lg:mt-24 mt-16">
+            <ReadyToGrow />
+          </div>
         </div>
       )}
     </div>

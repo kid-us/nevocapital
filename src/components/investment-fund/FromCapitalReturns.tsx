@@ -1,5 +1,6 @@
-import { leftArrow, longLineArrow, rightArrow } from "@/assets";
+import { fromReturn } from "@/assets";
 import Reveal from "../Revel";
+import { motion } from "motion/react";
 
 const FromCapitalReturns = () => {
   return (
@@ -19,124 +20,140 @@ const FromCapitalReturns = () => {
         <p className="mt-2">Investment Cycle</p>
       </Reveal>
 
-      <div className="grid grid-cols-7 mt-16">
-        <div className="relative md:flex hidden items-center">
-          <div className="absolute left-8">
-            <Reveal>
-              <img src={longLineArrow} alt="Line Arrow" />
-            </Reveal>
-          </div>
+      <Reveal>
+        <div className="mt-30 flex justify-center">
+          <motion.img
+            src={fromReturn}
+            alt="From Capital returns"
+            initial={{ rotate: 90, borderRadius: "0%" }}
+            whileInView={{ rotate: 0, borderRadius: "50%" }}
+            transition={{
+              duration: 2,
+              ease: "easeInOut",
+            }}
+            viewport={{ once: true }}
+          />
         </div>
-
-        <div className="col-span-6">
-          <div className="grid md:grid-cols-4 gap-x-10 gap-y-5">
-            <div className="col-span-2 md:w-[200px] w-full">
-              <Reveal>
-                <div className="space-y-2">
-                  <h1 className="md:text-2xl text-xl font-semibold">
-                    1 - Investor Commitment
-                  </h1>
-                  <p>Investors commit capital to the fund.</p>
-                </div>
-              </Reveal>
-            </div>
-
-            {/* Right Arrow */}
-            <div className="relative col-span-2 md:flex hidden items-center">
-              <div className="absolute top-20 -left-20">
-                <Reveal>
-                  <img src={rightArrow} alt="Right Arrow" />
-                </Reveal>
-              </div>
-            </div>
-
-            {/* Left Arrow */}
-            <div className="relative col-span-2 md:flex hidden items-center">
-              <div className="absolute top-28 right-10">
-                <Reveal>
-                  <img src={leftArrow} alt="Left Arrow" />
-                </Reveal>
-              </div>
-            </div>
-
-            <div className="col-span-2 md:w-[200px] w-full">
-              <Reveal>
-                <div className="space-y-2">
-                  <h1 className="md:text-2xl text-xl font-semibold">
-                    2 - Capital Deployment
-                  </h1>
-                  <p>
-                    The fund lends capital to real estate investors for
-                    fix-and-flip and wholesale projects.
-                  </p>
-                </div>
-              </Reveal>
-            </div>
-
-            <div className="col-span-2 md:w-[200px] w-full">
-              <Reveal>
-                <div className="space-y-2">
-                  <h1 className="md:text-2xl text-xl font-semibold">
-                    3 - Project Execution
-                  </h1>
-                  <p>
-                    The real estate investors acquire, renovate, and sell
-                    properties.
-                  </p>
-                </div>
-              </Reveal>
-            </div>
-
-            {/* Right Arrow */}
-            <div className="relative col-span-2 md:flex hidden items-center">
-              <div className="absolute top-20 -left-20">
-                <Reveal>
-                  <img src={rightArrow} alt="Right Arrow" />
-                </Reveal>
-              </div>
-            </div>
-
-            {/* Left Arrow */}
-            <div className="relative col-span-2 md:flex hidden items-center">
-              <div className="absolute top-24 right-10">
-                <Reveal>
-                  <img src={leftArrow} alt="Left Arrow" />
-                </Reveal>
-              </div>
-            </div>
-
-            <div className="col-span-2 md:w-[200px] w-full">
-              <Reveal>
-                <div className="space-y-2">
-                  <h1 className="md:text-2xl text-xl font-semibold">
-                    4 - Project Execution
-                  </h1>
-                  <p>
-                    The real estate investors acquire, renovate, and sell
-                    properties.
-                  </p>
-                </div>
-              </Reveal>
-            </div>
-
-            <div className="col-span-2 md:w-[200px] w-full">
-              <Reveal>
-                <div className="space-y-2">
-                  <h1 className="md:text-2xl text-xl font-semibold">
-                    5 - Investor Payouts
-                  </h1>
-                  <p>
-                    The real estate investors acquire, renovate, and sell
-                    properties.
-                  </p>
-                </div>
-              </Reveal>
-            </div>
-          </div>
-        </div>
-      </div>
+      </Reveal>
     </>
   );
 };
 
 export default FromCapitalReturns;
+
+// <div className="grid grid-cols-7 mt-16">
+//   <div className="relative md:flex hidden items-center">
+//     <div className="absolute left-8">
+//       <Reveal>
+//         <img src={longLineArrow} alt="Line Arrow" />
+//       </Reveal>
+//     </div>
+//   </div>
+
+//   <div className="col-span-6">
+//     <div className="grid md:grid-cols-4 gap-x-10 gap-y-5">
+//       <div className="col-span-2 md:w-[200px] w-full">
+//         <Reveal>
+//           <div className="space-y-2">
+//             <h1 className="md:text-2xl text-xl font-semibold">
+//               1 - Investor Commitment
+//             </h1>
+//             <p>Investors commit capital to the fund.</p>
+//           </div>
+//         </Reveal>
+//       </div>
+
+//       {/* Right Arrow */}
+//       <div className="relative col-span-2 md:flex hidden items-center">
+//         <div className="absolute top-20 -left-20">
+//           <Reveal>
+//             <img src={rightArrow} alt="Right Arrow" />
+//           </Reveal>
+//         </div>
+//       </div>
+
+//       {/* Left Arrow */}
+//       <div className="relative col-span-2 md:flex hidden items-center">
+//         <div className="absolute top-28 right-10">
+//           <Reveal>
+//             <img src={leftArrow} alt="Left Arrow" />
+//           </Reveal>
+//         </div>
+//       </div>
+
+//       <div className="col-span-2 md:w-[200px] w-full">
+//         <Reveal>
+//           <div className="space-y-2">
+//             <h1 className="md:text-2xl text-xl font-semibold">
+//               2 - Capital Deployment
+//             </h1>
+//             <p>
+//               The fund lends capital to real estate investors for
+//               fix-and-flip and wholesale projects.
+//             </p>
+//           </div>
+//         </Reveal>
+//       </div>
+
+//       <div className="col-span-2 md:w-[200px] w-full">
+//         <Reveal>
+//           <div className="space-y-2">
+//             <h1 className="md:text-2xl text-xl font-semibold">
+//               3 - Project Execution
+//             </h1>
+//             <p>
+//               The real estate investors acquire, renovate, and sell
+//               properties.
+//             </p>
+//           </div>
+//         </Reveal>
+//       </div>
+
+//       {/* Right Arrow */}
+//       <div className="relative col-span-2 md:flex hidden items-center">
+//         <div className="absolute top-20 -left-20">
+//           <Reveal>
+//             <img src={rightArrow} alt="Right Arrow" />
+//           </Reveal>
+//         </div>
+//       </div>
+
+//       {/* Left Arrow */}
+//       <div className="relative col-span-2 md:flex hidden items-center">
+//         <div className="absolute top-24 right-10">
+//           <Reveal>
+//             <img src={leftArrow} alt="Left Arrow" />
+//           </Reveal>
+//         </div>
+//       </div>
+
+//       <div className="col-span-2 md:w-[200px] w-full">
+//         <Reveal>
+//           <div className="space-y-2">
+//             <h1 className="md:text-2xl text-xl font-semibold">
+//               4 - Project Execution
+//             </h1>
+//             <p>
+//               The real estate investors acquire, renovate, and sell
+//               properties.
+//             </p>
+//           </div>
+//         </Reveal>
+//       </div>
+
+//       <div className="col-span-2 md:w-[200px] w-full">
+//         <Reveal>
+//           <div className="space-y-2">
+//             <h1 className="md:text-2xl text-xl font-semibold">
+//               5 - Investor Payouts
+//             </h1>
+//             <p>
+//               The real estate investors acquire, renovate, and sell
+//               properties.
+//             </p>
+//           </div>
+//         </Reveal>
+//       </div>
+//     </div>
+//   </div>
+// </div>

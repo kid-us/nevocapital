@@ -10,6 +10,7 @@ import {
   specialized,
   specializedHover,
 } from "@/assets";
+import ReadyToGrow from "@/components/investment-fund/ReadyToGrow";
 import Reveal from "@/components/Revel";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
@@ -109,6 +110,7 @@ const toc: TOC[] = [
   { id: "MeetTheTeam", label: "Meet the Team" },
   { id: "OurVision", label: "Strategic Growth, Built on Principles" },
   { id: "WhyPartnerWithUs", label: "Why Partner With Us" },
+  { id: "ReadyToGrow", label: "Ready to Grow" },
 ];
 
 function companyPage() {
@@ -351,6 +353,11 @@ function companyPage() {
               </div>
             </Reveal>
           ))}
+        </div>
+
+        {/* Ready to Grow */}
+        <div id="ReadyToGrow" className="lg:pt-44 pt-20 mb-10">
+          <ReadyToGrow />
         </div>
       </div>
 

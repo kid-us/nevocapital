@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 
 const ReadyToGrow = () => {
   return (
-    <>
+    <div className="bg-primary text-center text-white p-12">
       <Reveal>
         <h1 className="lg:text-3xl text-xl">
           Ready to Grow with Nevo Capital?
@@ -20,16 +20,16 @@ const ReadyToGrow = () => {
       </Reveal>
 
       <Reveal>
-        <div className="mt-8 flex ">
+        <div className="mt-8 flex justify-center">
           <Link
             to="/invest-with-us"
-            className="bg-primary rounded py-2 px-10 text-sm flex items-center"
+            className="text-primary rounded py-2 px-10 text-sm flex items-center bg-white"
           >
             Invest With Us <ArrowUpRight className="ms-5" size={19} />
           </Link>
         </div>
       </Reveal>
-    </>
+    </div>
   );
 };
 

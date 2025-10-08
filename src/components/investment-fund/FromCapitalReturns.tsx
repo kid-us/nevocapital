@@ -1,10 +1,10 @@
-import { fromReturn } from "@/assets";
+import { five, four, fromReturn, one, three, two } from "@/assets";
 import Reveal from "../Revel";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 const FromCapitalReturns = () => {
   return (
-    <>
+    <div className="relative lg:h-[880px]">
       <Reveal>
         <h1 className="lg:text-3xl text-xl">From Capital to Returns</h1>
       </Reveal>
@@ -20,22 +20,110 @@ const FromCapitalReturns = () => {
         <p className="mt-2">Investment Cycle</p>
       </Reveal>
 
+      <div className="relative lg:flex hidden flex-col items-center mt-30">
+        {/* 1 - Slide down */}
+        <motion.div
+          className="absolute"
+          initial={{ y: -100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <div className="absolute top-[4rem] left-[15.5rem] w-40">
+            <h1 className="font-semibold text-xl leading-5">
+              1 - Investor Commitment
+            </h1>
+            <p className="text-xs mt-2">
+              Investors commit capital to the fund.
+            </p>
+          </div>
+          <img src={one} alt="One" />
+        </motion.div>
+
+        {/* 5 - Slide from left */}
+        <motion.div
+          className="absolute"
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 1 }}
+          viewport={{ once: true }}
+        >
+          <div className="absolute top-[13rem] left-[2rem] w-40">
+            <h1 className="font-semibold text-xl leading-5">
+              5 - Investor Payouts
+            </h1>
+            <p className="text-xs mt-2">
+              Investors receive their distributions or keep their initial
+              investment for future growth.
+            </p>
+          </div>
+          <img src={five} alt="Five" />
+        </motion.div>
+
+        {/* 4 - Slide up */}
+        <motion.div
+          className="absolute"
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 1.8 }}
+          viewport={{ once: true }}
+        >
+          <div className="absolute top-[25rem] left-[7rem] w-40">
+            <h1 className="font-semibold text-xl leading-5">
+              4 - Loan Repayment & Returns
+            </h1>
+            <p className="text-xs mt-2">
+              Upon resale, the loan is repaid with interest and fees, generating
+              returns for the fund.
+            </p>
+          </div>
+          <img src={four} alt="Four" />
+        </motion.div>
+
+        {/* 3 - Slide up */}
+        <motion.div
+          className="absolute"
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 2.6 }}
+          viewport={{ once: true }}
+        >
+          <div className="absolute top-[26.5rem] left-[23rem] w-40">
+            <h1 className="font-semibold text-xl leading-5">
+              3 - Project Execution
+            </h1>
+            <p className="text-xs mt-2">
+              The real estate investors acquire, renovate, and sell properties.
+            </p>
+          </div>
+          <img src={three} alt="Three" />
+        </motion.div>
+
+        {/* 2 - Slide from right */}
+        <motion.div
+          className="absolute"
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 3.4 }}
+          viewport={{ once: true }}
+        >
+          <div className="absolute top-[13rem] left-[27rem] w-40">
+            <h1 className="font-semibold text-xl leading-5">
+              2 - Capital Deployment
+            </h1>
+            <p className="text-xs mt-2">
+              The fund lends capital to real estate investors for fix-and-flip
+              and wholesale projects.
+            </p>
+          </div>
+          <img src={two} alt="Two" />
+        </motion.div>
+      </div>
+
       <Reveal>
-        <div className="mt-30 flex justify-center">
-          <motion.img
-            src={fromReturn}
-            alt="From Capital returns"
-            initial={{ rotate: 90, borderRadius: "0%" }}
-            whileInView={{ rotate: 0, borderRadius: "50%" }}
-            transition={{
-              duration: 2,
-              ease: "easeInOut",
-            }}
-            viewport={{ once: true }}
-          />
-        </div>
+        <img src={fromReturn} className="lg:hidden mt-20" />
       </Reveal>
-    </>
+    </div>
   );
 };
 

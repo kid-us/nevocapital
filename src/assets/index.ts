@@ -41,6 +41,11 @@ import verified from "./verified.svg";
 import target from "./target.svg";
 import lines from "./lines.svg";
 import monitor from "./monitor.svg";
+import one from "./1.png";
+import two from "./2.png";
+import three from "./3.png";
+import four from "./4.png";
+import five from "./5.png";
 
 export {
   logo,
@@ -85,4 +90,9 @@ export {
   monitor,
   target,
   verified,
+  five,
+  four,
+  one,
+  three,
+  two,
 };

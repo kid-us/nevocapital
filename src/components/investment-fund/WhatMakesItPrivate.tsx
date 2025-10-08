@@ -8,7 +8,7 @@ const WhatMakesItPrivate = () => {
         <h1 className="lg:text-3xl text-xl">What Makes It Private?</h1>
       </Reveal>
       <Reveal>
-        <p className="text-sm mt-4">
+        <p className="mt-4 text-zinc-800">
           Unlike public bonds, private credit opportunities aren’t traded on
           open markets. Instead, they involve negotiated, illiquid transactions
           that reward investors with higher yields for committing capital over a
@@ -19,7 +19,7 @@ const WhatMakesItPrivate = () => {
       </Reveal>
 
       <Reveal>
-        <p className="mt-3 text-sm">
+        <p className="mt-3">
           Global Growth of Private Credit (AUM in $ Billions)
         </p>
       </Reveal>

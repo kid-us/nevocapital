@@ -20,7 +20,7 @@ const PrivateCredit = () => {
         </p>
       </Reveal>
       <Reveal>
-        <p className="mt-8 text-sm">
+        <p className="mt-8 text-zinc-800">
           Private credit—sometimes called private lending—is built on a simple
           idea: lending directly to borrowers for a fixed return. Unlike
           equities that swing with the market, private credit focuses on steady,
@@ -39,7 +39,7 @@ const PrivateCredit = () => {
                 alt={content.title}
                 className="w-full h-32 object-cover"
               />
-              <p className="text-sm mt-2">{content.title}</p>
+              <p className="mt-2">{content.title}</p>
             </div>
           </Reveal>
         ))}

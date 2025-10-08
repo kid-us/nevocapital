@@ -120,7 +120,7 @@ function CompanyMembersPage() {
                   About {selectedMember.name}
                 </h3>
                 <hr className="border-primary my-4" />
-                <p className="text-sm text-zinc-500">{selectedMember.about}</p>
+                <p className="text-zinc-800">{selectedMember.about}</p>
 
                 <div className="mt-5 flex space-x-3 group tex-sm items-center">
                   <Linkedin size={20} />
@@ -138,7 +138,7 @@ function CompanyMembersPage() {
           <Reveal>
             <div className="lg:mt-24 mt-16">
               <h1 className="lg:text-2xl text-xl">Background & Education</h1>
-              <p className="mt-3 text-sm text-zinc-600">
+              <p className="mt-3 text-zinc-800">
                 {selectedMember.backgroundEducation}
               </p>
             </div>
@@ -148,9 +148,7 @@ function CompanyMembersPage() {
           <Reveal>
             <div className="lg:mt-24 mt-16">
               <h1 className="lg:text-2xl text-xl">Career Path</h1>
-              <p className="mt-3 text-sm text-zinc-600">
-                {selectedMember.careerPath}
-              </p>
+              <p className="mt-3 text-zinc-800">{selectedMember.careerPath}</p>
             </div>
           </Reveal>
 
@@ -160,9 +158,7 @@ function CompanyMembersPage() {
               <h1 className="lg:text-2xl text-xl">
                 Current Role at Nevo Capital
               </h1>
-              <p className="mt-3 text-sm text-zinc-600">
-                {selectedMember.currentRole}
-              </p>
+              <p className="mt-3 text-zinc-800">{selectedMember.currentRole}</p>
             </div>
           </Reveal>
 
@@ -170,7 +166,7 @@ function CompanyMembersPage() {
           <Reveal>
             <div className="lg:mt-24 mt-16">
               <h1 className="lg:text-2xl text-xl">Beyond Business</h1>
-              <p className="mt-3 text-sm text-zinc-600">
+              <p className="mt-3 text-zinc-800">
                 {selectedMember.beyondBusiness}
               </p>
             </div>

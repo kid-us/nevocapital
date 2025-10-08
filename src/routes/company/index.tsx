@@ -161,7 +161,7 @@ function companyPage() {
             </h1>
           </Reveal>
           <Reveal>
-            <p className="mt-7 text-sm text-zinc-600">
+            <p className="mt-7 text-zinc-800">
               Nevo Capital is a fund management firm focused on delivering
               institutional-quality opportunities in private markets—starting
               with our flagship Private Credit Fund.
@@ -180,7 +180,7 @@ function companyPage() {
               </h1>
             </Reveal>
             <Reveal>
-              <p className="text-sm mt-4 text-zinc-600">
+              <p className="mt-4 text-zinc-800">
                 Nevo Capital is a boutique investment management firm offering
                 carefully structured opportunities in private markets. We serve
                 accredited and non-accredited investors as well as family
@@ -199,7 +199,7 @@ function companyPage() {
             <h1 className="lg:text-3xl text-xl">Meet the Team</h1>
           </Reveal>
           <Reveal>
-            <p className="text-sm mt-4 text-zinc-600">
+            <p className="mt-4 text-zinc-800">
               Our leadership team combines expertise in real estate, private
               credit, and investment management. Each member brings hands-on
               execution experience and a shared commitment to investor-first
@@ -214,13 +214,13 @@ function companyPage() {
                     <img src={team.img} alt={team.name} className="pt-5" />
                   </div>
                   <p className="font-bold mt-4 text-lg">{team.name}</p>
-                  <p className="text-sm text-zinc-600">{team.position}</p>
+                  <p className=" text-zinc-800">{team.position}</p>
                   <Link
                     to="/company/$companyId"
                     params={{
                       companyId: String(team.name.split(" ")[0]).toLowerCase(),
                     }}
-                    className="group flex space-x-3 mt-2 items-center text-sm font-semibold"
+                    className="group flex space-x-3 mt-2 items-center  font-semibold"
                   >
                     <p>Learn More</p>
                     <ArrowUpRight
@@ -242,12 +242,12 @@ function companyPage() {
             </h1>
           </Reveal>
           <Reveal>
-            <p className="text-sm text-zinc-600 mt-3">
+            <p className=" text-zinc-800 mt-3">
               Strategic Growth, Built on Principles
             </p>
           </Reveal>
           <Reveal>
-            <p className="mt-4 text-sm text-zinc-600">
+            <p className="mt-4  text-zinc-800">
               Nevo Capital was founded with a simple vision: to make
               institutional-quality private market investments accessible to
               investors seeking stability, growth, and diversification. We focus
@@ -267,13 +267,13 @@ function companyPage() {
                 </Reveal>
                 <div className="lg:mt-0 mt-10 ms-2">
                   <Reveal>
-                    <p className="text-sm">Today</p>
+                    <p className="">Today</p>
                   </Reveal>
                   <Reveal>
                     <div className="lg:block hidden h-6 border-l"></div>
                   </Reveal>
                   <Reveal>
-                    <p className="lg:mt-3 mt-1 text-xs font-semibold">
+                    <p className="lg:mt-3 mt-1 text-sm font-medium">
                       Private Credit Fund (short-term, real estate-backed
                       lending)
                     </p>
@@ -286,13 +286,13 @@ function companyPage() {
                 </Reveal>
                 <div className="lg:mt-0 mt-5 ms-2">
                   <Reveal>
-                    <p className="text-sm">Near Future</p>
+                    <p className="">Near Future</p>
                   </Reveal>
                   <Reveal>
                     <div className="lg:block hidden h-6 border-l"></div>
                   </Reveal>
                   <Reveal>
-                    <p className="lg:mt-3 mt-1 text-xs font-semibold">
+                    <p className="lg:mt-3 mt-1 text-sm font-medium">
                       Core Real Estate Fund (long-term, income-producing and
                       growth-oriented properties)
                     </p>
@@ -305,13 +305,13 @@ function companyPage() {
                 </Reveal>
                 <div className="lg:mt-0 mt-5 ms-2">
                   <Reveal>
-                    <p className="text-sm">Long Run</p>
+                    <p className="">Long Run</p>
                   </Reveal>
                   <Reveal>
                     <div className="lg:block hidden h-6 border-l"></div>
                   </Reveal>
                   <Reveal>
-                    <p className="lg:mt-3 mt-1 text-xs font-semibold">
+                    <p className="lg:mt-3 mt-1 text-sm font-medium">
                       Diversified Alternatives Platform (multi-strategy
                       alternative platform for portfolio diversification)
                     </p>
@@ -348,7 +348,7 @@ function companyPage() {
                 </div>
                 <div className="flex flex-col md:col-span-3">
                   <p className="font-semibold">{content.title}</p>
-                  <p className="text-zinc-600 text-sm mt-1">{content.desc}</p>
+                  <p className="text-zinc-800  mt-1">{content.desc}</p>
                 </div>
               </div>
             </Reveal>
@@ -372,7 +372,7 @@ function companyPage() {
                 <Reveal key={t.id}>
                   <a
                     href={`#${t.id}`}
-                    className={`text-sm cursor-pointer ${
+                    className={` cursor-pointer ${
                       currentSection === t.id ? "font-bold" : "text-zinc-500"
                     }`}
                   >

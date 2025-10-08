@@ -10,7 +10,7 @@ const FromCapitalReturns = () => {
       </Reveal>
 
       <Reveal>
-        <p className="mt-4">
+        <p className="mt-4 text-zinc-800">
           A clear, repeatable process designed to protect investor capital and
           generate steady returns.
         </p>

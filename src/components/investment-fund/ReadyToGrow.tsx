@@ -11,7 +11,7 @@ const ReadyToGrow = () => {
         </h1>
       </Reveal>
       <Reveal>
-        <p className="mt-8 text-sm">
+        <p className="mt-8">
           Explore how the Nevo Capital Private Credit Fund can help you
           diversify with predictable, real estate-backed returns. Invest with
           confidence today—and grow with our expanding platform of
@@ -23,7 +23,7 @@ const ReadyToGrow = () => {
         <div className="mt-8 flex justify-center">
           <Link
             to="/invest-with-us"
-            className="text-primary rounded py-2 px-10 text-sm flex items-center bg-white"
+            className="text-primary rounded py-2 px-10 flex items-center bg-white"
           >
             Invest With Us <ArrowUpRight className="ms-5" size={19} />
           </Link>

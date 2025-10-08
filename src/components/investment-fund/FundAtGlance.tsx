@@ -9,7 +9,7 @@ const FundAtGlance = () => {
         <h1 className="lg:text-3xl text-xl">Our Fund at a Glance</h1>
       </Reveal>
       <Reveal>
-        <p className="mt-4 text-sm">
+        <p className="mt-4 text-zinc-800">
           The Nevo Capital Private Credit Fund provides short-term, real
           estate-backed financing for fix-and-flip projects. By combining speed,
           technology, flexibility, and rigorous underwriting, we aim to deliver
@@ -47,7 +47,7 @@ const FundAtGlance = () => {
                 duration: 0.8,
                 delay: 0.3,
               }}
-              className={"text-xs md:text-[16px] md:mt-2 mt-1 font-bold"}
+              className={"text-xs md:text-[16px] md:mt-2 mt-1 font-medium"}
             >
               Target Investor Return 10% + annually
             </motion.p>
@@ -78,7 +78,7 @@ const FundAtGlance = () => {
                 duration: 0.8,
                 delay: 0.3,
               }}
-              className={"text-xs md:text-[16px] md:mt-2 mt-1 font-bold"}
+              className={"text-xs md:text-[16px] md:mt-2 mt-1 font-medium"}
             >
               Minimum Investment $50,000
             </motion.p>
@@ -109,7 +109,7 @@ const FundAtGlance = () => {
                 duration: 0.8,
                 delay: 0.3,
               }}
-              className={"text-xs md:text-[16px] md:mt-2 mt-1 font-bold"}
+              className={"text-xs md:text-[16px] md:mt-2 mt-1 font-medium"}
             >
               Regulation Type Reg D 506(b), 3(c)(1)
             </motion.p>
@@ -140,7 +140,7 @@ const FundAtGlance = () => {
                 duration: 0.8,
                 delay: 0.3,
               }}
-              className={"text-xs md:text-[16px] md:mt-2 mt-1 font-bold"}
+              className={"text-xs md:text-[16px] md:mt-2 mt-1 font-medium"}
             >
               First Position Line on Real Property
             </motion.p>
@@ -171,7 +171,7 @@ const FundAtGlance = () => {
                 duration: 0.8,
                 delay: 0.3,
               }}
-              className={"text-xs md:text-[16px] md:mt-2 mt-1 font-bold"}
+              className={"text-xs md:text-[16px] md:mt-2 mt-1 font-medium"}
             >
               Lock Up Period 12 Months
             </motion.p>
@@ -206,7 +206,7 @@ const FundAtGlance = () => {
                   duration: 0.8,
                   delay: 0.3,
                 }}
-                className="text-xs mt-1 font-bold"
+                className="text-xs mt-1 font-medium"
               >
                 Target Investor Return 10% + annually
               </motion.p>
@@ -237,7 +237,7 @@ const FundAtGlance = () => {
                   duration: 0.8,
                   delay: 0.3,
                 }}
-                className="text-xs mt-1 font-bold"
+                className="text-xs mt-1 font-medium"
               >
                 Minimum Investment $50,000
               </motion.p>
@@ -268,7 +268,7 @@ const FundAtGlance = () => {
                   duration: 0.8,
                   delay: 0.3,
                 }}
-                className="text-xs mt-1 font-bold"
+                className="text-xs mt-1 font-medium"
               >
                 Regulation Type Reg D 506(b), 3(c)(1)
               </motion.p>
@@ -299,7 +299,7 @@ const FundAtGlance = () => {
                   duration: 0.8,
                   delay: 0.3,
                 }}
-                className="text-xs mt-1 font-bold"
+                className="mt-1 font-medium"
               >
                 First Position Line on Real Property
               </motion.p>
@@ -330,7 +330,7 @@ const FundAtGlance = () => {
                   duration: 0.8,
                   delay: 0.3,
                 }}
-                className="text-xs mt-1 font-bold"
+                className="text-xs mt-1 font-medium"
               >
                 Lock Up Period 12 Months
               </motion.p>

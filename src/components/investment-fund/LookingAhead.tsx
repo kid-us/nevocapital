@@ -9,7 +9,7 @@ const LookingAhead = () => {
         </h1>
       </Reveal>
       <Reveal>
-        <p className="mt-8 text-sm">
+        <p className="mt-8 text-zinc-800">
           While the Nevo Capital Private Credit Fund is currently open, we are
           preparing additional funds to expand investor access. Our platform
           roadmap spans today’s short-term lending, tomorrow’s long-term real
@@ -27,13 +27,13 @@ const LookingAhead = () => {
             </Reveal>
             <div className="lg:mt-0 mt-10 ms-2">
               <Reveal>
-                <p className="text-sm">Today</p>
+                <p className="">Today</p>
               </Reveal>
               <Reveal>
                 <div className="lg:block hidden h-6 border-l"></div>
               </Reveal>
               <Reveal>
-                <p className="lg:mt-3 mt-1 text-xs font-semibold">
+                <p className="lg:mt-3 mt-1 text-sm font-medium">
                   Private Credit Fund (short-term, lending)
                 </p>
               </Reveal>
@@ -45,13 +45,13 @@ const LookingAhead = () => {
             </Reveal>
             <div className="lg:mt-0 mt-5 ms-2">
               <Reveal>
-                <p className="text-sm">Next</p>
+                <p className="">Next</p>
               </Reveal>
               <Reveal>
                 <div className="lg:block hidden h-6 border-l"></div>
               </Reveal>
               <Reveal>
-                <p className="lg:mt-3 mt-1 text-xs font-semibold">
+                <p className="lg:mt-3 mt-1 text-sm font-medium">
                   Core Real Estate Fund (long-term, growth & income)
                 </p>
               </Reveal>
@@ -63,13 +63,13 @@ const LookingAhead = () => {
             </Reveal>
             <div className="lg:mt-0 mt-5 ms-2">
               <Reveal>
-                <p className="text-sm">Future</p>
+                <p className="">Future</p>
               </Reveal>
               <Reveal>
                 <div className="lg:block hidden h-6 border-l"></div>
               </Reveal>
               <Reveal>
-                <p className="lg:mt-3 mt-1 text-xs font-semibold">
+                <p className="lg:mt-3 mt-1 text-sm font-medium">
                   Diversified Alternatives Fund (broad exposure)
                 </p>
               </Reveal>

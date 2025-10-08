@@ -84,7 +84,7 @@ function RouteComponent() {
         <div className="absolute -bottom-[28rem] w-[620px] h-[620px] overflow-hidden rounded-full border-t border-l border-r border-primary">
           <div className="flex justify-center text-black mt-20 space-x-8">
             <Link
-              to="/"
+              to="/company"
               className="font-medium text-sm hover:text-primary transition-colors duration-200"
             >
               About

@@ -79,7 +79,7 @@ const Footer = () => {
         <p className="text-xs text-zinc-500">
           © {date.getFullYear()} Nevo Capital. All rights reserved
         </p>
-        <Link to="/" className="underline text-xs">
+        <Link to="/terms-of-use" className="underline text-xs">
           Privacy Policy
         </Link>
       </div>

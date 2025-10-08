@@ -49,7 +49,7 @@ function InvestmentFunds() {
 
   // Toc Tracker
   useEffect(() => {
-    // scrollTo(0, 0);
+    scrollTo(0, 0);
 
     const handleScroll = () => {
       let current = "";

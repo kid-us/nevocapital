@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermsOfUseRouteImport } from './routes/terms-of-use'
 import { Route as InvestmentFundsRouteImport } from './routes/investment-funds'
 import { Route as InvestWithUsRouteImport } from './routes/invest-with-us'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -17,6 +18,11 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as CompanyIndexRouteImport } from './routes/company/index'
 import { Route as CompanyCompanyIdRouteImport } from './routes/company/$companyId'
 
+const TermsOfUseRoute = TermsOfUseRouteImport.update({
+  id: '/terms-of-use',
+  path: '/terms-of-use',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const InvestmentFundsRoute = InvestmentFundsRouteImport.update({
   id: '/investment-funds',
   path: '/investment-funds',
@@ -59,6 +65,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/invest-with-us': typeof InvestWithUsRoute
   '/investment-funds': typeof InvestmentFundsRoute
+  '/terms-of-use': typeof TermsOfUseRoute
   '/company/$companyId': typeof CompanyCompanyIdRoute
   '/company': typeof CompanyIndexRoute
 }
@@ -68,6 +75,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/invest-with-us': typeof InvestWithUsRoute
   '/investment-funds': typeof InvestmentFundsRoute
+  '/terms-of-use': typeof TermsOfUseRoute
   '/company/$companyId': typeof CompanyCompanyIdRoute
   '/company': typeof CompanyIndexRoute
 }
@@ -78,6 +86,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/invest-with-us': typeof InvestWithUsRoute
   '/investment-funds': typeof InvestmentFundsRoute
+  '/terms-of-use': typeof TermsOfUseRoute
   '/company/$companyId': typeof CompanyCompanyIdRoute
   '/company/': typeof CompanyIndexRoute
 }
@@ -89,6 +98,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/invest-with-us'
     | '/investment-funds'
+    | '/terms-of-use'
     | '/company/$companyId'
     | '/company'
   fileRoutesByTo: FileRoutesByTo
@@ -98,6 +108,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/invest-with-us'
     | '/investment-funds'
+    | '/terms-of-use'
     | '/company/$companyId'
     | '/company'
   id:
@@ -107,6 +118,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/invest-with-us'
     | '/investment-funds'
+    | '/terms-of-use'
     | '/company/$companyId'
     | '/company/'
   fileRoutesById: FileRoutesById
@@ -117,12 +129,20 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   InvestWithUsRoute: typeof InvestWithUsRoute
   InvestmentFundsRoute: typeof InvestmentFundsRoute
+  TermsOfUseRoute: typeof TermsOfUseRoute
   CompanyCompanyIdRoute: typeof CompanyCompanyIdRoute
   CompanyIndexRoute: typeof CompanyIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/terms-of-use': {
+      id: '/terms-of-use'
+      path: '/terms-of-use'
+      fullPath: '/terms-of-use'
+      preLoaderRoute: typeof TermsOfUseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/investment-funds': {
       id: '/investment-funds'
       path: '/investment-funds'
@@ -181,6 +201,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   InvestWithUsRoute: InvestWithUsRoute,
   InvestmentFundsRoute: InvestmentFundsRoute,
+  TermsOfUseRoute: TermsOfUseRoute,
   CompanyCompanyIdRoute: CompanyCompanyIdRoute,
   CompanyIndexRoute: CompanyIndexRoute,
 }

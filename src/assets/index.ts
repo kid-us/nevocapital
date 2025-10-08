@@ -37,6 +37,10 @@ import leftArrow from "./leftArrow.svg";
 import rightArrow from "./rightArrow.svg";
 import layer from "./layer.svg";
 import fromReturn from "./fromReturn.svg";
+import verified from "./verified.svg";
+import target from "./target.svg";
+import lines from "./lines.svg";
+import monitor from "./monitor.svg";
 
 export {
   logo,
@@ -77,4 +81,8 @@ export {
   rightArrow,
   layer,
   fromReturn,
+  lines,
+  monitor,
+  target,
+  verified,
 };

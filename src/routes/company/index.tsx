@@ -1,14 +1,12 @@
 import {
   alex,
-  aligned,
-  alignedHover,
   comapnyGraph,
   david,
-  institutionalHover,
-  institutionalPng,
   jochai,
-  specialized,
-  specializedHover,
+  lines,
+  monitor,
+  target,
+  verified,
 } from "@/assets";
 import ReadyToGrow from "@/components/investment-fund/ReadyToGrow";
 import Reveal from "@/components/Revel";
@@ -31,13 +29,13 @@ interface TheTeam {
   img: string;
 }
 
-interface Content {
-  id: number;
-  title: string;
-  desc: string;
-  img: string;
-  hoverImg: string;
-}
+// interface Content {
+//   id: number;
+//   title: string;
+//   desc: string;
+//   img: string;
+//   hoverImg: string;
+// }
 
 export interface TOC {
   id: string;
@@ -69,37 +67,71 @@ const teams: TheTeam[] = [
   },
 ];
 
-// Contents
-const contents: Content[] = [
+// Why Partner with Us
+const whyPartnerWithUs: {
+  id: number;
+  bg: string;
+  title: string;
+  icon: string;
+}[] = [
   {
     id: 1,
-    desc: "Deep knowledge in real estate and private markets, applied with disciplined risk management.",
-    hoverImg: institutionalHover,
-    img: institutionalPng,
-    title: "Specialized Expertise",
+    bg: "#E0B84D",
+    icon: verified,
+    title: "Institutional Quality",
   },
   {
     id: 2,
-    desc: "Deep knowledge in real estate and private markets, applied with disciplined risk management.",
-    hoverImg: specializedHover,
-    img: specialized,
+    bg: "#E0B84DCC",
+
+    icon: target,
     title: "Specialized Expertise",
   },
   {
     id: 3,
-    desc: " We invest our own capital alongside yours—true partnership in every strategy.",
-    hoverImg: alignedHover,
-    img: aligned,
+    bg: "#E0B84D99",
+    icon: lines,
     title: "Aligned Interests",
   },
   {
     id: 4,
-    desc: " From underwriting to monitoring, we integrate advanced technology to enhance speed, precision, and transparency across every stage of the investment process.",
-    hoverImg: specializedHover,
-    img: specialized,
+    bg: "#E0B84D66",
+    icon: monitor,
     title: "Technology-Enabled Advantage",
   },
 ];
+
+// Contents
+// const contents: Content[] = [
+//   {
+//     id: 1,
+//     desc: "Deep knowledge in real estate and private markets, applied with disciplined risk management.",
+//     hoverImg: institutionalHover,
+//     img: institutionalPng,
+//     title: "Specialized Expertise",
+//   },
+//   {
+//     id: 2,
+//     desc: "Deep knowledge in real estate and private markets, applied with disciplined risk management.",
+//     hoverImg: specializedHover,
+//     img: specialized,
+//     title: "Specialized Expertise",
+//   },
+//   {
+//     id: 3,
+//     desc: " We invest our own capital alongside yours—true partnership in every strategy.",
+//     hoverImg: alignedHover,
+//     img: aligned,
+//     title: "Aligned Interests",
+//   },
+//   {
+//     id: 4,
+//     desc: " From underwriting to monitoring, we integrate advanced technology to enhance speed, precision, and transparency across every stage of the investment process.",
+//     hoverImg: specializedHover,
+//     img: specialized,
+//     title: "Technology-Enabled Advantage",
+//   },
+// ];
 
 const toc: TOC[] = [
   {
@@ -328,7 +360,28 @@ function companyPage() {
           <Reveal>
             <h1 className="lg:text-3xl text-xl mb-4">Why Partner With Us</h1>
           </Reveal>
-          {contents.map((content) => (
+
+          <div className="grid lg:grid-cols-4 grid-cols-2 lg:gap-0 gap-5 mt-8">
+            {whyPartnerWithUs.map((why) => (
+              <div className="shadow-lg">
+                <Reveal key={why.id}>
+                  <>
+                    <div
+                      style={{ backgroundColor: why.bg }}
+                      className="flex items-center justify-center p-8"
+                    >
+                      <img src={why.icon} alt={why.title} />
+                    </div>
+                    <p className="mt-2 font-medium p-4 text-center">
+                      {why.title}
+                    </p>
+                  </>
+                </Reveal>
+              </div>
+            ))}
+          </div>
+
+          {/* {contents.map((content) => (
             <Reveal key={content.id}>
               <div
                 key={content.id}
@@ -352,7 +405,7 @@ function companyPage() {
                 </div>
               </div>
             </Reveal>
-          ))}
+          ))} */}
         </div>
 
         {/* Ready to Grow */}
@@ -372,7 +425,7 @@ function companyPage() {
                 <Reveal key={t.id}>
                   <a
                     href={`#${t.id}`}
-                    className={` cursor-pointer ${
+                    className={` cursor-pointer text-sm ${
                       currentSection === t.id ? "font-medium" : "text-zinc-700"
                     }`}
                   >

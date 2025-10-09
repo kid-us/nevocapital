@@ -1,6 +1,6 @@
 import { Link, useLocation } from "@tanstack/react-router";
 import { X, Menu, Phone, Mail } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { nav } from "@/constants/nav";
 import { logo } from "@/assets";
@@ -12,6 +12,14 @@ const Navbar = () => {
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const [isInvestUsHovered, setIsInvestUsHovered] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (location.pathname === "/invest-with-us") {
+      setIsInvestUsHovered(true);
+    } else {
+      setIsInvestUsHovered(false);
+    }
+  }, [location.pathname, isInvestUsHovered]);
 
   return (
     <div className="sticky top-0 w-full !z-50 bg-white lg:px-0 px-5 lg:py-1 py-3">
@@ -100,7 +108,9 @@ const Navbar = () => {
                 transition={{ type: "keyframes", stiffness: 200, damping: 15 }}
                 className="w-2 h-2 bg-primary rounded-full absolute -left-3 top-1/2 -translate-y-1/2"
               />
-              <span className="relative transition-colors duration-300 group-hover:text-primary">
+              <span
+                className={`relative transition-colors duration-300 group-hover:text-primary ${isInvestUsHovered && "text-primary"}`}
+              >
                 Invest with us
               </span>
             </Link>

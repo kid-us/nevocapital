@@ -213,7 +213,7 @@ function companyPage() {
                   <img
                     src={team.img}
                     alt={team.name}
-                    className="w-full h-auto transition-all duration-500 ease-in-out group-hover:blur-sm group-hover:bg-black rounded-lg"
+                    className="w-full md:h-auto h-78 transition-all duration-500 ease-in-out group-hover:blur-sm group-hover:bg-black rounded-lg object-cover"
                   />
 
                   {/* Overlay Learn More */}
@@ -222,7 +222,7 @@ function companyPage() {
                     params={{
                       companyId: String(team.name.split(" ")[0]).toLowerCase(),
                     }}
-                    className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out text-white font-bold space-x-2"
+                    className="absolute inset-0 md:flex hidden items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out text-white font-bold space-x-2"
                   >
                     <p>Learn More</p>
                     <ArrowUpRight
@@ -234,7 +234,22 @@ function companyPage() {
                   {/* Name and Position below the image */}
                   <div className="mt-4">
                     <p className="font-bold text-lg">{team.name}</p>
-                    <p className="text-zinc-800">{team.position}</p>
+                    <p className="text-zinc-800 mb-3">{team.position}</p>
+                    <Link
+                      to="/company/$companyId"
+                      className="md:hidden flex items-center space-x-2 transition-all font-medium"
+                      params={{
+                        companyId: String(
+                          team.name.split(" ")[0]
+                        ).toLowerCase(),
+                      }}
+                    >
+                      <p>Learn More</p>
+                      <ArrowUpRight
+                        size={20}
+                        className="transform transition-transform duration-500 group-hover:rotate-45"
+                      />
+                    </Link>
                   </div>
                 </div>
               </Reveal>

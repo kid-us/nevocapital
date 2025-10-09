@@ -52,7 +52,7 @@ const LookingAhead = () => {
             viewport={{ once: true }}
             transition={{ delay: 1.5, duration: 1, ease: "easeOut" }}
           >
-            Future
+            Today
           </motion.text>
 
           <motion.text
@@ -65,7 +65,7 @@ const LookingAhead = () => {
             viewport={{ once: true }}
             transition={{ delay: 2, duration: 1, ease: "easeOut" }}
           >
-            Today
+            Future
           </motion.text>
 
           <motion.text
@@ -94,10 +94,10 @@ const LookingAhead = () => {
             transition={{ delay: 1.6, duration: 1, ease: "easeOut" }}
           >
             <tspan x="280" dy="10">
-              Diversified Alternatives
+              Private Credit Fund
             </tspan>
             <tspan x="280" dy="30">
-              Fund (broad exposure)
+              (short-term, lending)
             </tspan>
           </motion.text>
 
@@ -113,10 +113,10 @@ const LookingAhead = () => {
             transition={{ delay: 2.1, duration: 1, ease: "easeOut" }}
           >
             <tspan x="-100" dy="10">
-              Private Credit Fund
+              Diversified Alternatives
             </tspan>
             <tspan x="-100" dy="30">
-              (short-term, lending)
+              Fund (broad exposure)
             </tspan>
           </motion.text>
 

@@ -13,6 +13,7 @@ import Reveal from "@/components/Revel";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
 
 export const Route = createFileRoute("/company/")({
   component: companyPage,
@@ -28,14 +29,6 @@ interface TheTeam {
   path: string;
   img: string;
 }
-
-// interface Content {
-//   id: number;
-//   title: string;
-//   desc: string;
-//   img: string;
-//   hoverImg: string;
-// }
 
 export interface TOC {
   id: string;
@@ -73,12 +66,14 @@ const whyPartnerWithUs: {
   bg: string;
   title: string;
   icon: string;
+  desc: string;
 }[] = [
   {
     id: 1,
     bg: "#E0B84D",
     icon: verified,
     title: "Institutional Quality",
+    desc: "Governance, compliance, and transparency guide every investment decision.",
   },
   {
     id: 2,
@@ -86,52 +81,23 @@ const whyPartnerWithUs: {
 
     icon: target,
     title: "Specialized Expertise",
+    desc: "Deep knowledge in real estate and private markets, applied with disciplined risk management.",
   },
   {
     id: 3,
     bg: "#E0B84D99",
     icon: lines,
     title: "Aligned Interests",
+    desc: "We invest our own capital alongside yours—true partnership in every strategy.",
   },
   {
     id: 4,
     bg: "#E0B84D66",
     icon: monitor,
     title: "Technology-Enabled Advantage",
+    desc: " From underwriting to monitoring, we integrate advanced technology to enhance speed, precision, and transparency across every stage of the investment process.",
   },
 ];
-
-// Contents
-// const contents: Content[] = [
-//   {
-//     id: 1,
-//     desc: "Deep knowledge in real estate and private markets, applied with disciplined risk management.",
-//     hoverImg: institutionalHover,
-//     img: institutionalPng,
-//     title: "Specialized Expertise",
-//   },
-//   {
-//     id: 2,
-//     desc: "Deep knowledge in real estate and private markets, applied with disciplined risk management.",
-//     hoverImg: specializedHover,
-//     img: specialized,
-//     title: "Specialized Expertise",
-//   },
-//   {
-//     id: 3,
-//     desc: " We invest our own capital alongside yours—true partnership in every strategy.",
-//     hoverImg: alignedHover,
-//     img: aligned,
-//     title: "Aligned Interests",
-//   },
-//   {
-//     id: 4,
-//     desc: " From underwriting to monitoring, we integrate advanced technology to enhance speed, precision, and transparency across every stage of the investment process.",
-//     hoverImg: specializedHover,
-//     img: specialized,
-//     title: "Technology-Enabled Advantage",
-//   },
-// ];
 
 const toc: TOC[] = [
   {
@@ -146,6 +112,7 @@ const toc: TOC[] = [
 ];
 
 function companyPage() {
+  const [hoveredSection, setHoveredSection] = useState<number | null>(null);
   const [currentSection, setCurrentSection] =
     useState<string>("BuildingPlatform");
 
@@ -365,56 +332,44 @@ function companyPage() {
         </div>
 
         {/* Why Partner with us */}
-        <div id="WhyPartnerWithUs" className="lg:pt-44 pt-20 mb-10">
-          <Reveal>
-            <h1 className="lg:text-3xl text-xl mb-4">Why Partner With Us</h1>
-          </Reveal>
+        <div id="WhyPartnerWithUs" className="lg:pt-44 pt-20 mb-10 relative">
+          <h1 className="lg:text-3xl text-xl mb-4">Why Partner With Us</h1>
 
-          <div className="grid lg:grid-cols-4 grid-cols-2 lg:gap-0 gap-5 mt-8">
-            {whyPartnerWithUs.map((why) => (
-              <div className="shadow-lg">
-                <Reveal key={why.id}>
-                  <>
-                    <div
-                      style={{ backgroundColor: why.bg }}
-                      className="flex items-center justify-center p-8"
-                    >
-                      <img src={why.icon} alt={why.title} />
-                    </div>
-                    <p className="mt-2 font-medium p-4 text-center">
-                      {why.title}
-                    </p>
-                  </>
-                </Reveal>
+          <div className="grid lg:grid-cols-4 grid-cols-2 lg:gap-0 gap-5 mt-8 relative">
+            {whyPartnerWithUs.map((why, index) => (
+              <div
+                key={why.id}
+                className="shadow-lg relative"
+                onMouseEnter={() => setHoveredSection(index)}
+                onMouseLeave={() => setHoveredSection(null)}
+              >
+                <div
+                  style={{ backgroundColor: why.bg }}
+                  className="flex items-center justify-center p-8 rounded transition-transform duration-300 ease-in-out hover:scale-105"
+                >
+                  <img src={why.icon} alt={why.title} />
+                </div>
+                <p className="mt-2 font-medium p-3 text-center">{why.title}</p>
               </div>
             ))}
-          </div>
 
-          {/* {contents.map((content) => (
-            <Reveal key={content.id}>
-              <div
-                key={content.id}
-                className="grid lg:grid-cols-4 md:grid-cols-4 grid-cols-1 items-center gap-5 mt-5"
-              >
-                <div className="relative w-full h-full group">
-                  <img
-                    src={content.img}
-                    alt={content.title}
-                    className="w-full h- object-cover transition-opacity duration-300 ease-in-out group-hover:opacity-0"
-                  />
-                  <img
-                    src={content.hoverImg}
-                    alt={`${content.title} hover`}
-                    className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100"
-                  />
-                </div>
-                <div className="flex flex-col md:col-span-3">
-                  <p className="font-semibold">{content.title}</p>
-                  <p className="text-zinc-800  mt-1">{content.desc}</p>
-                </div>
-              </div>
-            </Reveal>
-          ))} */}
+            {/* Single Hovered Section Description */}
+            <AnimatePresence>
+              {hoveredSection !== null && (
+                <motion.div
+                  initial={{ y: -20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -20, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                  className="absolute left-0 lg:-bottom-24 bottom-0 w-full lg:max-w-[calc(100%+2rem)] px-4 lg:px-0 bg-primary p-5 rounded-lg text-white shadow-lg z-10"
+                >
+                  <p className="font-medium text-sm sm:text-base lg:text-lg text-center lg:text-left">
+                    {whyPartnerWithUs[hoveredSection].desc}
+                  </p>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </div>
 
         {/* Ready to Grow */}

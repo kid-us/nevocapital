@@ -1,10 +1,10 @@
 import ComingSoon from "@/components/ComingSoon";
 import { createFileRoute } from "@tanstack/react-router";
 
-export const Route = createFileRoute("/invest-with-us")({
-  component: RouteComponent,
+export const Route = createFileRoute("/client-portals")({
+  component: ClientPortalsPage,
 });
 
-function RouteComponent() {
+function ClientPortalsPage() {
   return <ComingSoon />;
 }

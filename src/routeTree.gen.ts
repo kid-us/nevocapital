@@ -13,6 +13,7 @@ import { Route as TermsOfUseRouteImport } from './routes/terms-of-use'
 import { Route as InvestmentFundsRouteImport } from './routes/investment-funds'
 import { Route as InvestWithUsRouteImport } from './routes/invest-with-us'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ClientPortalsRouteImport } from './routes/client-portals'
 import { Route as AbouteRouteImport } from './routes/aboute'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CompanyIndexRouteImport } from './routes/company/index'
@@ -36,6 +37,11 @@ const InvestWithUsRoute = InvestWithUsRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ClientPortalsRoute = ClientPortalsRouteImport.update({
+  id: '/client-portals',
+  path: '/client-portals',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AbouteRoute = AbouteRouteImport.update({
@@ -62,6 +68,7 @@ const CompanyCompanyIdRoute = CompanyCompanyIdRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/aboute': typeof AbouteRoute
+  '/client-portals': typeof ClientPortalsRoute
   '/contact': typeof ContactRoute
   '/invest-with-us': typeof InvestWithUsRoute
   '/investment-funds': typeof InvestmentFundsRoute
@@ -72,6 +79,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/aboute': typeof AbouteRoute
+  '/client-portals': typeof ClientPortalsRoute
   '/contact': typeof ContactRoute
   '/invest-with-us': typeof InvestWithUsRoute
   '/investment-funds': typeof InvestmentFundsRoute
@@ -83,6 +91,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/aboute': typeof AbouteRoute
+  '/client-portals': typeof ClientPortalsRoute
   '/contact': typeof ContactRoute
   '/invest-with-us': typeof InvestWithUsRoute
   '/investment-funds': typeof InvestmentFundsRoute
@@ -95,6 +104,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/aboute'
+    | '/client-portals'
     | '/contact'
     | '/invest-with-us'
     | '/investment-funds'
@@ -105,6 +115,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/aboute'
+    | '/client-portals'
     | '/contact'
     | '/invest-with-us'
     | '/investment-funds'
@@ -115,6 +126,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/aboute'
+    | '/client-portals'
     | '/contact'
     | '/invest-with-us'
     | '/investment-funds'
@@ -126,6 +138,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AbouteRoute: typeof AbouteRoute
+  ClientPortalsRoute: typeof ClientPortalsRoute
   ContactRoute: typeof ContactRoute
   InvestWithUsRoute: typeof InvestWithUsRoute
   InvestmentFundsRoute: typeof InvestmentFundsRoute
@@ -164,6 +177,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/client-portals': {
+      id: '/client-portals'
+      path: '/client-portals'
+      fullPath: '/client-portals'
+      preLoaderRoute: typeof ClientPortalsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/aboute': {
       id: '/aboute'
       path: '/aboute'
@@ -198,6 +218,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AbouteRoute: AbouteRoute,
+  ClientPortalsRoute: ClientPortalsRoute,
   ContactRoute: ContactRoute,
   InvestWithUsRoute: InvestWithUsRoute,
   InvestmentFundsRoute: InvestmentFundsRoute,

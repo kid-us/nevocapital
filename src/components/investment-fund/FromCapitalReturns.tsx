@@ -20,13 +20,13 @@ const FromCapitalReturns = () => {
         <p className="mt-2">Investment Cycle</p>
       </Reveal>
 
-      <div className="relative lg:flex hidden flex-col items-center mt-30">
+      <div className="relative lg:flex hidden flex-col items-center mt-30 scale-90">
         {/* 1 - Slide down */}
         <motion.div
           className="absolute"
           initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.6, delay: 0 }}
           viewport={{ once: true }}
         >
           <div className="absolute top-[4rem] left-[15.5rem] w-40">
@@ -40,24 +40,43 @@ const FromCapitalReturns = () => {
           <img src={one} alt="One" />
         </motion.div>
 
-        {/* 5 - Slide from left */}
+        {/* 2 - Slide from right */}
         <motion.div
           className="absolute"
-          initial={{ x: -100, opacity: 0 }}
+          initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
           viewport={{ once: true }}
         >
-          <div className="absolute top-[13rem] left-[2rem] w-40">
+          <div className="absolute top-[13rem] left-[27rem] w-40">
             <h1 className="font-semibold text-xl leading-5">
-              5 - Investor Payouts
+              2 - Capital Deployment
             </h1>
             <p className="text-xs mt-2">
-              Investors receive their distributions or keep their initial
-              investment for future growth.
+              The fund lends capital to real estate investors for fix-and-flip
+              and wholesale projects.
             </p>
           </div>
-          <img src={five} alt="Five" />
+          <img src={two} alt="Two" />
+        </motion.div>
+
+        {/* 3 - Slide up */}
+        <motion.div
+          className="absolute"
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, delay: 1 }}
+          viewport={{ once: true }}
+        >
+          <div className="absolute top-[26.5rem] left-[23rem] w-40">
+            <h1 className="font-semibold text-xl leading-5">
+              3 - Project Execution
+            </h1>
+            <p className="text-xs mt-2">
+              The real estate investors acquire, renovate, and sell properties.
+            </p>
+          </div>
+          <img src={three} alt="Three" />
         </motion.div>
 
         {/* 4 - Slide up */}
@@ -65,7 +84,7 @@ const FromCapitalReturns = () => {
           className="absolute"
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1.8 }}
+          transition={{ duration: 0.6, delay: 1.5 }}
           viewport={{ once: true }}
         >
           <div className="absolute top-[25rem] left-[7rem] w-40">
@@ -80,43 +99,24 @@ const FromCapitalReturns = () => {
           <img src={four} alt="Four" />
         </motion.div>
 
-        {/* 3 - Slide up */}
+        {/* 5 - Slide from left */}
         <motion.div
           className="absolute"
-          initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 2.6 }}
-          viewport={{ once: true }}
-        >
-          <div className="absolute top-[26.5rem] left-[23rem] w-40">
-            <h1 className="font-semibold text-xl leading-5">
-              3 - Project Execution
-            </h1>
-            <p className="text-xs mt-2">
-              The real estate investors acquire, renovate, and sell properties.
-            </p>
-          </div>
-          <img src={three} alt="Three" />
-        </motion.div>
-
-        {/* 2 - Slide from right */}
-        <motion.div
-          className="absolute"
-          initial={{ x: 100, opacity: 0 }}
+          initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 3.4 }}
+          transition={{ duration: 0.6, delay: 2 }}
           viewport={{ once: true }}
         >
-          <div className="absolute top-[13rem] left-[27rem] w-40">
+          <div className="absolute top-[13rem] left-[2rem] w-40">
             <h1 className="font-semibold text-xl leading-5">
-              2 - Capital Deployment
+              5 - Investor Payouts
             </h1>
             <p className="text-xs mt-2">
-              The fund lends capital to real estate investors for fix-and-flip
-              and wholesale projects.
+              Investors receive their distributions or keep their initial
+              investment for future growth.
             </p>
           </div>
-          <img src={two} alt="Two" />
+          <img src={five} alt="Five" />
         </motion.div>
       </div>
 

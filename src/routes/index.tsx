@@ -69,7 +69,7 @@ function RouteComponent() {
         {/* Hero BG */}
         <HeroBg />
 
-        <div className="flex flex-col mb-4">
+        <div className="flex flex-col mb-10">
           <img src={hero} className="lg:w-[350px] w-[300px]" />
         </div>
 

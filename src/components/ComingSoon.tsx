@@ -36,7 +36,7 @@ const ComingSoon = () => {
       <img
         src={layer}
         alt="Layer"
-        className="absolute bottom-0 h-f overflow-hidden"
+        className="absolute -bottom-30 h-f overflow-hidden"
       />
     </div>
   );

@@ -13,7 +13,7 @@ const ComingSoon = () => {
 
       <div className="flex flex-col items-center justify-center h-full">
         <img src={hero} className="lg:w-[200px] w-[150px]" />
-        <h1 className="lg:text-6xl md:text-4xl text-2xl mt-10">Coming Soon</h1>
+        <h1 className="lg:text-5xl md:text-4xl text-2xl mt-10">Coming Soon</h1>
         <p className="lg:text-xl text-sm mt-2 md:px-10 text-center">
           We are working hard to get this up and running
         </p>

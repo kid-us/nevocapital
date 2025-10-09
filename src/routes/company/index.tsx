@@ -350,7 +350,7 @@ function companyPage() {
         <div id="WhyPartnerWithUs" className="lg:pt-44 pt-20 mb-10 relative">
           <h1 className="lg:text-3xl text-xl mb-4">Why Partner With Us</h1>
 
-          <div className="grid lg:grid-cols-4 grid-cols-2 lg:gap-0 gap-5 mt-8 relative">
+          <div className="grid lg:grid-cols-4 md:grid-cols-2 lg:gap-0 gap-5 mt-8 relative">
             {whyPartnerWithUs.map((why, index) => (
               <div
                 key={why.id}
@@ -364,7 +364,12 @@ function companyPage() {
                 >
                   <img src={why.icon} alt={why.title} />
                 </div>
-                <p className="mt-2 font-medium p-3 text-center">{why.title}</p>
+                <div className="p-3">
+                  <p className="mt-2 font-medium text-center">{why.title}</p>
+                  <p className="text-xs lg:hidden text-center mt-2">
+                    {why.desc}
+                  </p>
+                </div>
               </div>
             ))}
 
@@ -376,9 +381,9 @@ function companyPage() {
                   animate={{ y: 0, opacity: 1 }}
                   exit={{ y: -20, opacity: 0 }}
                   transition={{ duration: 0.3, ease: "easeOut" }}
-                  className="absolute left-0 lg:-bottom-24 bottom-0 w-full lg:max-w-[calc(100%+2rem)] bg-primary p-5 rounded-lg text-white shadow-lg z-10"
+                  className="lg:block hidden absolute left-0 lg:top-54 w-full lg:max-w-[calc(100%+2rem)] bg-primary p-5 rounded-lg text-white shadow-lg z-10"
                 >
-                  <p className="font-medium text-sm sm:text-base lg:text-lg text-center lg:text-left">
+                  <p className="font-medium text-sm sm:text-base text-center lg:text-left">
                     {whyPartnerWithUs[hoveredSection].desc}
                   </p>
                 </motion.div>

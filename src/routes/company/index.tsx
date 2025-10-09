@@ -241,25 +241,34 @@ function companyPage() {
           <div className="grid md:grid-cols-3 grid-cols-1 gap-5 mt-5">
             {teams.map((team) => (
               <Reveal key={team.id}>
-                <div>
-                  <div className="bg-[#ebebeb]">
-                    <img src={team.img} alt={team.name} className="pt-5" />
-                  </div>
-                  <p className="font-bold mt-4 text-lg">{team.name}</p>
-                  <p className=" text-zinc-800">{team.position}</p>
+                <div className="group relative overflow-hidden cursor-pointer rounded-lg">
+                  {/* Image */}
+                  <img
+                    src={team.img}
+                    alt={team.name}
+                    className="w-full h-auto transition-all duration-500 ease-in-out group-hover:blur-sm group-hover:bg-black rounded-lg"
+                  />
+
+                  {/* Overlay Learn More */}
                   <Link
                     to="/company/$companyId"
                     params={{
                       companyId: String(team.name.split(" ")[0]).toLowerCase(),
                     }}
-                    className="group flex space-x-3 mt-2 items-center  font-semibold"
+                    className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out text-white font-bold space-x-2"
                   >
                     <p>Learn More</p>
                     <ArrowUpRight
                       size={20}
-                      className="group-hover:rotate-45 transition-all duration-300"
+                      className="transform transition-transform duration-500 group-hover:rotate-45"
                     />
                   </Link>
+
+                  {/* Name and Position below the image */}
+                  <div className="mt-4">
+                    <p className="font-bold text-lg">{team.name}</p>
+                    <p className="text-zinc-800">{team.position}</p>
+                  </div>
                 </div>
               </Reveal>
             ))}

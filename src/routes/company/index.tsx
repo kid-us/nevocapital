@@ -376,7 +376,7 @@ function companyPage() {
                   animate={{ y: 0, opacity: 1 }}
                   exit={{ y: -20, opacity: 0 }}
                   transition={{ duration: 0.3, ease: "easeOut" }}
-                  className="absolute left-0 lg:-bottom-24 bottom-0 w-full lg:max-w-[calc(100%+2rem)] px-4 lg:px-0 bg-primary p-5 rounded-lg text-white shadow-lg z-10"
+                  className="absolute left-0 lg:-bottom-24 bottom-0 w-full lg:max-w-[calc(100%+2rem)] bg-primary p-5 rounded-lg text-white shadow-lg z-10"
                 >
                   <p className="font-medium text-sm sm:text-base lg:text-lg text-center lg:text-left">
                     {whyPartnerWithUs[hoveredSection].desc}
